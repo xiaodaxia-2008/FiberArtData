@@ -1,6 +1,6 @@
 # FiberArt 软件模型库
 
-这里存放FiberArt软件使用的一些模型数据，包括机器人、工具、导轨、变位机，以及一些铺放曲面。
+这里存放FiberArt软件使用的一些模型数据，包括机器人、工具、导轨、变位机，以及CAD曲面模型等。
 
 ## 怎么制作机器人URDF模型
 
@@ -15,9 +15,9 @@
 
 ### 运动学参数
 
-FiberArt实现了两个逆运动学求解算法，一个是基于[opw_kinematics](https://github.com/Jmeyer1292/opw_kinematics)的解析解，它的速度更快；另一个是基于PoE算法的。
+FiberArt实现了两个逆运动学求解算法，一个是基于[opw_kinematics](https://github.com/Jmeyer1292/opw_kinematics)的解析算法，它的速度更快；另一个是基于雅可比的数值迭代算法。
 
-要使用解析算法，需要在机器人的URDF文档里面写入 `opw_parameters`：
+要使用OPW解析算法，需要机械臂满足对应的构型结构（大多数工业串联六轴机械臂都满足），同时在机器人的URDF文档里面写入 `opw_parameters`：
 
 - [怎么从机器人技术手册计算OPW参数](./Docs/opw.md)
 - 怎么将OPW参数写入到机器人的URDF文档，可以参考[现有的机器人模型](./Robots/KR480R3330MT/KR480R3330MT.urdf)。

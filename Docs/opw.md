@@ -37,10 +37,6 @@ sign[5] = -1
 
 在 OPW 算法里面，用 $q_{opw}$ 表示假设的零位和旋转轴向系统下机器人关节的位置，用 $q_{manufacturer}$表示厂家规定的机器人关节，两者的关系是：
 
-$$
-q_{opw} = q_{manufacturer} \cdot sign - offset
-
-\implies q_{manufacturer} = (q_{opw} + offset) \cdot sign
-$$
+$$q_{opw} = q_{manufacturer} \cdot sign - offset \implies q_{manufacturer} = (q_{opw} + offset) \cdot sign$$
 
 充分理解上述原理，有助于计算各个参数的正负号。

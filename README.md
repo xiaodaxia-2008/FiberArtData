@@ -37,3 +37,7 @@ FiberArt实现了两个逆运动学求解算法，一个是基于[opw_kinematics
 
 - [Github Issues](https://github.com/xiaodaxia-2008/FiberArtData/issues)
 - Email: [fiberart@duck.com](mailto:fiberart@duck.com)
+
+## 贡献
+
+欢迎通过 PR 提交新的模型数据！

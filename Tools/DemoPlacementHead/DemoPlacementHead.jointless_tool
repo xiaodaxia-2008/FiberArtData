@@ -1,0 +1,16 @@
+
+<robot name="DemoPlacementHead">
+    <material name="tool_gray">
+        <color rgba="0.82 0.68 0.61 1" />
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="tool_gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <attach_pose xyz="0 0 0" rpy="0 0 0"/>
+    <tcp xyz="-0.03 0 1.161" rpy="180 0 0"/>
+</robot>
+    

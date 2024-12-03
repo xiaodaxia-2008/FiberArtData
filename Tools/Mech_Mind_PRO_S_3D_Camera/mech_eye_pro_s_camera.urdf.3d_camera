@@ -1,0 +1,30 @@
+<robot name="camera">
+    <material name="tool_gray">
+        <color rgba="0.20 0.20 0.20 1.00" />
+    </material>
+    <material name="blue">
+        <color rgba="0.0 0.0 1.0 0.5" />
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="tool_gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="fov_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/fov_link.stl" material_name="blue"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="base_link_to_fov_link" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="base_link"/>
+        <child link="fov_link"/>
+    </joint>
+    <attach_pose xyz="0 0 0" rpy="0 90 0"/>
+    <tcp xyz="0 0 0.75" rpy="0 0 0"/>
+</robot>
+

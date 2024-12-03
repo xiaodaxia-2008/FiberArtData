@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<robot name="TapePlacementGantry">
+    <!-- Properties -->
+    <material name="gantry_gray">
+        <color rgba="0.4 0.4 0.4 1" />
+    </material>
+    <material name="gantry_organge">
+        <color rgba="0.96 0.65 0.14 1" />
+    </material>
+    <material name="gantry_lightgreen">
+        <color rgba="0.53 0.73 0.27 1.00" />
+    </material>
+    <material name="gantry_purple">
+        <color rgba="0.61 0.45 0.37 1.00" />
+    </material>
+    <material name="gantry_deepblue">
+        <color rgba="0.15 0.25 0.52 1.00" />
+    </material>
+    <!-- link list -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="gantry_gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link1">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_1.stl" material_name="gantry_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_2.stl" material_name="gantry_lightgreen"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link3">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_3.stl" material_name="gantry_purple"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_4.stl" material_name="gantry_deepblue"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="ee_link"/>
+    <!-- end of link list -->
+    <!-- joint list -->
+    <joint name="joint1" type="prismatic">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0 0 1.225" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-11" upper="11" velocity="5"/>
+    </joint>
+    <joint name="joint2" type="prismatic">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0.402 0 4.167" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+        <limit lower="-1.6" upper="1.6" velocity="5"/>
+    </joint>
+    <joint name="joint3" type="prismatic">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="0.599 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="0" upper="0.8" velocity="5"/>
+    </joint>
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="-0.25 0 -2.21" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-360" upper="360" velocity="180"/>
+    </joint>
+    <joint name="joint_4_t-tool0" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link4"/>
+        <child link="ee_link"/>
+    </joint>
+    <!-- end of joint list -->
+    <tcp xyz="0 0 0" rpy="0 0 0"/>
+</robot>
+

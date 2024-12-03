@@ -1,0 +1,10 @@
+Ply/铺层	Ply0
+PlanMethod/规划算法	固定角度
+LayupAngle/轨迹角度	0
+LayupSurface/铺放曲面	LayupSurface
+ReferencePoint/参考点	SampleSpar/Vertex1
+ReferenceDirection/参考方向	/
+Boundaries/边界	"SampleSpar/Wire1,SampleSpar/Wire8"
+OffTheShelfIRC/以单引导线为IRC	NO
+GuideCurves/引导线	"SampleSpar/Wire10,SampleSpar/Wire11,SampleSpar/Wire12,SampleSpar/Wire13"
+GuideCurveAlgorithm/引导线算法	权重

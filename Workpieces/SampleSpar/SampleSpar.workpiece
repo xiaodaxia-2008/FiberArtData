@@ -1,0 +1,14 @@
+# the file content complies with yaml-file format
+model_file: SampleSpar.stp
+model_color:
+  red: 0.85
+  green: 0.82
+  blue: 0.6
+model_pose:
+  x: 0.9
+  y: 0.0
+  z: 0.0
+  # The sequence is Rot(yaw, UnitZ) * Rot(pitch, UnitY) * Rot(roll, UnitX)
+  roll: 0.0
+  pitch: 0.0
+  yaw: 0.0

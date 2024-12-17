@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<robot name="PositionerM">
+    <!-- Properties -->
+    <!-- link list -->
+    <material name="gray">
+        <color rgba="0.4 0.4 0.4 1" />
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link1">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_1.stl" material_name="gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="ee_link"/>
+    <!-- end of link list -->
+    <!-- joint list -->
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+        <limit lower="-9999" upper="9999" velocity="360"/>
+    </joint>
+    <joint name="joint_6_t-tool0" type="fixed">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <parent link="link1"/>
+        <child link="ee_link"/>
+    </joint>
+    <!-- end of joint list -->
+
+    <!-- the pose of positioner local base r.t. world frame -->
+    <base_pose xyz="2.68598 0 0.804447" rpy="0 0 0" />
+</robot>
+

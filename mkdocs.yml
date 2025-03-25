@@ -1,4 +1,5 @@
 site_name: FiberArt 软件模型库说明
+docs_dir: Docs
 
 theme: 
   name: material

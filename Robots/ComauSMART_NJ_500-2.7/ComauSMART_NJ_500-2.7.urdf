@@ -108,8 +108,7 @@
         <child link="ee_link"/>
     </joint>
     <!-- end of joint list -->
-    <!-- <tcp xyz="0 0 0" rpy="0 0 0"/> -->
-    <tcp xyz="-0.001761239 0.000556 0.636682762" rpy="0 0 0"/>
+    <tcp xyz="0 0 0" rpy="0 0 0"/>
 
     <!-- home positions  -->
     <home_positions joints="0 0 -90 0 90 0" />

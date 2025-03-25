@@ -1,0 +1,16 @@
+
+<robot name="PlacementHeadM">
+    <material name="tool_gray">
+        <color rgba="0.82 0.68 0.61 1" />
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="tool_gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <attach_pose xyz="0 0 0" rpy="0 0 180"/>
+    <tcp xyz="-0.001761239 0.000556 0.636682762" rpy="180 0 180"/>
+</robot>
+    

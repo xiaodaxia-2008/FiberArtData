@@ -1,11 +1,22 @@
+---
+title: 正交球腕机器人OPW参数设置
 
-# OPW (Ortho-parallel Basis and a Spherical Wrist) 参数说明
+date:
+    created: 2025-03-25T16:02:32+08:00
+---
+
+
+## 正交球腕机器人 OPW 参数说明
+
+*[OPW]: Ortho-parallel Basis and a Spherical Wrist
 
 算法假设当所有关节都直立向上时，机械臂处于零位，如下图中所示。它还假设所有绕机器人基座的旋转都是正向的。
 
 ![opw_parameters](./opw.png)
 
 要使用该库，填写 OPW 参数，其中包含7个运动学参数，以及将算法假设的零位（臂在Z轴向上）调整到制造商机器臂零位的关节偏移量。此外，如果机器人的关节旋转轴与论文中的约定不匹配，还应指定6个“符号校正”参数（-1或1）。
+
+## KR480 R3330 MT
 
 以下面的 KR480 R3330 MT机器人为例：
 

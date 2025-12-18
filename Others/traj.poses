@@ -1,5 +1,7 @@
-# 笛卡尔轨迹文件，# 开头的是注释
-# RX,RY,RZ 的定义是 RoationMatrix = Rot(RZ, UnitZ) * Rot(RY, UnitY) * Rot(RX, UnitX)
+# 笛卡尔轨迹文件
+# 开头的是注释
+# 分隔符可以是 , 或者 空格
+# RX,RY,RZ 的定义是 RoationMatrix = Rot(RX, UnitX) * Rot(RY, UnitY) * Rot(RZ, UnitZ)
 # X,Y,Z,RX,RY,RZ
 0.65,0,0.78,180,-40,0
 1.2,0,0.78,180,-90,0

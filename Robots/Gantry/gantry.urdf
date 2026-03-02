@@ -1,0 +1,135 @@
+<?xml version="1.0" ?>
+<robot name="Gantry">
+    <!-- Properties -->
+    <material name="gantry_gray">
+        <color rgba="0.4 0.4 0.4 1" />
+    </material>
+    <material name="gantry_white">
+        <color rgba="0.8 0.8 0.8 1" />
+    </material>
+
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="gantry_gray"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint1" type="prismatic">
+        <parent link="base_link"/>
+        <child link="link_1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-8" upper="8" velocity="5"/>
+    </joint>
+    
+    <link name="link_1">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_1.stl" material_name="gantry_white"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint2" type="prismatic">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="-0.66 0 5.025" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+        <!-- Y 轴行程 ±1.6不够 -->
+        <!-- <limit lower="-1.6" upper="1.6" velocity="5"/> -->
+        <limit lower="-2" upper="2" velocity="5"/>
+    </joint>
+
+
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_2.stl" material_name="gantry_white"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint3" type="prismatic">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="-0.57 0 3.5" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-1.7" upper="0.55" velocity="5"/>
+    </joint>
+
+    <link name="link3">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_3.stl" material_name="gantry_white"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="0 0 -4.8" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+        <limit lower="-30" upper="30" velocity="30"/>
+    </joint>
+
+
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_4.stl" material_name="gantry_white"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint5" type="revolute">
+        <parent link="link4"/>
+        <child link="link5"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-95" upper="95" velocity="30"/>
+    </joint>
+
+
+    <link name="link5">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_5.stl" material_name="gantry_white"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="joint6" type="revolute">
+        <parent link="link5"/>
+        <child link="link6"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-350" upper="350" velocity="90"/>
+    </joint>
+
+
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_6.stl" material_name="gantry_white"/>
+            </geometry>
+        </visual>
+    </link>
+    <joint name="joint_6_t-tool0" type="fixed">
+        <!-- 这里绕 X 轴旋转180°，让法线符合一般惯例（垂直于法兰盘向外） -->
+        <origin xyz="0 0 -0.395" rpy="180 0 0"/>
+        <parent link="link6"/>
+        <child link="ee_link"/>
+    </joint>
+    <link name="ee_link"/>
+
+    <tcp xyz="0 0 0" rpy="0 0 0"/>
+
+    <home_positions joints="0 0 0 0 0 0" />
+
+    <!-- 指示FiberArt构造专门用于龙门机构的运动学求解器 -->
+    <gantry_kinematics joint_limit_weights="0 0 0 1 0 0" joint_smooth_weights="0.1 0.1 0.1 0.1 0.1 0.1" />
+</robot>
+

@@ -1,0 +1,16 @@
+
+<robot name="AFPH16">
+    <material name="organge">
+        <color rgba="0.96 0.65 0.14 1" />
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/AFP-head.stl" material_name="organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <attach_pose xyz="0 0 0" rpy="0 0 0"/>
+    <tcp xyz="0 0 1.239" rpy="180 0 0"/>
+</robot>
+    

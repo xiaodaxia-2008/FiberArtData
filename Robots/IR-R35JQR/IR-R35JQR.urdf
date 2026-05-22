@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<robot name="IR-R35JQR">
+    <!-- Properties -->
+    <material name="kuka_gray">
+        <color rgba="0.4 0.4 0.4 1" />
+    </material>
+    <material name="kuka_organge">
+        <color rgba="0.96 0.65 0.14 1" />
+    </material>
+    <!-- link list -->
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/base_link.stl" material_name="kuka_gray"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link1">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_1.stl" material_name="kuka_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_2.stl" material_name="kuka_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link3">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_3.stl" material_name="kuka_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_4.stl" material_name="kuka_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link5">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_5.stl" material_name="kuka_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="visual/link_6.stl" material_name="kuka_organge"/>
+            </geometry>
+        </visual>
+    </link>
+    <link name="ee_link"/>
+    <!-- end of link list -->
+    <!-- joint list -->
+    <joint name="joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 0 1" />
+        <limit lower="-170" upper="170" velocity="200"/>
+    </joint>
+    <joint name="joint2" type="revolute">
+        <parent link="link1"/>
+        <child link="link2"/>
+        <origin xyz="0.17 0 0.5" rpy="0 0 0" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-155" upper="80" velocity="180"/>
+    </joint>
+    <joint name="joint3" type="revolute">
+        <parent link="link2"/>
+        <child link="link3"/>
+        <origin xyz="0 0 0.84" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+        <limit lower="-160" upper="75" velocity="242"/>
+    </joint>
+    <joint name="joint4" type="revolute">
+        <parent link="link3"/>
+        <child link="link4"/>
+        <origin xyz="0.8345 0 0.14" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-180" upper="180" velocity="450"/>
+    </joint>
+    <joint name="joint5" type="revolute">
+        <parent link="link4"/>
+        <child link="link5"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="0 -1 0" />
+        <limit lower="-130" upper="130" velocity="336"/>
+    </joint>
+    <joint name="joint6" type="revolute">
+        <parent link="link5"/>
+        <child link="link6"/>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <axis xyz="1 0 0" />
+        <limit lower="-360" upper="360" velocity="407"/>
+    </joint>
+    <joint name="joint_6_t-tool0" type="fixed">
+        <origin xyz="0.13 0 0" rpy="0 90 0"/>
+        <parent link="link6"/>
+        <child link="ee_link"/>
+    </joint>
+    <!-- end of joint list -->
+    <tcp xyz="0 0 0" rpy="0 0 0"/>
+
+    <!-- home positions  -->
+    <home_positions joints="0 0 0 0 0 0" />
+
+    <!-- Ortho-parallel Basis and a Spherical Wrist -->
+    <opw_parameters>
+        <c1>0.5</c1>
+        <c2>0.84</c2>
+        <c3>0.8345</c3>
+        <c4>0.13</c4>
+        <a1>0.17</a1>
+        <a2>-0.14</a2>
+        <b>0</b>
+        <joint1 sign_correction="1" offset="0"/>
+        <joint2 sign_correction="-1" offset="0"/>
+        <joint3 sign_correction="1" offset="-90"/>
+        <joint4 sign_correction="1" offset="0"/>
+        <joint5 sign_correction="-1" offset="0"/>
+        <joint6 sign_correction="1" offset="0"/>
+    </opw_parameters>
+</robot>
+

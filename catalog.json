@@ -1,0 +1,320 @@
+{
+  "version": "1.0",
+  "models": [
+    {
+      "type": "Robot",
+      "name": "COMAUSMART_NJ_500-2.7",
+      "brand": "COMAU",
+      "payload_kg": 500,
+      "reach_m": 2.703,
+      "urdf": "Robots/COMAUSMART_NJ_500-2.7/COMAUSMART_NJ_500-2.7.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/COMAUSMART_NJ_500-2.7.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "GANTRY",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Robots/GANTRY/GANTRY.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/GANTRY.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "IR-R35JQR",
+      "brand": "INOVANCE",
+      "payload_kg": 35,
+      "reach_m": 1.856,
+      "urdf": "Robots/IR-R35JQR/IR-R35JQR.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/IR-R35JQR.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR10R1100SIXX",
+      "brand": "KUKA",
+      "payload_kg": 10,
+      "reach_m": 1.101,
+      "urdf": "Robots/KR10R1100SIXX/KR10R1100SIXX.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR10R1100SIXX.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR10R1420",
+      "brand": "KUKA",
+      "payload_kg": 10,
+      "reach_m": 1.42,
+      "urdf": "Robots/KR10R1420/KR10R1420.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR10R1420.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR10R1420HP",
+      "brand": "KUKA",
+      "payload_kg": 10,
+      "reach_m": 1.42,
+      "urdf": "Robots/KR10R1420HP/KR10R1420HP.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR10R1420HP.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR10R900_2",
+      "brand": "KUKA",
+      "payload_kg": 6.5,
+      "reach_m": 0.901,
+      "urdf": "Robots/KR10R900_2/KR10R900_2.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR10R900_2.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR120R2500PRO",
+      "brand": "KUKA",
+      "payload_kg": 120,
+      "reach_m": 2.496,
+      "urdf": "Robots/KR120R2500PRO/KR120R2500PRO.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR120R2500PRO.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR150R3100_2",
+      "brand": "KUKA",
+      "payload_kg": 150,
+      "reach_m": 3.1,
+      "urdf": "Robots/KR150R3100_2/KR150R3100_2.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR150R3100_2.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR150_2",
+      "brand": "KUKA",
+      "payload_kg": 150,
+      "reach_m": 2.7,
+      "urdf": "Robots/KR150_2/KR150_2.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR150_2.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR16_2",
+      "brand": "KUKA",
+      "payload_kg": 16,
+      "reach_m": 1.61,
+      "urdf": "Robots/KR16_2/KR16_2.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR16_2.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR210L150",
+      "brand": "KUKA",
+      "payload_kg": 150,
+      "reach_m": 3.1,
+      "urdf": "Robots/KR210L150/KR210L150.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR210L150.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR210R2700-2",
+      "brand": "KUKA",
+      "payload_kg": 210,
+      "reach_m": 2.701,
+      "urdf": "Robots/KR210R2700-2/KR210R2700-2.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR210R2700-2.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR360R2830",
+      "brand": "KUKA",
+      "payload_kg": 360,
+      "reach_m": 2.826,
+      "urdf": "Robots/KR360R2830/KR360R2830.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR360R2830.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR3R540",
+      "brand": "KUKA",
+      "payload_kg": 3,
+      "reach_m": 0.541,
+      "urdf": "Robots/KR3R540/KR3R540.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR3R540.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KUKA KR480 R3330 MT",
+      "brand": "KUKA",
+      "payload_kg": 480,
+      "reach_m": 3.326,
+      "urdf": "Robots/KR480R3330MT/KR480R3330MT.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR480R3330MT.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR500R2380",
+      "brand": "KUKA",
+      "payload_kg": 500,
+      "reach_m": 2.826,
+      "urdf": "Robots/KR500R2380/KR500R2380.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR500R2380.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR5_ARC",
+      "brand": "KUKA",
+      "payload_kg": 5,
+      "reach_m": 1.423,
+      "urdf": "Robots/KR5_ARC/KR5_ARC.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR5_ARC.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR6R700SIXX",
+      "brand": "KUKA",
+      "payload_kg": 6,
+      "reach_m": 0.707,
+      "urdf": "Robots/KR6R700SIXX/KR6R700SIXX.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR6R700SIXX.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR6R900SIXX",
+      "brand": "KUKA",
+      "payload_kg": 6.5,
+      "reach_m": 0.901,
+      "urdf": "Robots/KR6R900SIXX/KR6R900SIXX.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR6R900SIXX.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "KR6R900_2",
+      "brand": "KUKA",
+      "payload_kg": 6.5,
+      "reach_m": 0.901,
+      "urdf": "Robots/KR6R900_2/KR6R900_2.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/KR6R900_2.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "LBR_IIWA_14_R820",
+      "brand": "KUKA",
+      "payload_kg": 14,
+      "reach_m": 0.82,
+      "urdf": "Robots/LBR_IIWA_14_R820/LBR_IIWA_14_R820.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/LBR_IIWA_14_R820.zip"
+    },
+    {
+      "type": "Robot",
+      "name": "TAPEPLACEMENTGANTRY",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Robots/TAPEPLACEMENTGANTRY/TAPEPLACEMENTGANTRY.urdf",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Robots/TAPEPLACEMENTGANTRY.zip"
+    },
+    {
+      "type": "Track",
+      "name": "DemoTrack",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tracks/DemoTrack/DemoTrack.track",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tracks/DemoTrack.zip"
+    },
+    {
+      "type": "Track",
+      "name": "TrackM",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tracks/TrackM/TrackM.track",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tracks/TrackM.zip"
+    },
+    {
+      "type": "Positioner",
+      "name": "DemoPositioner",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Positioners/DemoPositioner/DemoPositioner.positioner",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Positioners/DemoPositioner.zip"
+    },
+    {
+      "type": "Positioner",
+      "name": "DemoPositioner",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Positioners/PerpendularPositioner/Positioner.positioner",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Positioners/PerpendularPositioner.zip"
+    },
+    {
+      "type": "Positioner",
+      "name": "Positioner",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Positioners/Positioner1DoF/Positioner.positioner",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Positioners/Positioner1DoF.zip"
+    },
+    {
+      "type": "Positioner",
+      "name": "PositionerM",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Positioners/PositionerM/PositionerM.positioner",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Positioners/PositionerM.zip"
+    },
+    {
+      "type": "Tool",
+      "name": "AFPH16",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tools/AFPHead/AFPH16.jointless_tool",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tools/AFPHead.zip"
+    },
+    {
+      "type": "Tool",
+      "name": "Fiber Placement Head",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tools/PlacementHead/PlacementHead.jointless_tool",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tools/PlacementHead.zip"
+    },
+    {
+      "type": "Tool",
+      "name": "PlacementHeadM",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tools/PlacementHeadM/PlacementHeadM.jointless_tool",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tools/PlacementHeadM.zip"
+    },
+    {
+      "type": "Tool",
+      "name": "DemoPlacementHead",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tools/SimpleDemoPlacementHead/DemoPlacementHead.jointless_tool",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tools/SimpleDemoPlacementHead.zip"
+    },
+    {
+      "type": "Tool",
+      "name": "sucker",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tools/Sucker/sucker.jointless_tool",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tools/Sucker.zip"
+    },
+    {
+      "type": "Tool",
+      "name": "TapePlacementHead",
+      "brand": "Unknown",
+      "payload_kg": 0.0,
+      "reach_m": 0.0,
+      "urdf": "Tools/TapePlacementHead/TapePlacementHead.jointless_tool",
+      "zip_url": "https://storage.fiber-art.myshawn.com/Tools/TapePlacementHead.zip"
+    }
+  ]
+}

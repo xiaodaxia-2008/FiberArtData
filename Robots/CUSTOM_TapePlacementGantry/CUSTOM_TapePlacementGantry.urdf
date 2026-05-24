@@ -20,8 +20,9 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="visual/base_link.stl" material_name="gantry_gray"/>
+        <mesh filename="visual/base_link.stl"/>
       </geometry>
+      <material name="gantry_gray"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -32,8 +33,9 @@
   <link name="link1">
     <visual>
       <geometry>
-        <mesh filename="visual/link_1.stl" material_name="gantry_organge"/>
+        <mesh filename="visual/link_1.stl"/>
       </geometry>
+      <material name="gantry_organge"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -44,8 +46,9 @@
   <link name="link2">
     <visual>
       <geometry>
-        <mesh filename="visual/link_2.stl" material_name="gantry_lightgreen"/>
+        <mesh filename="visual/link_2.stl"/>
       </geometry>
+      <material name="gantry_lightgreen"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -56,8 +59,9 @@
   <link name="link3">
     <visual>
       <geometry>
-        <mesh filename="visual/link_3.stl" material_name="gantry_purple"/>
+        <mesh filename="visual/link_3.stl"/>
       </geometry>
+      <material name="gantry_purple"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -68,8 +72,9 @@
   <link name="link4">
     <visual>
       <geometry>
-        <mesh filename="visual/link_4.stl" material_name="gantry_deepblue"/>
+        <mesh filename="visual/link_4.stl"/>
       </geometry>
+      <material name="gantry_deepblue"/>
     </visual>
     <collision name="collision">
       <geometry>

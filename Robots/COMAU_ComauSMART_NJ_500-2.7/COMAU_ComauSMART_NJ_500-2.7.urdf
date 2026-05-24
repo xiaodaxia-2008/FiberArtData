@@ -11,8 +11,9 @@
   <link name="base_link">
     <visual>
       <geometry>
-        <mesh filename="visual/base_link.stl" material_name="gray"/>
+        <mesh filename="visual/base_link.stl"/>
       </geometry>
+      <material name="gray"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -23,8 +24,9 @@
   <link name="link1">
     <visual>
       <geometry>
-        <mesh filename="visual/link_1.stl" material_name="comau_red"/>
+        <mesh filename="visual/link_1.stl"/>
       </geometry>
+      <material name="comau_red"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -35,8 +37,9 @@
   <link name="link2">
     <visual>
       <geometry>
-        <mesh filename="visual/link_2.stl" material_name="comau_red"/>
+        <mesh filename="visual/link_2.stl"/>
       </geometry>
+      <material name="comau_red"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -47,8 +50,9 @@
   <link name="link3">
     <visual>
       <geometry>
-        <mesh filename="visual/link_3.stl" material_name="comau_red"/>
+        <mesh filename="visual/link_3.stl"/>
       </geometry>
+      <material name="comau_red"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -59,8 +63,9 @@
   <link name="link4">
     <visual>
       <geometry>
-        <mesh filename="visual/link_4.stl" material_name="comau_red"/>
+        <mesh filename="visual/link_4.stl"/>
       </geometry>
+      <material name="comau_red"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -71,8 +76,9 @@
   <link name="link5">
     <visual>
       <geometry>
-        <mesh filename="visual/link_5.stl" material_name="comau_red"/>
+        <mesh filename="visual/link_5.stl"/>
       </geometry>
+      <material name="comau_red"/>
     </visual>
     <collision name="collision">
       <geometry>
@@ -83,8 +89,9 @@
   <link name="link6">
     <visual>
       <geometry>
-        <mesh filename="visual/link_6.stl" material_name="comau_red"/>
+        <mesh filename="visual/link_6.stl"/>
       </geometry>
+      <material name="comau_red"/>
     </visual>
     <collision name="collision">
       <geometry>

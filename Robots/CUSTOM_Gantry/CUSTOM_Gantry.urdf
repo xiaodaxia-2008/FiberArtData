@@ -13,6 +13,11 @@
         <mesh filename="visual/base_link.stl" material_name="gantry_gray"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint1" type="prismatic">
     <parent link="base_link"/>
@@ -27,6 +32,11 @@
         <mesh filename="visual/link_1.stl" material_name="gantry_white"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link_1.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint2" type="prismatic">
     <parent link="link1"/>
@@ -43,6 +53,11 @@
         <mesh filename="visual/link_2.stl" material_name="gantry_white"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link2.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint3" type="prismatic">
     <parent link="link2"/>
@@ -57,6 +72,11 @@
         <mesh filename="visual/link_3.stl" material_name="gantry_white"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link3.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint4" type="revolute">
     <parent link="link3"/>
@@ -71,6 +91,11 @@
         <mesh filename="visual/link_4.stl" material_name="gantry_white"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link4.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint5" type="revolute">
     <parent link="link4"/>
@@ -85,6 +110,11 @@
         <mesh filename="visual/link_5.stl" material_name="gantry_white"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link5.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint6" type="revolute">
     <parent link="link5"/>
@@ -99,6 +129,11 @@
         <mesh filename="visual/link_6.stl" material_name="gantry_white"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link6.stl"/>
+      </geometry>
+    </collision>
   </link>
   <joint name="joint_6_t-tool0" type="fixed">
     <!-- 这里绕 X 轴旋转180°，让法线符合一般惯例（垂直于法兰盘向外） -->

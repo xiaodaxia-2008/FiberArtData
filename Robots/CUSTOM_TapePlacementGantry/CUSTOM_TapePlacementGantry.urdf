@@ -23,6 +23,11 @@
         <mesh filename="visual/base_link.stl" material_name="gantry_gray"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link1">
     <visual>
@@ -30,6 +35,11 @@
         <mesh filename="visual/link_1.stl" material_name="gantry_organge"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link1.stl"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link2">
     <visual>
@@ -37,6 +47,11 @@
         <mesh filename="visual/link_2.stl" material_name="gantry_lightgreen"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link2.stl"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link3">
     <visual>
@@ -44,6 +59,11 @@
         <mesh filename="visual/link_3.stl" material_name="gantry_purple"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link3.stl"/>
+      </geometry>
+    </collision>
   </link>
   <link name="link4">
     <visual>
@@ -51,6 +71,11 @@
         <mesh filename="visual/link_4.stl" material_name="gantry_deepblue"/>
       </geometry>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link4.stl"/>
+      </geometry>
+    </collision>
   </link>
   <link name="ee_link"/>
   <!-- end of link list -->

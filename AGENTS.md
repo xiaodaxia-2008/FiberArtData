@@ -7,9 +7,9 @@
 
 ```python
 # /// script
-# dependencies = ["requests"]
+# requires-python = ">=3.12"
+# dependencies = []
 # ///
-import requests
 # ... script body ...
 ```
 

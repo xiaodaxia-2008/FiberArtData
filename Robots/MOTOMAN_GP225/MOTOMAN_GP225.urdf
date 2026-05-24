@@ -161,6 +161,11 @@
       </geometry>
       <material name="yaskawa_blue"/>
     </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link_2_l_2.stl"/>
+      </geometry>
+    </collision>
     <!-- collision mesh is fully contained within link_2_l -->
   </link>
   <joint name="joint_1_s_2" type="revolute">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="MOTOMAN_HC20DTP">
   <material name="yaskawa_white">
-    <color rgba="0.7 0.7 0.7 1.0"/>
+    <color rgba="0.99 0.99 0.99 1"/>
   </material>
   <!-- link list -->
   <link name="base_link">

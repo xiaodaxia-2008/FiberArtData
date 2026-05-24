@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="MOTOMAN_ES165">
   <material name="black">
-    <color rgba="0.7 0.7 0.7 1.0"/>
+    <color rgba="0 0 0 1"/>
   </material>
   <material name="blue">
-    <color rgba="0.7 0.7 0.7 1.0"/>
+    <color rgba="0.1294118 0.1490196 0.7490196 1.0"/>
   </material>
   <material name="yellow">
-    <color rgba="0.7 0.7 0.7 1.0"/>
+    <color rgba="0 1 1 1"/>
   </material>
   <!-- link list -->
   <link name="base_link">
@@ -17,7 +17,7 @@
         <mesh filename="visual/base_link.stl"/>
       </geometry>
       <material name="blue">
-        <color rgba="0 0 1 1"/>
+        <color rgba="0.1294118 0.1490196 0.7490196 1.0"/>
       </material>
     </visual>
     <collision>

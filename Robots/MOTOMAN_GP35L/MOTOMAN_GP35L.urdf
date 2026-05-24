@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <robot name="MOTOMAN_GP35L">
   <material name="yaskawa_blue">
-    <color rgba="0.7 0.7 0.7 1.0"/>
+    <color rgba="0.1294118 0.1490196 0.7490196 1.0"/>
   </material>
   <material name="yaskawa_silver">
-    <color rgba="0.7 0.7 0.7 1.0"/>
+    <color rgba="0.8 0.8 0.8 1"/>
   </material>
   <!-- link list -->
   <link name="base_link">

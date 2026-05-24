@@ -1,13 +1,12 @@
-
-<?xml version="1.0" ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <robot name="DemoTrack">
     <!-- Properties -->
     <!-- link list -->
     <material name="gray">
-        <color rgba="0.4 0.4 0.4 1" />
+        <color rgba="0.4 0.4 0.4 1"/>
     </material>
     <material name="gray2">
-        <color rgba="0.5 0.5 0.5 1" />
+        <color rgba="0.5 0.5 0.5 1"/>
     </material>
     <link name="base_link">
         <visual>
@@ -15,6 +14,7 @@
                 <mesh filename="visual/base_link.stl" material_name="gray"/>
             </geometry>
         </visual>
+    <collision><geometry><mesh filename="collision/base_link.stl"/></geometry></collision>
     </link>
     <link name="link1">
         <visual>
@@ -22,6 +22,7 @@
                 <mesh filename="visual/link1.stl" material_name="gray2"/>
             </geometry>
         </visual>
+    <collision><geometry><mesh filename="collision/link1.stl"/></geometry></collision>
     </link>
     <link name="ee_link"/>
     <!-- end of link list -->
@@ -29,17 +30,16 @@
     <joint name="joint1" type="prismatic">
         <parent link="base_link"/>
         <child link="link1"/>
-        <origin xyz="-0.065 0 0.375" rpy="0 0 0" />
-        <axis xyz="0 1 0" />
-        <limit lower="0" upper="15.0" velocity="1"/>
+        <origin xyz="-0.065 0 0.375" rpy="0.0 0.0 0.0"/>
+        <axis xyz="0 1 0"/>
+        <limit lower="0.0" upper="0.261799" velocity="0.017453"/>
     </joint>
     <joint name="joint_1_t-tool0" type="fixed">
-        <origin xyz="0.5 0.5 0.173" rpy="0 0 0"/>
+        <origin xyz="0.5 0.5 0.173" rpy="0.0 0.0 0.0"/>
         <parent link="link1"/>
         <child link="ee_link"/>
     </joint>
     <!-- end of joint list -->
 
-    <base_pose xyz="0 0 0" rpy="0 0 0" />
+    <base_pose xyz="0 0 0" rpy="0.0 0.0 0.0"/>
 </robot>
-    

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="KUKA_KR3R540">
+  <material name="kuka_pedestal">
+    <color rgba="0.505882 0.470588 0.388235 1.0"/>
+  </material>
+  <material name="kuka_ral_pure_white">
+    <color rgba="0.945098 0.92549 1.0 1.0"/>
+  </material>
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/base_link.stl"/>
+      </geometry>
+      <material name="kuka_pedestal"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_1.stl"/>
+      </geometry>
+      <material name="kuka_ral_pure_white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_2">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_2.stl"/>
+      </geometry>
+      <material name="kuka_ral_pure_white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_3">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_3.stl"/>
+      </geometry>
+      <material name="kuka_ral_pure_white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_4">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_4.stl"/>
+      </geometry>
+      <material name="kuka_ral_pure_white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_5">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_5.stl"/>
+      </geometry>
+      <material name="kuka_ral_pure_white"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_5.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_6">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_6.stl"/>
+      </geometry>
+      <material name="kuka_pedestal"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_6.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Following REP199, this frame shall be use to attach EEF or other equipment -->
+  <link name="flange"/>
+  <joint name="joint_a1" type="revolute">
+    <origin xyz="0 0 0.345" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="${radians(-170)}" upper="${radians(170)}" effort="0" velocity="${radians(530)}"/>
+  </joint>
+  <joint name="joint_a2" type="revolute">
+    <origin xyz="0.020 0 0" rpy="0 0 0"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-170)}" upper="${radians(50)}" effort="0" velocity="${radians(529)}"/>
+  </joint>
+  <joint name="joint_a3" type="revolute">
+    <origin xyz="0.260 0 0" rpy="0 0 0"/>
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-110)}" upper="${radians(155)}" effort="0" velocity="${radians(538)}"/>
+  </joint>
+  <joint name="joint_a4" type="revolute">
+    <origin xyz="0 0 0.020" rpy="0 0 0"/>
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${radians(-175)}" upper="${radians(175)}" effort="0" velocity="${radians(600)}"/>
+  </joint>
+  <joint name="joint_a5" type="revolute">
+    <origin xyz="0.260 0 0" rpy="0 0 0"/>
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-120)}" upper="${radians(120)}" effort="0" velocity="${radians(600)}"/>
+  </joint>
+  <joint name="joint_a6" type="revolute">
+    <origin xyz="0.075 0 0" rpy="0 0 0"/>
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${radians(-350)}" upper="${radians(350)}" effort="0" velocity="${radians(800)}"/>
+  </joint>
+  <joint name="joint_a6-tool0" type="fixed">
+    <parent link="link_6"/>
+    <child link="flange"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+  <!-- ROS base_link to KUKA $ROBROOT coordinate system transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+  <!-- This frame corresponds to the $TOOL coordinate system in KUKA KRC controllers -->
+  <link name="tool0"/>
+  <joint name="flange-tool0" type="fixed">
+    <parent link="flange"/>
+    <child link="tool0"/>
+    <origin xyz="0 0 0" rpy="0 ${radians(90)} 0"/>
+  </joint>
+</robot>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="ABB_IRB52_7_120">
+  <material name="abb_black">
+    <color rgba="0.1882353 0.1960784 0.2039216 1"/>
+  </material>
+  <material name="abb_orange">
+    <color rgba="0.7372549 0.3490196 0.1607843 1"/>
+  </material>
+  <material name="abb_yellow">
+    <color rgba="1 1 0 1"/>
+  </material>
+  <!-- link list -->
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/base_link.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+      <material name="abb_yellow"/>
+    </collision>
+  </link>
+  <link name="link_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_1.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_1.stl"/>
+      </geometry>
+      <material name="abb_yellow"/>
+    </collision>
+  </link>
+  <link name="link_2">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_2.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_2.stl"/>
+      </geometry>
+      <material name="abb_yellow"/>
+    </collision>
+  </link>
+  <link name="link_3">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_3.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_3.stl"/>
+      </geometry>
+      <material name="abb_yellow"/>
+    </collision>
+  </link>
+  <link name="link_4">
+    <visual>
+      <origin xyz="0.600 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_4.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0.600 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_4.stl"/>
+      </geometry>
+      <material name="abb_yellow"/>
+    </collision>
+  </link>
+  <link name="link_5">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_5.stl"/>
+      </geometry>
+      <material name="abb_orange"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_5.stl"/>
+      </geometry>
+      <material name="abb_yellow"/>
+    </collision>
+  </link>
+  <link name="link_6">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_6.stl"/>
+      </geometry>
+      <material name="abb_black"/>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_6.stl"/>
+      </geometry>
+      <material name="abb_black"/>
+    </collision>
+  </link>
+  <!-- end of link list -->
+  <!-- joint list -->
+  <joint name="joint_1" type="revolute">
+    <origin xyz="0 0 0.4865" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" effort="0" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint_2" type="revolute">
+    <origin xyz="0.150 0 0.0" rpy="0 0 0"/>
+    <parent link="link_1"/>
+    <child link="link_2"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-63)}" upper="${radians(110)}" effort="0" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint_3" type="revolute">
+    <origin xyz="0 0 0.475" rpy="0 0 0"/>
+    <parent link="link_2"/>
+    <child link="link_3"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-235)}" upper="${radians(55)}" effort="0" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint_4" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="link_3"/>
+    <child link="link_4"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="${radians(-200)}" upper="${radians(200)}" effort="0" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint_5" type="revolute">
+    <origin xyz="0.600 0 0" rpy="0 0 0"/>
+    <parent link="link_4"/>
+    <child link="link_5"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-115)}" upper="${radians(115)}" effort="0" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint_6" type="revolute">
+    <origin xyz="0.065 0 0" rpy="0 0 0"/>
+    <parent link="link_5"/>
+    <child link="link_6"/>
+    <axis xyz="1 0 0"/>
+    <limit lower="${radians(-400)}" upper="${radians(400)}" effort="0" velocity="${radians(180)}"/>
+  </joint>
+  <!-- end of joint list -->
+  <!-- ROS-Industrial 'base' frame: base_link to ABB World Coordinates transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
+  <link name="flange"/>
+  <joint type="fixed" name="joint_6-flange">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="link_6"/>
+    <child link="flange"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
+  <link name="tool0"/>
+  <joint name="link_6-tool0" type="fixed">
+    <origin xyz="0 0 0" rpy="0 ${radians(90)} 0"/>
+    <parent link="flange"/>
+    <child link="tool0"/>
+  </joint>
+</robot>

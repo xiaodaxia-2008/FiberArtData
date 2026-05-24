@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="MOTOMAN_SIA5D">
+  <link name="base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/base.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/base.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_s">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_s.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_s.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_s" type="revolute">
+    <origin xyz="0 0 0.31" rpy="0 0 0"/>
+    <!--r=${90*deg}-->
+    <parent link="base_link"/>
+    <child link="link_s"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${-180*deg}" upper="${180*deg}" effort="0" velocity="${200*deg}"/>
+  </joint>
+  <link name="link_l">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_l.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_l.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_l" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="link_s"/>
+    <child link="link_l"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${-110*deg}" upper="${110*deg}" effort="0" velocity="${200*deg}"/>
+  </joint>
+  <link name="link_e">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_e.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_e.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_e" type="revolute">
+    <origin xyz="0 0 0.27" rpy="0 0 0"/>
+    <parent link="link_l"/>
+    <child link="link_e"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${-170*deg}" upper="${170*deg}" effort="0" velocity="${200*deg}"/>
+  </joint>
+  <link name="link_u">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_u.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_u.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_u" type="revolute">
+    <origin xyz="0.085 0 0" rpy="0 0 0"/>
+    <parent link="link_e"/>
+    <child link="link_u"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="${-90*deg}" upper="${115*deg}" effort="0" velocity="${200*deg}"/>
+  </joint>
+  <link name="link_r">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_r.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_r.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_r" type="revolute">
+    <origin xyz="0.27 0 0.06" rpy="0 0 0"/>
+    <parent link="link_u"/>
+    <child link="link_r"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${-90*deg}" upper="${90*deg}" effort="0" velocity="${200*deg}"/>
+  </joint>
+  <link name="link_b">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_b.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_b.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_b" type="revolute">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="link_r"/>
+    <child link="link_b"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="${-110*deg}" upper="${110*deg}" effort="0" velocity="${230*deg}"/>
+  </joint>
+  <link name="link_t">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_t.dae"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_t.dae"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="joint_t" type="revolute">
+    <origin xyz="0.134 0 0" rpy="0 0 0"/>
+    <parent link="link_b"/>
+    <child link="link_t"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${-90*deg}" upper="${90*deg}" effort="0" velocity="${350*deg}"/>
+  </joint>
+  <link name="tool0"/>
+  <joint name="link_t-tool0" type="fixed">
+    <origin xyz="0.011 0 0" rpy="${-90*deg} ${-90*deg} ${-90*deg}"/>
+    <parent link="link_t"/>
+    <child link="tool0"/>
+  </joint>
+  <!-- ROS base_link (via base_link) to Motoman Robot (not Base) Frame transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0.310" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+</robot>

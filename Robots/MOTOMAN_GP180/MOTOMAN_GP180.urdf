@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="MOTOMAN_GP180">
+  <material name="yaskawa_blue">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <!-- link list -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="visual/base_link.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_1_s">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_1_s.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/link_1_s.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_2_l">
+    <visual>
+      <origin rpy="${radians(90)} ${radians(0)} ${radians(90)}"/>
+      <geometry>
+        <mesh filename="visual/link_2_l.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="${radians(90)} ${radians(0)} ${radians(90)}"/>
+      <geometry>
+        <mesh filename="collision/link_2_l.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_3_u">
+    <visual>
+      <origin rpy="${radians(-90)} ${radians(0)} ${radians(-90)}"/>
+      <geometry>
+        <mesh filename="visual/link_3_u.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="${radians(-90)} ${radians(0)} ${radians(-90)}"/>
+      <geometry>
+        <mesh filename="collision/link_3_u.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_4_r">
+    <visual>
+      <origin rpy="${radians(0)} ${radians(90)} ${radians(0)}" xyz="0 0 1.225"/>
+      <geometry>
+        <mesh filename="visual/link_4_r.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="${radians(0)} ${radians(90)} ${radians(0)}" xyz="0 0 1.225"/>
+      <geometry>
+        <mesh filename="collision/link_4_r.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_5_b">
+    <visual>
+      <origin rpy="${radians(-90)} ${radians(0)} ${radians(-90)}"/>
+      <geometry>
+        <mesh filename="visual/link_5_b.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="${radians(-90)} ${radians(0)} ${radians(-90)}"/>
+      <geometry>
+        <mesh filename="collision/link_5_b.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_6_t">
+    <visual>
+      <origin rpy="${radians(0)} ${radians(90)} ${radians(0)}"/>
+      <geometry>
+        <mesh filename="visual/link_6_t.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="${radians(0)} ${radians(90)} ${radians(0)}"/>
+      <geometry>
+        <mesh filename="collision/link_6_t.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- end of link list -->
+  <!-- joint list -->
+  <joint name="joint_1_s" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1_s"/>
+    <origin xyz="0 0 0.650" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" effort="8237.59" velocity="${radians(125)}"/>
+  </joint>
+  <joint name="joint_2_l" type="revolute">
+    <parent link="link_1_s"/>
+    <child link="link_2_l"/>
+    <origin xyz="0.325 0 0" rpy="0 ${radians(-90)} ${radians(-90)}"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-60)}" upper="${radians(76)}" effort="10419.57" velocity="${radians(115)}"/>
+  </joint>
+  <joint name="joint_3_u" type="revolute">
+    <parent link="link_2_l"/>
+    <child link="link_3_u"/>
+    <origin xyz="1.150 0 0" rpy="${radians(180)} 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-86)}" upper="${radians(90)}" effort="7453.05" velocity="${radians(125)}"/>
+  </joint>
+  <joint name="joint_4_r" type="revolute">
+    <parent link="link_3_u"/>
+    <child link="link_4_r"/>
+    <origin xyz="0.300 -1.225 0" rpy="${radians(-90)} 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-360)}" upper="${radians(360)}" effort="1671.05" velocity="${radians(182)}"/>
+  </joint>
+  <joint name="joint_5_b" type="revolute">
+    <parent link="link_4_r"/>
+    <child link="link_5_b"/>
+    <origin xyz="0 0 0" rpy="${radians(90)} 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-130)}" upper="${radians(130)}" effort="1081.18" velocity="${radians(175)}"/>
+  </joint>
+  <joint name="joint_6_t" type="revolute">
+    <parent link="link_5_b"/>
+    <child link="link_6_t"/>
+    <origin xyz="0 -0.225 0" rpy="${radians(-90)} 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-360)}" upper="${radians(360)}" effort="926.73" velocity="${radians(265)}"/>
+  </joint>
+  <!-- end of joint list -->
+  <!-- ROS base_link to Robot Manufacturer World Coordinates transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0.650" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
+  <link name="flange"/>
+  <joint name="joint_6_t-flange" type="fixed">
+    <origin xyz="0 0 0" rpy="0 ${radians(90)} 0"/>
+    <parent link="link_6_t"/>
+    <child link="flange"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
+  <link name="tool0"/>
+  <joint name="flange-tool0" type="fixed">
+    <origin xyz="0 0 0" rpy="${pi} ${-pi/2.0} 0"/>
+    <parent link="flange"/>
+    <child link="tool0"/>
+  </joint>
+</robot>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="MOTOMAN_TORSO">
+  <material name="yaskawa_blue">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <material name="yaskawa_white">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <!-- link list -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="visual/base.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/base.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_b1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_b1.stl"/>
+      </geometry>
+      <material name="yaskawa_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_b1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link_b2"/>
+  <!-- joint list -->
+  <joint name="joint_b1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_b1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-170)}" upper="${radians(170)}" effort="100" velocity="${radians(130)}"/>
+  </joint>
+  <joint name="joint_b2" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_b2"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-170)}" upper="${radians(170)}" effort="100" velocity="${radians(130)}"/>
+    <mimic joint="joint_b1" multiplier="1" offset="0"/>
+  </joint>
+  <!-- end of joint list -->
+</robot>

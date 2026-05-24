@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="MOTOMAN_MOTOPOS_MH1655">
+  <material name="yaskawa_blue">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <!-- link list -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="visual/base_link.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+    </collision>
+    <if value="${use_pedestal}">
+      <!-- Pedestal is 0.695m high -->
+      <visual>
+        <geometry>
+          <mesh filename="visual/pedestal.stl"/>
+        </geometry>
+        <material name="yaskawa_blue"/>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="collision/pedestal.stl"/>
+        </geometry>
+      </collision>
+    </if>
+  </link>
+  <link name="link_1">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_1.stl"/>
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/link_1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- end of link list -->
+  <!-- joint list -->
+  <joint name="joint_1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_1"/>
+    <origin xyz="0 0 0.305" rpy="0 0 0"/>
+    <axis xyz="1 0 0"/>
+    <!-- NOTE: the velocity limit is a conservative conversion from the stated
+           limit in the manual: 10.8 rpm (in section 3.2.1) -->
+    <limit lower="${-2*pi}" upper="${2*pi}" effort="1274" velocity="1.1309"/>
+  </joint>
+  <!-- end of joint list -->
+  <!-- ROS base_link to Robot Manufacturer World Coordinates transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+  <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
+  <link name="flange"/>
+  <joint name="joint_1-flange" type="fixed">
+    <origin xyz="0.2768 0 0" rpy="0 0 0"/>
+    <parent link="link_1"/>
+    <child link="flange"/>
+  </joint>
+  <!-- ROS-Industrial 'tool0' frame: all-zeros tool frame -->
+  <link name="tool0"/>
+  <joint name="flange-tool0" type="fixed">
+    <origin xyz="0 0 0" rpy="${pi} ${-pi/2} 0"/>
+    <parent link="flange"/>
+    <child link="tool0"/>
+  </joint>
+</robot>

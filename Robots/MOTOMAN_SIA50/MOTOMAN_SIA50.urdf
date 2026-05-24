@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="MOTOMAN_SIA50">
+  <material name="yaskawa_blue">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <material name="yaskawa_white">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <material name="yaskawa_yellow">
+    <color rgba="0.7 0.7 0.7 1.0"/>
+  </material>
+  <!-- link list -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="visual/base_link.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_s">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_1_s.stl"/>
+      </geometry>
+      <material name="yaskawa_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_1_s.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_l">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_2_l.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_2_l.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_e">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_3_e.stl"/>
+      </geometry>
+      <material name="yaskawa_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_3_e.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_u">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_4_u.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_4_u.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_r">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_5_r.stl"/>
+      </geometry>
+      <material name="yaskawa_white"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_5_r.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_b">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="visual/link_6_b.stl"/>
+      </geometry>
+      <material name="yaskawa_blue"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <mesh filename="collision/link_6_b.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="link_t">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_7_t.stl"/>
+      </geometry>
+      <material name="yaskawa_white"/>
+    </visual>
+    <collision>
+      <geometry>
+        <mesh filename="collision/link_7_t.stl"/>
+      </geometry>
+      <material name="yaskawa_yellow"/>
+    </collision>
+  </link>
+  <link name="tool0"/>
+  <!-- end of link list -->
+  <!-- joint list -->
+  <joint name="joint_s" type="revolute">
+    <parent link="base_link"/>
+    <child link="link_s"/>
+    <origin xyz="0 0 0.540" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" effort="4903.32" velocity="${radians(170)}"/>
+  </joint>
+  <joint name="joint_l" type="revolute">
+    <parent link="link_s"/>
+    <child link="link_l"/>
+    <origin xyz="0.145 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-60)}" upper="${radians(125)}" effort="5883.99" velocity="${radians(130)}"/>
+  </joint>
+  <joint name="joint_e" type="revolute">
+    <parent link="link_l"/>
+    <child link="link_e"/>
+    <origin xyz="0 0 0.875" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="${radians(-170)}" upper="${radians(170)}" effort="2549.73" velocity="${radians(130)}"/>
+  </joint>
+  <joint name="joint_u" type="revolute">
+    <parent link="link_e"/>
+    <child link="link_u"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="${radians(-35)}" upper="${radians(215)}" effort="2549.73" velocity="${radians(130)}"/>
+  </joint>
+  <joint name="joint_r" type="revolute">
+    <parent link="link_u"/>
+    <child link="link_r"/>
+    <origin xyz="0.61 0 0" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${radians(-170)}" upper="${radians(170)}" effort="720.2" velocity="${radians(130)}"/>
+  </joint>
+  <joint name="joint_b" type="revolute">
+    <parent link="link_r"/>
+    <child link="link_b"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="${radians(-125)}" upper="${radians(125)}" effort="720.2" velocity="${radians(130)}"/>
+  </joint>
+  <joint name="joint_t" type="revolute">
+    <parent link="link_b"/>
+    <child link="link_t"/>
+    <origin xyz="0.35 0 0" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" effort="255.76" velocity="${radians(200)}"/>
+  </joint>
+  <joint name="link_t-tool0" type="fixed">
+    <origin xyz="0 0 0.0" rpy="0 0 ${radians(-180)}"/>
+    <parent link="link_t"/>
+    <child link="tool0"/>
+  </joint>
+  <!-- end of joint list -->
+  <!-- ROS base_link (via base_link) to Motoman Robot (not Base) Frame transform -->
+  <link name="base"/>
+  <joint name="base_link-base" type="fixed">
+    <origin xyz="0 0 0.540" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="base"/>
+  </joint>
+</robot>

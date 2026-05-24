@@ -1,6 +1,8 @@
 *.SLDASM
 *.venv
-
+.antigravitycli
+.claude
+temp/
 # Zip 文件夹
 *_Zip/
 *.zip

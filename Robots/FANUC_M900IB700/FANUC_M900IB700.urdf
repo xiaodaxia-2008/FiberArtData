@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="FANUC_M900IB700">
+  <fanuc_m900ib700_base prefix="" has_plinks="true" has_balancers="true" has_fl_pockets="false"/>
+</robot>

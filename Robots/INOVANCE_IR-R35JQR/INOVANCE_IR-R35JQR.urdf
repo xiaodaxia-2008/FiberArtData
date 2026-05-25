@@ -107,45 +107,45 @@
     <child link="link1"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-170" upper="170" velocity="200"/>
+    <limit lower="${radians(-170)}" upper="${radians(170)}" velocity="${radians(200)}"/>
   </joint>
   <joint name="joint2" type="revolute">
     <parent link="link1"/>
     <child link="link2"/>
     <origin xyz="0.17 0 0.5" rpy="0 0 0"/>
     <axis xyz="0 -1 0"/>
-    <limit lower="-155" upper="80" velocity="180"/>
+    <limit lower="${radians(-155)}" upper="${radians(80)}" velocity="${radians(180)}"/>
   </joint>
   <joint name="joint3" type="revolute">
     <parent link="link2"/>
     <child link="link3"/>
     <origin xyz="0 0 0.84" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="-160" upper="75" velocity="242"/>
+    <limit lower="${radians(-160)}" upper="${radians(75)}" velocity="${radians(242)}"/>
   </joint>
   <joint name="joint4" type="revolute">
     <parent link="link3"/>
     <child link="link4"/>
     <origin xyz="0.8345 0 0.14" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit lower="-180" upper="180" velocity="450"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" velocity="${radians(450)}"/>
   </joint>
   <joint name="joint5" type="revolute">
     <parent link="link4"/>
     <child link="link5"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 -1 0"/>
-    <limit lower="-130" upper="130" velocity="336"/>
+    <limit lower="${radians(-130)}" upper="${radians(130)}" velocity="${radians(336)}"/>
   </joint>
   <joint name="joint6" type="revolute">
     <parent link="link5"/>
     <child link="link6"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit lower="-360" upper="360" velocity="407"/>
+    <limit lower="${radians(-360)}" upper="${radians(360)}" velocity="${radians(407)}"/>
   </joint>
   <joint name="joint_6_t-tool0" type="fixed">
-    <origin xyz="0.13 0 0" rpy="0 90 0"/>
+    <origin xyz="0.13 0 0" rpy="0 ${radians(90)} 0"/>
     <parent link="link6"/>
     <child link="ee_link"/>
   </joint>

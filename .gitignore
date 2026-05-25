@@ -7,3 +7,4 @@ temp/
 *_Zip/
 *.zip
 ros-robots/
+.env

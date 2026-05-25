@@ -68,25 +68,36 @@ def main():
                                 
                         model_name = root.get('name', fallback_name)
                         
-                        # Heuristics for brand
-                        brand = "Unknown"
-                        name_upper = model_name.upper()
-                        if name_upper.startswith('KR') or name_upper.startswith('LBR'):
-                            brand = "KUKA"
-                        elif name_upper.startswith('IRB'):
-                            brand = "ABB"
-                        elif name_upper.startswith('M-') or name_upper.startswith('R-'):
-                            brand = "FANUC"
-                            
-                        catalog["models"].append({
+                        model_entry = {
                             "type": cat["type"],
                             "name": model_name,
-                            "brand": brand,
-                            "payload_kg": 0.0,
-                            "reach_m": 0.0,
                             "urdf": rel_urdf,
-                            "zip_url": zip_url
-                        })
+                            "uri": zip_url
+                        }
+                        
+                        brand = root.get('brand')
+                        if brand is not None:
+                            model_entry["brand"] = brand
+                            
+                        payload = root.get('payload')
+                        if payload is not None:
+                            try:
+                                model_entry["payload"] = float(payload)
+                            except ValueError:
+                                model_entry["payload"] = payload
+                                
+                        reach = root.get('reach')
+                        if reach is not None:
+                            try:
+                                model_entry["reach"] = float(reach)
+                            except ValueError:
+                                model_entry["reach"] = reach
+                                
+                        xml_type = root.get('type')
+                        if xml_type is not None:
+                            model_entry["type"] = xml_type
+                            
+                        catalog["models"].append(model_entry)
                     except Exception as e:
                         print(f"Error parsing {urdf_path}: {e}")
                     

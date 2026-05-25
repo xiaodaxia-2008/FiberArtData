@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="STAUBLI_RX160">
+<robot name="STAUBLI_RX160" payload="20" reach="1.6" brand="STAUBLI" type="Robot">
   <material name="staubli_ral_grey_aluminium">
     <color rgba="0.529412 0.521569 0.505882 1.0"/>
   </material>

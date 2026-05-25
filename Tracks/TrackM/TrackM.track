@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<robot name="TrackM">
+<robot name="TrackM" payload="1000" brand="Custom" type="Track">
   <!-- Properties -->
   <!-- link list -->
   <material name="gray">

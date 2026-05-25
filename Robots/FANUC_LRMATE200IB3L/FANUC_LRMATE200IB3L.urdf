@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="FANUC_LRMATE200IB3L">
+<robot name="FANUC_LRMATE200IB3L" payload="3" reach="0.83" brand="FANUC" type="Robot">
   <material name="fanuc_black">
     <color rgba="0.15 0.15 0.15 1.0"/>
   </material>

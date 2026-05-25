@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="MOTOMAN_CSDA10F">
+<robot name="MOTOMAN_CSDA10F" brand="MOTOMAN" type="Robot">
   <torso name="torso" prefix="torso_"/>
   <csda10f_motoman_arm name="arm_left" prefix="arm_left_" parent="torso_link_b1" reflect="1">
     <origin xyz="0 0 0" rpy="0 0 0"/>

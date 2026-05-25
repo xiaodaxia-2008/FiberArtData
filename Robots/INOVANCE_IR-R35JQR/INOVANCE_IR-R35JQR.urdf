@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="INOVANCE_IR-R35JQR">
+<robot name="INOVANCE_IR-R35JQR" payload="35" reach="1.856" brand="INOVANCE" type="Robot">
   <!-- Properties -->
   <material name="kuka_gray">
     <color rgba="0.4 0.4 0.4 1"/>

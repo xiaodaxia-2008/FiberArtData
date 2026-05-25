@@ -1,4 +1,4 @@
-<robot name="sucker">
+<robot name="sucker" brand="Custom" type="Tool">
     <material name="tool_gray">
         <color rgba="0.82 0.68 0.61 1" />
     </material>

@@ -1,5 +1,5 @@
 
-<robot name="AFPH16">
+<robot name="AFPH16" brand="Custom" type="Tool">
     <material name="organge">
         <color rgba="0.96 0.65 0.14 1" />
     </material>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="UR20">
+<robot name="UR20" payload="20" reach="1.75" brand="UR" type="Robot">
   <!--
     Base UR robot series xacro macro.
 

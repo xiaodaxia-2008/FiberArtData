@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="KUKA_KR3R540">
+<robot name="KUKA_KR3R540" payload="3" reach="0.54" brand="KUKA" type="Robot">
   <material name="kuka_pedestal">
     <color rgba="0.505882 0.470588 0.388235 1.0"/>
   </material>

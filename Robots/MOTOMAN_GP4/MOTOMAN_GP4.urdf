@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="MOTOMAN_GP4">
+<robot name="MOTOMAN_GP4" brand="MOTOMAN" type="Robot">
   <material name="yaskawa_blue">
     <color rgba="0.1294118 0.1490196 0.7490196 1.0"/>
   </material>

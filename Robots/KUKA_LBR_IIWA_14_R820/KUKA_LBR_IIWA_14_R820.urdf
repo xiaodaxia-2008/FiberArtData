@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="KUKA_LBR_IIWA_14_R820">
+<robot name="KUKA_LBR_IIWA_14_R820" payload="14" reach="0.82" brand="KUKA" type="Robot">
   <!-- link list -->
   <link name="base_link">
     <visual>

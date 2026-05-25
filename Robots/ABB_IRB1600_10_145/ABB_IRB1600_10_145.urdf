@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="ABB_IRB1600_10_145">
+<robot name="ABB_IRB1600_10_145" payload="10" reach="1.45" brand="ABB" type="Robot">
   <material name="abb_orange">
     <color rgba="0.7372549 0.3490196 0.1607843 1"/>
   </material>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="KUKA_KR10R900_2">
+<robot name="KUKA_KR10R900_2" payload="10" reach="0.901" brand="KUKA" type="Robot">
   <material name="kuka_black">
     <color rgba="0.054902 0.054902 0.062745 1.0"/>
   </material>

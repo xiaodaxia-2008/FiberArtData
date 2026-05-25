@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="KUKA_KR210L150">
+<robot name="KUKA_KR210L150" payload="150" reach="3.1" brand="KUKA" type="Robot">
   <!-- links -->
   <link name="base_link">
     <inertial>

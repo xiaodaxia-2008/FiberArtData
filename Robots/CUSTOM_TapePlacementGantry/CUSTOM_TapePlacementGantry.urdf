@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="CUSTOM_TapePlacementGantry">
+<robot name="CUSTOM_TapePlacementGantry" brand="Custom" type="Robot">
   <!-- Properties -->
   <material name="gantry_gray">
     <color rgba="0.4 0.4 0.4 1"/>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<robot name="PositionerM">
+<robot name="PositionerM" payload="1000" brand="Custom" type="Positioner">
   <!-- Properties -->
   <!-- link list -->
   <material name="gray">

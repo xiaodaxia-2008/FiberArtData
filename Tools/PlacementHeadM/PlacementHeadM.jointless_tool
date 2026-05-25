@@ -10,7 +10,7 @@
             </geometry>
         </visual>
     </link>
-    <attach_pose xyz="0 0 0" rpy="0 0 180"/>
-    <tcp xyz="-0.001761239 0.000556 0.636682762" rpy="180 0 180"/>
+    <attach_pose xyz="0 0 0" rpy="0 0 ${radians(180)}"/>
+    <tcp xyz="-0.001761239 0.000556 0.636682762" rpy="${radians(180)} 0 ${radians(180)}"/>
 </robot>
     

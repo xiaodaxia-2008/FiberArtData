@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<robot name="UR_UR15">
+<robot name="UR20">
   <!--
     Base UR robot series xacro macro.
 
@@ -130,7 +130,7 @@
     <inertial>
       <mass value="4.0"/>
       <origin rpy="0 0 0" xyz="0 0 0"/>
-      <inertia ixx="0.032233320440000005" ixy="0.0" ixz="0.0" iyy="0.032233320440000005" iyz="0.0" izz="0.05780000000000001"/>
+      <inertia ixx="0.0061063308908" ixy="0.0" ixz="0.0" iyy="0.0061063308908" iyz="0.0" izz="0.01125"/>
     </inertial>
   </link>
   <link name="shoulder_link">
@@ -150,14 +150,14 @@
       </geometry>
     </collision>
     <inertial>
-      <mass value="9.9883"/>
-      <origin rpy="1.570796326794897 0 0" xyz="2.4e-05 -0.025304 -0.033309"/>
-      <inertia ixx="0.051334" ixy="2.5e-05" ixz="-1.6e-05" iyy="0.047702" iyz="0.008805" izz="0.034263"/>
+      <mass value="16.343"/>
+      <origin rpy="1.570796326794897 0 0" xyz="0.0 -0.0062 -0.061"/>
+      <inertia ixx="0.08866" ixy="-0.00011" ixz="-0.00011" iyy="0.07632" iyz="0.0072" izz="0.08418"/>
     </inertial>
   </link>
   <link name="upper_arm_link">
     <visual>
-      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.1"/>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26"/>
       <geometry>
         <mesh filename="visual/upperarm.dae"/>
       </geometry>
@@ -166,20 +166,20 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.1"/>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.26"/>
       <geometry>
         <mesh filename="collision/upperarm.stl"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="14.9255"/>
-      <origin rpy="0 0 0" xyz="-0.228491 -8.3e-05 0.192787"/>
-      <inertia ixx="0.048202" ixy="0.000232" ixz="-0.032135" iyy="1.188499" iyz="-1.7e-05" izz="1.182771"/>
+      <mass value="29.632"/>
+      <origin rpy="0 0 0" xyz="-0.3394 0.0 0.2098"/>
+      <inertia ixx="0.1467" ixy="0.00019" ixz="-0.05163" iyy="4.6659" iyz="4e-05" izz="4.6348"/>
     </inertial>
   </link>
   <link name="forearm_link">
     <visual>
-      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.125"/>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043"/>
       <geometry>
         <mesh filename="visual/forearm.dae"/>
       </geometry>
@@ -188,21 +188,21 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.125"/>
+      <origin rpy="1.5707963267948966 0 -1.5707963267948966" xyz="0 0 0.043"/>
       <geometry>
         <mesh filename="collision/forearm.stl"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="6.1015"/>
-      <origin rpy="0 0 0" xyz="-0.210929 1.9e-05 0.070552"/>
-      <inertia ixx="0.018481" ixy="-5e-06" ixz="0.013601" iyy="0.303502" iyz="3e-06" izz="0.296843"/>
+      <mass value="7.879"/>
+      <origin rpy="0 0 0" xyz="-0.4053 0.0 0.0604"/>
+      <inertia ixx="0.02612" ixy="-5e-05" ixz="-0.02898" iyy="0.75763" iyz="-1e-05" izz="0.75327"/>
     </inertial>
   </link>
   <link name="wrist_1_link">
     <visual>
       <!-- TODO: Move this to a parameter -->
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0502"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775"/>
       <geometry>
         <mesh filename="visual/wrist1.dae"/>
       </geometry>
@@ -211,20 +211,20 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0502"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0775"/>
       <geometry>
         <mesh filename="collision/wrist1.stl"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="2.089"/>
-      <origin rpy="1.570796326794897 0 0" xyz="2.5e-05 -0.016413 -0.019695"/>
-      <inertia ixx="0.004339" ixy="1.9e-05" ixz="1e-06" iyy="0.002548" iyz="0.000706" izz="0.003912"/>
+      <mass value="3.054"/>
+      <origin rpy="1.570796326794897 0 0" xyz="0.0 -0.0393 -0.0026"/>
+      <inertia ixx="0.00555" ixy="-1e-05" ixz="-2e-05" iyy="0.00537" iyz="0.00036" izz="0.00402"/>
     </inertial>
   </link>
   <link name="wrist_2_link">
     <visual>
-      <origin rpy="0 0 0" xyz="0 0 -0.064"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.0749"/>
       <geometry>
         <mesh filename="visual/wrist2.dae"/>
       </geometry>
@@ -233,20 +233,20 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="0 0 0" xyz="0 0 -0.064"/>
+      <origin rpy="0 0 0" xyz="0 0 -0.0749"/>
       <geometry>
         <mesh filename="collision/wrist2.stl"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="2.0869"/>
-      <origin rpy="-1.570796326794897 0 0" xyz="2.5e-05 0.015886 -0.01996"/>
-      <inertia ixx="0.004288" ixy="1.7e-05" ixz="-3e-06" iyy="0.002566" iyz="-0.000716" izz="0.003927"/>
+      <mass value="3.126"/>
+      <origin rpy="-1.570796326794897 0 0" xyz="0.0 0.0379 -0.0024"/>
+      <inertia ixx="0.00586" ixy="-1e-05" ixz="-2e-05" iyy="0.00578" iyz="-0.00037" izz="0.00427"/>
     </inertial>
   </link>
   <link name="wrist_3_link">
     <visual>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0715"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07"/>
       <geometry>
         <mesh filename="visual/wrist3.dae"/>
       </geometry>
@@ -255,15 +255,15 @@
       </material>
     </visual>
     <collision>
-      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.0715"/>
+      <origin rpy="1.5707963267948966 0 0" xyz="0 0 -0.07"/>
       <geometry>
         <mesh filename="collision/wrist3.stl"/>
       </geometry>
     </collision>
     <inertial>
-      <mass value="1.0666"/>
-      <origin rpy="0 0 0" xyz="-1.8e-05 -0.000112 -0.053397"/>
-      <inertia ixx="0.001406" ixy="-3e-06" ixz="1e-05" iyy="0.001404" iyz="-2.4e-05" izz="0.001002"/>
+      <mass value="0.926"/>
+      <origin rpy="0 0 0" xyz="0.0 0.0 -0.0293"/>
+      <inertia ixx="0.00092" ixy="0.0" ixz="0.0" iyy="0.00091" iyz="0.0" izz="0.00117"/>
     </inertial>
   </link>
   <!-- joints: main serial chain -->
@@ -280,9 +280,9 @@
   <joint name="shoulder_pan_joint" type="revolute">
     <parent link="base_link_inertia"/>
     <child link="shoulder_link"/>
-    <origin rpy="0 0 0" xyz="0 0 0.2186"/>
+    <origin rpy="0 0 0" xyz="0 0 0.2363"/>
     <axis xyz="0 0 1"/>
-    <limit effort="433.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <limit effort="738.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="2.0943951023931953"/>
     <dynamics damping="0" friction="0"/>
   </joint>
   <joint name="shoulder_lift_joint" type="revolute">
@@ -290,39 +290,39 @@
     <child link="upper_arm_link"/>
     <origin rpy="1.570796327 0 0" xyz="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="433.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.141592653589793"/>
+    <limit effort="738.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="2.0943951023931953"/>
     <dynamics damping="0" friction="0"/>
   </joint>
   <joint name="elbow_joint" type="revolute">
     <parent link="upper_arm_link"/>
     <child link="forearm_link"/>
-    <origin rpy="0 0 0" xyz="-0.6475 0 0"/>
+    <origin rpy="0 0 0" xyz="-0.862 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit effort="204.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="4.1887902047863905"/>
+    <limit effort="433.0" lower="-3.141592653589793" upper="3.141592653589793" velocity="2.6179938779914944"/>
     <dynamics damping="0" friction="0"/>
   </joint>
   <joint name="wrist_1_joint" type="revolute">
     <parent link="forearm_link"/>
     <child link="wrist_1_link"/>
-    <origin rpy="0 0 0" xyz="-0.5164 0 0.1824"/>
+    <origin rpy="0 0 0" xyz="-0.7287 0 0.201"/>
     <axis xyz="0 0 1"/>
-    <limit effort="70.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="5.235987755982989"/>
+    <limit effort="107.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.6651914291880923"/>
     <dynamics damping="0" friction="0"/>
   </joint>
   <joint name="wrist_2_joint" type="revolute">
     <parent link="wrist_1_link"/>
     <child link="wrist_2_link"/>
-    <origin rpy="1.570796327 0 0" xyz="0 -0.1361 -2.791457662093657e-11"/>
+    <origin rpy="1.570796327 0 0" xyz="0 -0.1593 -3.267297616249225e-11"/>
     <axis xyz="0 0 1"/>
-    <limit effort="70.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="5.235987755982989"/>
+    <limit effort="107.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.6651914291880923"/>
     <dynamics damping="0" friction="0"/>
   </joint>
   <joint name="wrist_3_joint" type="revolute">
     <parent link="wrist_2_link"/>
     <child link="wrist_3_link"/>
-    <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793" xyz="0 0.1434 -2.941183164909849e-11"/>
+    <origin rpy="1.570796326589793 3.141592653589793 3.141592653589793" xyz="0 0.1543 -3.1647459019915597e-11"/>
     <axis xyz="0 0 1"/>
-    <limit effort="70.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="5.235987755982989"/>
+    <limit effort="107.0" lower="-6.283185307179586" upper="6.283185307179586" velocity="3.6651914291880923"/>
     <dynamics damping="0" friction="0"/>
   </joint>
   <!-- ROS-Industrial 'base' frame: base_link to UR 'Base' Coordinates transform -->

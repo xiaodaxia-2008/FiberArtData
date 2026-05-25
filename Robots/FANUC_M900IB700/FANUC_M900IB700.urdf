@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<robot name="FANUC_M900IB700" brand="FANUC" type="Robot">
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="FANUC_M900IB700" brand="FANUC" type="Robot" payload="700" reach="2.832">
   <fanuc_m900ib700_base prefix="" has_plinks="true" has_balancers="true" has_fl_pockets="false"/>
 </robot>

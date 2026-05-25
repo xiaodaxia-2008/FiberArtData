@@ -267,14 +267,18 @@
       "name": "CUSTOM_Gantry",
       "urdf": "Robots/CUSTOM_Gantry/CUSTOM_Gantry.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/CUSTOM_Gantry.zip",
-      "brand": "Custom"
+      "brand": "Custom",
+      "payload": 200.0,
+      "reach": 10.0
     },
     {
       "type": "Robot",
       "name": "CUSTOM_TapePlacementGantry",
       "urdf": "Robots/CUSTOM_TapePlacementGantry/CUSTOM_TapePlacementGantry.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/CUSTOM_TapePlacementGantry.zip",
-      "brand": "Custom"
+      "brand": "Custom",
+      "payload": 200.0,
+      "reach": 10.0
     },
     {
       "type": "Robot",
@@ -380,56 +384,72 @@
       "name": "FANUC_LRMATE200IC5L",
       "urdf": "Robots/FANUC_LRMATE200IC5L/FANUC_LRMATE200IC5L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IC5L.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 5.0,
+      "reach": 0.911
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID",
       "urdf": "Robots/FANUC_LRMATE200ID/FANUC_LRMATE200ID.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 7.0,
+      "reach": 0.717
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID4S",
       "urdf": "Robots/FANUC_LRMATE200ID4S/FANUC_LRMATE200ID4S.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID4S.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 7.0,
+      "reach": 0.55
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID4SC",
       "urdf": "Robots/FANUC_LRMATE200ID4SC/FANUC_LRMATE200ID4SC.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID4SC.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 7.0,
+      "reach": 0.55
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID4SH",
       "urdf": "Robots/FANUC_LRMATE200ID4SH/FANUC_LRMATE200ID4SH.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID4SH.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 4.0,
+      "reach": 0.55
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID7H",
       "urdf": "Robots/FANUC_LRMATE200ID7H/FANUC_LRMATE200ID7H.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID7H.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 7.0,
+      "reach": 0.717
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID7L",
       "urdf": "Robots/FANUC_LRMATE200ID7L/FANUC_LRMATE200ID7L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID7L.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 7.0,
+      "reach": 0.911
     },
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID7LC",
       "urdf": "Robots/FANUC_LRMATE200ID7LC/FANUC_LRMATE200ID7LC.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID7LC.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 7.0,
+      "reach": 0.911
     },
     {
       "type": "Robot",
@@ -481,7 +501,9 @@
       "name": "FANUC_M20IB25",
       "urdf": "Robots/FANUC_M20IB25/FANUC_M20IB25.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M20IB25.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 25.0,
+      "reach": 1.853
     },
     {
       "type": "Robot",
@@ -497,28 +519,36 @@
       "name": "FANUC_M430IA2P",
       "urdf": "Robots/FANUC_M430IA2P/FANUC_M430IA2P.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M430IA2P.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 2.0,
+      "reach": 0.9
     },
     {
       "type": "Robot",
       "name": "FANUC_M6IB",
       "urdf": "Robots/FANUC_M6IB/FANUC_M6IB.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M6IB.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 6.0,
+      "reach": 1.373
     },
     {
       "type": "Robot",
       "name": "FANUC_M6IB6S",
       "urdf": "Robots/FANUC_M6IB6S/FANUC_M6IB6S.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M6IB6S.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 6.0,
+      "reach": 0.951
     },
     {
       "type": "Robot",
       "name": "FANUC_M710IC45M",
       "urdf": "Robots/FANUC_M710IC45M/FANUC_M710IC45M.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M710IC45M.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 45.0,
+      "reach": 2.606
     },
     {
       "type": "Robot",
@@ -534,14 +564,18 @@
       "name": "FANUC_M900IA260L",
       "urdf": "Robots/FANUC_M900IA260L/FANUC_M900IA260L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M900IA260L.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 260.0,
+      "reach": 3.1
     },
     {
       "type": "Robot",
       "name": "FANUC_M900IB700",
       "urdf": "Robots/FANUC_M900IB700/FANUC_M900IB700.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M900IB700.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 700.0,
+      "reach": 2.832
     },
     {
       "type": "Robot",
@@ -566,7 +600,9 @@
       "name": "FANUC_R2000IC125L",
       "urdf": "Robots/FANUC_R2000IC125L/FANUC_R2000IC125L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC125L.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 125.0,
+      "reach": 3.1
     },
     {
       "type": "Robot",
@@ -591,7 +627,9 @@
       "name": "FANUC_R2000IC210L",
       "urdf": "Robots/FANUC_R2000IC210L/FANUC_R2000IC210L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC210L.zip",
-      "brand": "FANUC"
+      "brand": "FANUC",
+      "payload": 210.0,
+      "reach": 3.1
     },
     {
       "type": "Robot",
@@ -633,7 +671,10 @@
       "type": "Robot",
       "name": "KUKA_KR10R1420HP",
       "urdf": "Robots/KUKA_KR10R1420HP/KUKA_KR10R1420HP.urdf",
-      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R1420HP.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R1420HP.zip",
+      "brand": "KUKA",
+      "payload": 10.0,
+      "reach": 1.42
     },
     {
       "type": "Robot",
@@ -693,13 +734,19 @@
       "type": "Robot",
       "name": "KUKA_KR210R2700-2",
       "urdf": "Robots/KUKA_KR210R2700-2/KUKA_KR210R2700-2.urdf",
-      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR210R2700-2.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR210R2700-2.zip",
+      "brand": "KUKA",
+      "payload": 210.0,
+      "reach": 2.701
     },
     {
       "type": "Robot",
       "name": "KUKA_KR360R2830",
       "urdf": "Robots/KUKA_KR360R2830/KUKA_KR360R2830.urdf",
-      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR360R2830.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR360R2830.zip",
+      "brand": "KUKA",
+      "payload": 360.0,
+      "reach": 2.826
     },
     {
       "type": "Robot",
@@ -714,13 +761,19 @@
       "type": "Robot",
       "name": "KUKA_KR480R3330MT",
       "urdf": "Robots/KUKA_KR480R3330MT/KUKA_KR480R3330MT.urdf",
-      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR480R3330MT.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR480R3330MT.zip",
+      "brand": "KUKA",
+      "payload": 480.0,
+      "reach": 3.33
     },
     {
       "type": "Robot",
       "name": "KUKA_KR500R2380",
       "urdf": "Robots/KUKA_KR500R2380/KUKA_KR500R2380.urdf",
-      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR500R2380.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR500R2380.zip",
+      "brand": "KUKA",
+      "payload": 500.0,
+      "reach": 2.38
     },
     {
       "type": "Robot",
@@ -781,21 +834,27 @@
       "name": "MOTOMAN_ARM",
       "urdf": "Robots/MOTOMAN_ARM/MOTOMAN_ARM.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_ARM.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 0.72
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_CSDA10F",
       "urdf": "Robots/MOTOMAN_CSDA10F/MOTOMAN_CSDA10F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_CSDA10F.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 0.72
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_CSDA10F_MOTOMAN_ARM",
       "urdf": "Robots/MOTOMAN_CSDA10F_MOTOMAN_ARM/MOTOMAN_CSDA10F_MOTOMAN_ARM.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_CSDA10F_MOTOMAN_ARM.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 0.72
     },
     {
       "type": "Robot",
@@ -847,7 +906,9 @@
       "name": "MOTOMAN_GP165R_EQUIPPED",
       "urdf": "Robots/MOTOMAN_GP165R_EQUIPPED/MOTOMAN_GP165R_EQUIPPED.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP165R_EQUIPPED.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 165.0,
+      "reach": 3.14
     },
     {
       "type": "Robot",
@@ -881,21 +942,27 @@
       "name": "MOTOMAN_GP20HL",
       "urdf": "Robots/MOTOMAN_GP20HL/MOTOMAN_GP20HL.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP20HL.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 20.0,
+      "reach": 3.124
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP215",
       "urdf": "Robots/MOTOMAN_GP215/MOTOMAN_GP215.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP215.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 215.0,
+      "reach": 3.061
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP225",
       "urdf": "Robots/MOTOMAN_GP225/MOTOMAN_GP225.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP225.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 225.0,
+      "reach": 3.935
     },
     {
       "type": "Robot",
@@ -911,35 +978,45 @@
       "name": "MOTOMAN_GP250",
       "urdf": "Robots/MOTOMAN_GP250/MOTOMAN_GP250.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP250.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 250.0,
+      "reach": 2.951
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP25_12",
       "urdf": "Robots/MOTOMAN_GP25_12/MOTOMAN_GP25_12.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP25_12.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 12.0,
+      "reach": 1.73
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP25_20",
       "urdf": "Robots/MOTOMAN_GP25_20/MOTOMAN_GP25_20.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP25_20.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 20.0,
+      "reach": 1.73
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP35L",
       "urdf": "Robots/MOTOMAN_GP35L/MOTOMAN_GP35L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP35L.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 35.0,
+      "reach": 2.538
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP4",
       "urdf": "Robots/MOTOMAN_GP4/MOTOMAN_GP4.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP4.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 4.0,
+      "reach": 0.55
     },
     {
       "type": "Robot",
@@ -955,14 +1032,18 @@
       "name": "MOTOMAN_GP7",
       "urdf": "Robots/MOTOMAN_GP7/MOTOMAN_GP7.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP7.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 7.0,
+      "reach": 0.927
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP70L",
       "urdf": "Robots/MOTOMAN_GP70L/MOTOMAN_GP70L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP70L.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 70.0,
+      "reach": 3.048
     },
     {
       "type": "Robot",
@@ -978,14 +1059,18 @@
       "name": "MOTOMAN_GP88",
       "urdf": "Robots/MOTOMAN_GP88/MOTOMAN_GP88.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP88.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 88.0,
+      "reach": 2.235
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_GP8L",
       "urdf": "Robots/MOTOMAN_GP8L/MOTOMAN_GP8L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP8L.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 8.0,
+      "reach": 1.236
     },
     {
       "type": "Robot",
@@ -1010,49 +1095,63 @@
       "name": "MOTOMAN_HC10DTP_B00",
       "urdf": "Robots/MOTOMAN_HC10DTP_B00/MOTOMAN_HC10DTP_B00.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC10DTP_B00.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 1.2
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_HC10DT_B10",
       "urdf": "Robots/MOTOMAN_HC10DT_B10/MOTOMAN_HC10DT_B10.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC10DT_B10.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 1.2
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_HC20",
       "urdf": "Robots/MOTOMAN_HC20/MOTOMAN_HC20.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC20.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 20.0,
+      "reach": 1.7
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_HC20DTP",
       "urdf": "Robots/MOTOMAN_HC20DTP/MOTOMAN_HC20DTP.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC20DTP.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 20.0,
+      "reach": 1.7
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_HC30PL",
       "urdf": "Robots/MOTOMAN_HC30PL/MOTOMAN_HC30PL.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC30PL.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 30.0,
+      "reach": 2.1
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_MA2010",
       "urdf": "Robots/MOTOMAN_MA2010/MOTOMAN_MA2010.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MA2010.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 2.01
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_MH110",
       "urdf": "Robots/MOTOMAN_MH110/MOTOMAN_MH110.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MH110.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 110.0,
+      "reach": 2.235
     },
     {
       "type": "Robot",
@@ -1095,35 +1194,45 @@
       "name": "MOTOMAN_MOTOMINI",
       "urdf": "Robots/MOTOMAN_MOTOMINI/MOTOMAN_MOTOMINI.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MOTOMINI.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 1.0,
+      "reach": 0.35
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_MOTOPOS_D500",
       "urdf": "Robots/MOTOMAN_MOTOPOS_D500/MOTOMAN_MOTOPOS_D500.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MOTOPOS_D500.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 500.0,
+      "reach": 2.0
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_MOTOPOS_MH1655",
       "urdf": "Robots/MOTOMAN_MOTOPOS_MH1655/MOTOMAN_MOTOPOS_MH1655.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MOTOPOS_MH1655.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 165.0,
+      "reach": 2.0
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_MPX1950",
       "urdf": "Robots/MOTOMAN_MPX1950/MOTOMAN_MPX1950.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MPX1950.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 7.0,
+      "reach": 1.95
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_MS210",
       "urdf": "Robots/MOTOMAN_MS210/MOTOMAN_MS210.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MS210.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 210.0,
+      "reach": 2.651
     },
     {
       "type": "Robot",
@@ -1148,7 +1257,9 @@
       "name": "MOTOMAN_SIA10F",
       "urdf": "Robots/MOTOMAN_SIA10F/MOTOMAN_SIA10F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA10F.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 10.0,
+      "reach": 0.72
     },
     {
       "type": "Robot",
@@ -1164,14 +1275,18 @@
       "name": "MOTOMAN_SIA30D",
       "urdf": "Robots/MOTOMAN_SIA30D/MOTOMAN_SIA30D.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA30D.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 30.0,
+      "reach": 1.485
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA50",
       "urdf": "Robots/MOTOMAN_SIA50/MOTOMAN_SIA50.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA50.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 50.0,
+      "reach": 1.63
     },
     {
       "type": "Robot",
@@ -1187,14 +1302,18 @@
       "name": "MOTOMAN_TORSO",
       "urdf": "Robots/MOTOMAN_TORSO/MOTOMAN_TORSO.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_TORSO.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 5.0,
+      "reach": 0.7
     },
     {
       "type": "Robot",
       "name": "MOTOMAN_UP50N_35",
       "urdf": "Robots/MOTOMAN_UP50N_35/MOTOMAN_UP50N_35.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_UP50N_35.zip",
-      "brand": "MOTOMAN"
+      "brand": "MOTOMAN",
+      "payload": 35.0,
+      "reach": 1.63
     },
     {
       "type": "Robot",
@@ -1246,7 +1365,9 @@
       "name": "UR15",
       "urdf": "Robots/UR15/UR15.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR15.zip",
-      "brand": "UR"
+      "brand": "UR",
+      "payload": 15.0,
+      "reach": 1.3
     },
     {
       "type": "Robot",
@@ -1262,7 +1383,9 @@
       "name": "UR18",
       "urdf": "Robots/UR18/UR18.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR18.zip",
-      "brand": "UR"
+      "brand": "UR",
+      "payload": 18.0,
+      "reach": 0.95
     },
     {
       "type": "Robot",
@@ -1323,14 +1446,18 @@
       "name": "UR7E",
       "urdf": "Robots/UR7E/UR7E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR7E.zip",
-      "brand": "UR"
+      "brand": "UR",
+      "payload": 5.0,
+      "reach": 0.85
     },
     {
       "type": "Robot",
       "name": "UR8LONG",
       "urdf": "Robots/UR8LONG/UR8LONG.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR8LONG.zip",
-      "brand": "UR"
+      "brand": "UR",
+      "payload": 10.0,
+      "reach": 1.75
     },
     {
       "type": "Track",
@@ -1352,7 +1479,8 @@
       "type": "Positioner",
       "name": "DemoPositioner",
       "urdf": "Positioners/DemoPositioner/DemoPositioner.positioner",
-      "uri": "https://storage.fiber-art.myshawn.com/Positioners/DemoPositioner.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Positioners/DemoPositioner.zip",
+      "brand": "Custom"
     },
     {
       "type": "Positioner",

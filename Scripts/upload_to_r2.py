@@ -1,5 +1,6 @@
 #!/usr/bin/env -S uv run --script
 # /// script
+# requires-python = ">=3.12"
 # dependencies = ["boto3", "python-dotenv", "tqdm"]
 # ///
 
@@ -57,13 +58,13 @@ def upload_file_if_changed(s3_client, local_path, s3_key):
 
     local_md5 = calculate_md5(local_path)
     
-    # Check if remote file exists and has same MD5 (ETag)
+    # Check if remote file exists and has same Metadata MD5
     try:
         response = s3_client.head_object(Bucket=BUCKET_NAME, Key=s3_key)
-        remote_etag = response.get('ETag', '').strip('"\'')
+        remote_md5 = response.get('Metadata', {}).get('local-md5')
         
-        if local_md5 == remote_etag:
-            print(f"[Skipped] {s3_key} (Hash matched: {local_md5})")
+        if local_md5 == remote_md5:
+            print(f"[Skipped] {s3_key} (Metadata MD5 matched: {local_md5})")
             return
     except ClientError as e:
         error_code = e.response['Error']['Code']
@@ -78,10 +79,22 @@ def upload_file_if_changed(s3_client, local_path, s3_key):
         file_size = os.path.getsize(local_path)
         progress_callback = ProgressPercentage(local_path, file_size)
         
+        # Prepare upload arguments with Metadata and ContentType
+        extra_args = {
+            'Metadata': {
+                'local-md5': local_md5
+            }
+        }
+        if s3_key.endswith('.zip'):
+            extra_args['ContentType'] = 'application/zip'
+        elif s3_key.endswith('.json'):
+            extra_args['ContentType'] = 'application/json'
+            
         s3_client.upload_file(
             local_path,
             BUCKET_NAME,
             s3_key,
+            ExtraArgs=extra_args,
             Callback=progress_callback
         )
         print(f"[Success] Uploaded {s3_key}")
@@ -113,6 +126,8 @@ def main():
     models = catalog.get("models", [])
     print(f"Found {len(models)} models in catalog.json.")
 
+    processed_models = set()
+
     # 1. Process and zip folders according to catalog.json
     for model in models:
         urdf_rel_path = model.get("urdf")
@@ -120,15 +135,33 @@ def main():
             continue
 
         # e.g., "Robots/UR10/UR10.urdf" -> parts: ["Robots", "UR10", "UR10.urdf"]
+        # or "Robots/UR10.urdf" -> parts: ["Robots", "UR10.urdf"]
         parts = urdf_rel_path.replace("\\", "/").split("/")
-        if len(parts) < 3:
+        if len(parts) < 2:
             continue
 
         category = parts[0]
-        model_folder_name = parts[1]
+        if len(parts) >= 3:
+            model_folder_name = parts[1]
+        else:
+            # Fallback for shallow directory (e.g., Robots/UR10.urdf -> folder UR10)
+            model_folder_name = os.path.splitext(parts[1])[0]
+
+        # Prevent duplicate zipping/uploading for the same model in a single run
+        model_key = (category, model_folder_name)
+        if model_key in processed_models:
+            continue
+        processed_models.add(model_key)
 
         # Define source and zip folders
         source_dir = os.path.join(DATA_DIR, category)
+        model_dir = os.path.join(source_dir, model_folder_name)
+        
+        # Verify source directory exists before zipping
+        if not os.path.isdir(model_dir):
+            print(f"Warning: Model directory {model_dir} does not exist. Skipping.")
+            continue
+
         zip_dir = os.path.join(DATA_DIR, f"{category}_Zips")
         os.makedirs(zip_dir, exist_ok=True)
 
@@ -136,7 +169,11 @@ def main():
         local_zip_path = f"{zip_base}.zip"
         
         print(f"Zipping {category}/{model_folder_name} -> {category}_Zips/{model_folder_name}.zip ...")
-        shutil.make_archive(zip_base, 'zip', source_dir, model_folder_name)
+        try:
+            shutil.make_archive(zip_base, 'zip', source_dir, model_folder_name)
+        except Exception as e:
+            print(f"Error zipping {model_dir}: {e}. Skipping.")
+            continue
 
         # 2. Upload to Cloudflare R2
         s3_key = f"{category}/{model_folder_name}.zip"

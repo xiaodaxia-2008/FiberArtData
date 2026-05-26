@@ -9,6 +9,7 @@ import sys
 import json
 import shutil
 import hashlib
+import argparse
 import boto3
 from botocore.exceptions import ClientError
 from dotenv import load_dotenv
@@ -106,6 +107,10 @@ def main():
         print("Error: Missing R2 credentials in environment variables.")
         sys.exit(1)
 
+    parser = argparse.ArgumentParser(description="Upload zips and catalog to R2")
+    parser.add_argument("--update-file", help="Path to update.json filtering file")
+    args = parser.parse_args()
+
     s3 = boto3.client(
         's3',
         endpoint_url=ENDPOINT_URL,
@@ -125,6 +130,24 @@ def main():
 
     models = catalog.get("models", [])
     print(f"Found {len(models)} models in catalog.json.")
+
+    # Load filter file if specified
+    filter_models = None
+    if args.update_file:
+        if not os.path.exists(args.update_file):
+            print(f"Error: Update file '{args.update_file}' not found.")
+            sys.exit(1)
+        try:
+            with open(args.update_file, "r", encoding="utf-8") as f:
+                update_list = json.load(f)
+            if not isinstance(update_list, list):
+                print("Error: Update file must be a JSON array of strings.")
+                sys.exit(1)
+            filter_models = {str(item).replace("\\", "/").lower() for item in update_list}
+            print(f"Loaded filter from {args.update_file}. Will only process {len(filter_models)} specified models.")
+        except Exception as e:
+            print(f"Error parsing update file: {e}")
+            sys.exit(1)
 
     processed_models = set()
 
@@ -152,6 +175,25 @@ def main():
         if model_key in processed_models:
             continue
         processed_models.add(model_key)
+
+        # Check if we should filter this model
+        if filter_models is not None:
+            model_path_str = f"{category}/{model_folder_name}".lower()
+            folder_name_str = model_folder_name.lower()
+            
+            matched = False
+            if model_path_str in filter_models:
+                matched = True
+            elif folder_name_str in filter_models:
+                matched = True
+            else:
+                for entry in filter_models:
+                    if entry.endswith(f"/{folder_name_str}"):
+                        matched = True
+                        break
+            
+            if not matched:
+                continue
 
         # Define source and zip folders
         source_dir = os.path.join(DATA_DIR, category)

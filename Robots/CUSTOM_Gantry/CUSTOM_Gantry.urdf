@@ -87,7 +87,7 @@
     <child link="link4"/>
     <origin xyz="0 0 -4.8" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="-30" upper="30" velocity="30"/>
+    <limit lower="${radians(-30)}" upper="${radians(30)}" velocity="${radians(30)}"/>
   </joint>
   <link name="link4">
     <visual>
@@ -107,7 +107,7 @@
     <child link="link5"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
-    <limit lower="-95" upper="95" velocity="30"/>
+    <limit lower="${radians(-95)}" upper="${radians(95)}" velocity="${radians(30)}"/>
   </joint>
   <link name="link5">
     <visual>
@@ -127,7 +127,7 @@
     <child link="link6"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-350" upper="350" velocity="90"/>
+    <limit lower="${radians(-350)}" upper="${radians(350)}" velocity="${radians(90)}"/>
   </joint>
   <link name="link6">
     <visual>
@@ -144,7 +144,7 @@
   </link>
   <joint name="joint_6_t-tool0" type="fixed">
     <!-- 这里绕 X 轴旋转180°，让法线符合一般惯例（垂直于法兰盘向外） -->
-    <origin xyz="0 0 -0.395" rpy="180 0 0"/>
+    <origin xyz="0 0 -0.395" rpy="${radians(180)} 0 0"/>
     <parent link="link6"/>
     <child link="ee_link"/>
   </joint>

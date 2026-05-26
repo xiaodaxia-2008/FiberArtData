@@ -111,7 +111,7 @@
     <child link="link4"/>
     <origin xyz="-0.25 0 -2.21" rpy="0 0 0"/>
     <axis xyz="0 0 1"/>
-    <limit lower="-360" upper="360" velocity="180"/>
+    <limit lower="${radians(-360)}" upper="${radians(360)}" velocity="${radians(180)}"/>
   </joint>
   <joint name="joint_4_t-tool0" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0"/>

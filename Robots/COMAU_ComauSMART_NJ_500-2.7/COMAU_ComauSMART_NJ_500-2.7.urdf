@@ -107,52 +107,52 @@
     <child link="link1"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 0 -1"/>
-    <limit lower="-180" upper="180" velocity="45"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" velocity="${radians(45)}"/>
   </joint>
   <joint name="joint2" type="revolute">
     <parent link="link1"/>
     <child link="link2"/>
     <origin xyz="0.46 0 1.14" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="-60" upper="75" velocity="45"/>
+    <limit lower="${radians(-60)}" upper="${radians(75)}" velocity="${radians(45)}"/>
   </joint>
   <joint name="joint3" type="revolute">
     <parent link="link2"/>
     <child link="link3"/>
-    <origin xyz="0 0 1.05" rpy="0 -90 0"/>
+    <origin xyz="0 0 1.05" rpy="0 ${radians(-90)} 0"/>
     <axis xyz="0 -1 0"/>
-    <limit lower="-231" upper="-10" velocity="45"/>
+    <limit lower="${radians(-231)}" upper="${radians(-10)}" velocity="${radians(45)}"/>
   </joint>
   <joint name="joint4" type="revolute">
     <parent link="link3"/>
     <child link="link4"/>
     <origin xyz="1.205 0 0.25" rpy="0 0 0"/>
     <axis xyz="-1 0 0"/>
-    <limit lower="-2700" upper="2700" velocity="90"/>
+    <limit lower="${radians(-2700)}" upper="${radians(2700)}" velocity="${radians(90)}"/>
   </joint>
   <joint name="joint5" type="revolute">
     <parent link="link4"/>
     <child link="link5"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <limit lower="-125" upper="125" velocity="83"/>
+    <limit lower="${radians(-125)}" upper="${radians(125)}" velocity="${radians(83)}"/>
   </joint>
   <joint name="joint6" type="revolute">
     <parent link="link5"/>
     <child link="link6"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="-1 0 0"/>
-    <limit lower="-2700" upper="2700" velocity="130"/>
+    <limit lower="${radians(-2700)}" upper="${radians(2700)}" velocity="${radians(130)}"/>
   </joint>
   <joint name="joint_6_t-tool0" type="fixed">
-    <origin xyz="0.282 0 0" rpy="0 90 0"/>
+    <origin xyz="0.282 0 0" rpy="0 ${radians(90)} 0"/>
     <parent link="link6"/>
     <child link="ee_link"/>
   </joint>
   <!-- end of joint list -->
   <tcp xyz="0 0 0" rpy="0 0 0"/>
   <!-- home positions  -->
-  <home_positions joints="0 0 -90 0 90 0"/>
+  <home_positions joints="0 0 ${radians(-90)} 0 ${radians(90)} 0"/>
   <!-- Ortho-parallel Basis and a Spherical Wrist -->
   <opw_parameters>
     <c1>1.14</c1>

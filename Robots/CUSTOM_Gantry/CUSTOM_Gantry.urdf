@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <robot name="CUSTOM_Gantry" brand="Custom" type="Robot" payload="200" reach="10.0">
-  <!-- Properties -->
+  <!-- Gantry Properties -->
   <material name="gantry_gray">
     <color rgba="0.4 0.4 0.4 1"/>
   </material>

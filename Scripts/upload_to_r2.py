@@ -52,28 +52,33 @@ def calculate_md5(file_path):
             hash_md5.update(chunk)
     return hash_md5.hexdigest()
 
-def upload_file_if_changed(s3_client, local_path, s3_key):
+def upload_file_if_changed(s3_client, local_path, s3_key, remote_hash=None):
     if not os.path.exists(local_path):
         print(f"Error: Local file {local_path} not found.")
         return
 
     local_md5 = calculate_md5(local_path)
     
-    # Check if remote file exists and has same Metadata MD5
-    try:
-        response = s3_client.head_object(Bucket=BUCKET_NAME, Key=s3_key)
-        remote_md5 = response.get('Metadata', {}).get('local-md5')
-        
-        if local_md5 == remote_md5:
-            print(f"[Skipped] {s3_key} (Metadata MD5 matched: {local_md5})")
+    # Check if remote file exists and has same Metadata MD5 or remote_hash
+    if remote_hash is not None:
+        if local_md5 == remote_hash:
+            print(f"[Skipped] {s3_key} (Cloud catalog hash matched: {local_md5})")
             return
-    except ClientError as e:
-        error_code = e.response['Error']['Code']
-        if error_code == '404':
-            pass # File does not exist, proceed to upload
-        else:
-            print(f"Error checking {s3_key}: {e}")
-            return
+    else:
+        try:
+            response = s3_client.head_object(Bucket=BUCKET_NAME, Key=s3_key)
+            remote_md5 = response.get('Metadata', {}).get('local-md5')
+            
+            if local_md5 == remote_md5:
+                print(f"[Skipped] {s3_key} (Metadata MD5 matched: {local_md5})")
+                return
+        except ClientError as e:
+            error_code = e.response['Error']['Code']
+            if error_code == '404':
+                pass # File does not exist, proceed to upload
+            else:
+                print(f"Error checking {s3_key}: {e}")
+                return
 
     print(f"Uploading {s3_key}...")
     try:
@@ -102,6 +107,28 @@ def upload_file_if_changed(s3_client, local_path, s3_key):
     except Exception as e:
         print(f"[Failed] to upload {local_path}: {e}")
 
+def get_cloud_model_hash(cloud_catalog, category, model_folder_name):
+    """Retrieve the model zip hash from the cloud catalog dictionary."""
+    if not cloud_catalog:
+        return None
+    for model in cloud_catalog.get("models", []):
+        urdf_rel_path = model.get("urdf")
+        if not urdf_rel_path:
+            continue
+        # Normalize path for robust comparison
+        parts = urdf_rel_path.replace("\\", "/").split("/")
+        if len(parts) < 2:
+            continue
+        cat = parts[0]
+        if len(parts) >= 3:
+            folder = parts[1]
+        else:
+            folder = os.path.splitext(parts[1])[0]
+        
+        if cat.lower() == category.lower() and folder.lower() == model_folder_name.lower():
+            return model.get("hash")
+    return None
+
 def main():
     if not all([ENDPOINT_URL, ACCESS_KEY, SECRET_KEY, BUCKET_NAME]):
         print("Error: Missing R2 credentials in environment variables.")
@@ -121,12 +148,40 @@ def main():
 
     print(f"Connected to R2 bucket: {BUCKET_NAME}")
 
+    # Step 1: Download cloud catalog.json to temp/cloud_catalog.json
+    CLOUD_CATALOG_FILE = os.path.join(DATA_DIR, "temp", "cloud_catalog.json")
+    cloud_catalog = None
+    try:
+        print("Downloading cloud catalog.json to temp/cloud_catalog.json...")
+        s3.download_file(BUCKET_NAME, "catalog.json", CLOUD_CATALOG_FILE)
+        with open(CLOUD_CATALOG_FILE, "r", encoding="utf-8") as f:
+            cloud_catalog = json.load(f)
+        print("Cloud catalog.json downloaded and parsed successfully.")
+    except ClientError as e:
+        error_code = e.response['Error']['Code']
+        if error_code == '404':
+            print("Cloud catalog.json does not exist yet (first-time upload).")
+        else:
+            print(f"Warning: Failed to download cloud catalog.json: {e}")
+    except Exception as e:
+        print(f"Warning: Error parsing cloud catalog.json: {e}")
+
+    # Load local catalog.json
     if not os.path.exists(CATALOG_FILE):
         print(f"Error: catalog.json not found at {CATALOG_FILE}")
         sys.exit(1)
 
     with open(CATALOG_FILE, "r", encoding="utf-8") as f:
         catalog = json.load(f)
+
+    # Step 2: Compare local and cloud catalogs. If identical, exit early!
+    if cloud_catalog is not None:
+        if catalog == cloud_catalog:
+            print("\n[Skipped] Local catalog.json is identical to cloud catalog.json. No uploads needed!")
+            print("Early exit.")
+            sys.exit(0)
+        else:
+            print("Local catalog.json and cloud catalog.json differ. Proceeding with upload process...")
 
     models = catalog.get("models", [])
     print(f"Found {len(models)} models in catalog.json.")
@@ -219,7 +274,8 @@ def main():
 
         # 2. Upload to Cloudflare R2
         s3_key = f"{category}/{model_folder_name}.zip"
-        upload_file_if_changed(s3, local_zip_path, s3_key)
+        remote_hash = get_cloud_model_hash(cloud_catalog, category, model_folder_name)
+        upload_file_if_changed(s3, local_zip_path, s3_key, remote_hash=remote_hash)
 
     # 3. Upload catalog.json
     print("\nUploading catalog.json...")

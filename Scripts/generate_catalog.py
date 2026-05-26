@@ -6,10 +6,19 @@
 import os
 import json
 import shutil
+import hashlib
 from lxml import etree
 
 DATA_DIR = r"C:\AppSource\FiberArtData"
 R2_BASE_URL = "https://storage.fiber-art.myshawn.com/"
+
+def calculate_md5(file_path):
+    """Calculate the MD5 hash of a file."""
+    hash_md5 = hashlib.md5()
+    with open(file_path, "rb") as f:
+        for chunk in iter(lambda: f.read(4096), b""):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
 
 CATEGORIES = [
     {"folder": "Robots", "exts": (".urdf",), "type": "Robot"},
@@ -54,6 +63,8 @@ def main():
                     shutil.make_archive(zip_base, 'zip', source_dir, model_folder_name)
                     
                     zip_url = f"{R2_BASE_URL}{cat['folder']}/{zip_filename}"
+                    zip_path = f"{zip_base}.zip"
+                    zip_hash = calculate_md5(zip_path)
                     
                     try:
                         tree = etree.parse(urdf_path)
@@ -72,7 +83,8 @@ def main():
                             "type": cat["type"],
                             "name": model_name,
                             "urdf": rel_urdf,
-                            "uri": zip_url
+                            "uri": zip_url,
+                            "hash": zip_hash
                         }
                         
                         brand = root.get('brand')

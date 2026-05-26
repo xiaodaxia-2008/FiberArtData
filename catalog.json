@@ -716,7 +716,7 @@
       "name": "INOVANCE_IR-R35JQR",
       "urdf": "Robots/INOVANCE_IR-R35JQR/INOVANCE_IR-R35JQR.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/INOVANCE_IR-R35JQR.zip",
-      "hash": "7e93291ff815320da9075d71518e564c",
+      "hash": "25dd6ae6a316c45378067ec1915e03be",
       "brand": "INOVANCE",
       "payload": 35.0,
       "reach": 1.856
@@ -746,7 +746,7 @@
       "name": "KUKA_KR10R1420HP",
       "urdf": "Robots/KUKA_KR10R1420HP/KUKA_KR10R1420HP.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R1420HP.zip",
-      "hash": "342a7838c1039420e35cf59ff8989841",
+      "hash": "b6f2cf764b114c0709c89051fdf43782",
       "brand": "KUKA",
       "payload": 10.0,
       "reach": 1.42
@@ -816,7 +816,7 @@
       "name": "KUKA_KR210R2700-2",
       "urdf": "Robots/KUKA_KR210R2700-2/KUKA_KR210R2700-2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR210R2700-2.zip",
-      "hash": "b96c0ae1c84473112a921f28385439f1",
+      "hash": "a77ef4650e7ed0d76f781f602dca9c7d",
       "brand": "KUKA",
       "payload": 210.0,
       "reach": 2.701
@@ -826,7 +826,7 @@
       "name": "KUKA_KR360R2830",
       "urdf": "Robots/KUKA_KR360R2830/KUKA_KR360R2830.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR360R2830.zip",
-      "hash": "a895adf193fc12c7318c8bacfe79c836",
+      "hash": "4c58f1df198f955842a93b009fa30abe",
       "brand": "KUKA",
       "payload": 360.0,
       "reach": 2.826
@@ -846,7 +846,7 @@
       "name": "KUKA_KR480R3330MT",
       "urdf": "Robots/KUKA_KR480R3330MT/KUKA_KR480R3330MT.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR480R3330MT.zip",
-      "hash": "ed08cc02f727eabd024c6feaa0632f83",
+      "hash": "ff03da92b3e33b5fe82ba7a3e521948a",
       "brand": "KUKA",
       "payload": 480.0,
       "reach": 3.33
@@ -856,7 +856,7 @@
       "name": "KUKA_KR500R2380",
       "urdf": "Robots/KUKA_KR500R2380/KUKA_KR500R2380.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR500R2380.zip",
-      "hash": "82ec8130ea449876258749cefe8f08ac",
+      "hash": "00e4e2798e1826ee962ed2ed09348206",
       "brand": "KUKA",
       "payload": 500.0,
       "reach": 2.38

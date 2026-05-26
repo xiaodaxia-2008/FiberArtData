@@ -162,7 +162,7 @@
     <a2>-0.02</a2>
     <b>0</b>
     <joint1 sign_correction="-1"/>
-    <joint2 offset="-90"/>
+    <joint2 offset="${radians(-90)}"/>
     <joint4 sign_correction="-1"/>
     <joint6 sign_correction="-1"/>
   </opw_parameters>

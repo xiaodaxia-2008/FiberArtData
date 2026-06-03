@@ -212,14 +212,20 @@ def main():
         if not urdf_rel_path:
             continue
 
+        model_type = model.get("type", "")
+        is_cad_model = model_type == "CADModel"
+
         # e.g., "Robots/UR10/UR10.urdf" -> parts: ["Robots", "UR10", "UR10.urdf"]
-        # or "Robots/UR10.urdf" -> parts: ["Robots", "UR10.urdf"]
+        # or "CADModels/CircleSurface.stp" -> parts: ["CADModels", "CircleSurface.stp"]
         parts = urdf_rel_path.replace("\\", "/").split("/")
         if len(parts) < 2:
             continue
 
         category = parts[0]
         if len(parts) >= 3:
+            model_folder_name = parts[1]
+        elif is_cad_model:
+            # CADModels: keep full filename (e.g. CircleSurface.CATPart) to avoid dedup collision
             model_folder_name = parts[1]
         else:
             # Fallback for shallow directory (e.g., Robots/UR10.urdf -> folder UR10)
@@ -250,32 +256,45 @@ def main():
             if not matched:
                 continue
 
-        # Define source and zip folders
-        source_dir = os.path.join(DATA_DIR, category)
-        model_dir = os.path.join(source_dir, model_folder_name)
-        
-        # Verify source directory exists before zipping
-        if not os.path.isdir(model_dir):
-            print(f"Warning: Model directory {model_dir} does not exist. Skipping.")
-            continue
+        if is_cad_model:
+            # CADModels: zips are pre-generated with original filenames; just upload
+            zip_dir = os.path.join(DATA_DIR, f"{category}_Zip")
+            # urdf has the full original filename, e.g. "CADModels/CircleSurface.CATPart"
+            cad_filename = os.path.basename(urdf_rel_path)
+            local_zip_path = os.path.join(zip_dir, f"{cad_filename}.zip")
+            if not os.path.exists(local_zip_path):
+                print(f"Warning: Zip not found at {local_zip_path}. Skipping.")
+                continue
+            s3_key = f"{category}/{cad_filename}.zip"
+            remote_hash = get_cloud_model_hash(cloud_catalog, category, model.get("name", ""))
+            upload_file_if_changed(s3, local_zip_path, s3_key, remote_hash=remote_hash)
+        else:
+            # Define source and zip folders
+            source_dir = os.path.join(DATA_DIR, category)
+            model_dir = os.path.join(source_dir, model_folder_name)
+            
+            # Verify source directory exists before zipping
+            if not os.path.isdir(model_dir):
+                print(f"Warning: Model directory {model_dir} does not exist. Skipping.")
+                continue
 
-        zip_dir = os.path.join(DATA_DIR, f"{category}_Zips")
-        os.makedirs(zip_dir, exist_ok=True)
+            zip_dir = os.path.join(DATA_DIR, f"{category}_Zips")
+            os.makedirs(zip_dir, exist_ok=True)
 
-        zip_base = os.path.join(zip_dir, model_folder_name)
-        local_zip_path = f"{zip_base}.zip"
-        
-        print(f"Zipping {category}/{model_folder_name} -> {category}_Zips/{model_folder_name}.zip ...")
-        try:
-            shutil.make_archive(zip_base, 'zip', source_dir, model_folder_name)
-        except Exception as e:
-            print(f"Error zipping {model_dir}: {e}. Skipping.")
-            continue
+            zip_base = os.path.join(zip_dir, model_folder_name)
+            local_zip_path = f"{zip_base}.zip"
+            
+            print(f"Zipping {category}/{model_folder_name} -> {category}_Zips/{model_folder_name}.zip ...")
+            try:
+                shutil.make_archive(zip_base, 'zip', source_dir, model_folder_name)
+            except Exception as e:
+                print(f"Error zipping {model_dir}: {e}. Skipping.")
+                continue
 
-        # 2. Upload to Cloudflare R2
-        s3_key = f"{category}/{model_folder_name}.zip"
-        remote_hash = get_cloud_model_hash(cloud_catalog, category, model_folder_name)
-        upload_file_if_changed(s3, local_zip_path, s3_key, remote_hash=remote_hash)
+            # 2. Upload to Cloudflare R2
+            s3_key = f"{category}/{model_folder_name}.zip"
+            remote_hash = get_cloud_model_hash(cloud_catalog, category, model_folder_name)
+            upload_file_if_changed(s3, local_zip_path, s3_key, remote_hash=remote_hash)
 
     # 3. Upload catalog.json
     print("\nUploading catalog.json...")

@@ -1626,7 +1626,7 @@
       "name": "DemoTrack",
       "urdf": "Tracks/DemoTrack/DemoTrack.track",
       "uri": "https://storage.fiber-art.myshawn.com/Tracks/DemoTrack.zip",
-      "hash": "9298087c9cc424848f5875f3464ef40d",
+      "hash": "123a2b9c32fc90e1ea27c852d4b87995",
       "brand": "Custom",
       "payload": 1000.0
     },
@@ -1635,42 +1635,51 @@
       "name": "TrackM",
       "urdf": "Tracks/TrackM/TrackM.track",
       "uri": "https://storage.fiber-art.myshawn.com/Tracks/TrackM.zip",
-      "hash": "9cb8174d6b33342ac386819380616f5c",
+      "hash": "ef6b366cc3dad8ee5db18a15a5e1fdc8",
       "brand": "Custom",
       "payload": 1000.0
-    },
-    {
-      "type": "Positioner",
-      "name": "DemoPositioner",
-      "urdf": "Positioners/DemoPositioner/DemoPositioner.positioner",
-      "uri": "https://storage.fiber-art.myshawn.com/Positioners/DemoPositioner.zip",
-      "hash": "0dc8ba2462d366ffe2c4041949f62777",
-      "brand": "Custom"
     },
     {
       "type": "Positioner",
       "name": "DemoPositioner",
       "urdf": "Positioners/PerpendularPositioner/Positioner.positioner",
       "uri": "https://storage.fiber-art.myshawn.com/Positioners/PerpendularPositioner.zip",
-      "hash": "42be571c039426766aa8981b84b9f5b4",
+      "hash": "da8aa45e557d3547e99a424900af992b",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Positioner",
-      "name": "Positioner",
-      "urdf": "Positioners/Positioner1DoF/Positioner.positioner",
-      "uri": "https://storage.fiber-art.myshawn.com/Positioners/Positioner1DoF.zip",
-      "hash": "ec4124cf7e230ac640a2feb0177ad640",
+      "name": "PositionerL",
+      "urdf": "Positioners/PositionerL/PositionerL.positioner",
+      "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerL.zip",
+      "hash": "59a3d88fea49e73af7db3f778da660d0",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Positioner",
-      "name": "PositionerM",
-      "urdf": "Positioners/PositionerM/PositionerM.positioner",
-      "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerM.zip",
-      "hash": "934b965b81a111ee1acd144a221d9a40",
+      "name": "PositionerSimple",
+      "urdf": "Positioners/PositionerSimple/PositionerSimple.positioner",
+      "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerSimple.zip",
+      "hash": "a5d09d8b9cd06c4d8bcb90e957b28e6b",
+      "brand": "Custom"
+    },
+    {
+      "type": "Positioner",
+      "name": "PositionerXL",
+      "urdf": "Positioners/PositionerXL/PositionerXL.positioner",
+      "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerXL.zip",
+      "hash": "326598430b6fc95d54bb3066a5a3cea7",
+      "brand": "Custom",
+      "payload": 1000.0
+    },
+    {
+      "type": "Positioner",
+      "name": "PositionerXS",
+      "urdf": "Positioners/PositionerXS/PositionerXS.positioner",
+      "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerXS.zip",
+      "hash": "ee94476b347da222526fee1ea1e54d5f",
       "brand": "Custom",
       "payload": 1000.0
     },
@@ -1679,7 +1688,7 @@
       "name": "AFPH16",
       "urdf": "Tools/AFPHead/AFPH16.jointless_tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/AFPHead.zip",
-      "hash": "82e4ba3bf60715b5f6c178f375cab9ab",
+      "hash": "11644e7a76c7463049a28f93da451330",
       "brand": "Custom"
     },
     {
@@ -1721,6 +1730,202 @@
       "uri": "https://storage.fiber-art.myshawn.com/Tools/TapePlacementHead.zip",
       "hash": "8e3e35776c994b21bd4170270eb49954",
       "brand": "Custom"
+    },
+    {
+      "type": "CADModel",
+      "name": "CircleSurface",
+      "urdf": "CADModels/CircleSurface.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/CircleSurface.CATPart.zip",
+      "hash": "7f316b29d17d4b6046b7c652fe5d3d81"
+    },
+    {
+      "type": "CADModel",
+      "name": "CircleSurface",
+      "urdf": "CADModels/CircleSurface.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/CircleSurface.stp.zip",
+      "hash": "bd11b1e3d185f07b7cc445f45f33d4ce"
+    },
+    {
+      "type": "CADModel",
+      "name": "ConeTank",
+      "urdf": "CADModels/ConeTank.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/ConeTank.stp.zip",
+      "hash": "e51ad298c91ca1fb46191e82cdc88a63"
+    },
+    {
+      "type": "CADModel",
+      "name": "Cylinder",
+      "urdf": "CADModels/Cylinder.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Cylinder.CATPart.zip",
+      "hash": "a2bfb04acec83d98bd4867526c881fbc"
+    },
+    {
+      "type": "CADModel",
+      "name": "Cylinder",
+      "urdf": "CADModels/Cylinder.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Cylinder.stp.zip",
+      "hash": "c51584e716e920cedec4780fbc711d87"
+    },
+    {
+      "type": "CADModel",
+      "name": "ExtrudeSurface",
+      "urdf": "CADModels/ExtrudeSurface.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/ExtrudeSurface.stp.zip",
+      "hash": "7f334efb49352e3432d8bfac015ad36f"
+    },
+    {
+      "type": "CADModel",
+      "name": "FlatCurveSurface",
+      "urdf": "CADModels/FlatCurveSurface.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatCurveSurface.CATPart.zip",
+      "hash": "a80a663035ac1491b0af07fbe860cdf5"
+    },
+    {
+      "type": "CADModel",
+      "name": "FlatCurveSurface",
+      "urdf": "CADModels/FlatCurveSurface.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatCurveSurface.stp.zip",
+      "hash": "6f957f2f2380cad3f3ece2e6ad79be8c"
+    },
+    {
+      "type": "CADModel",
+      "name": "FlatSurfaceWithMultiplyBondaries",
+      "urdf": "CADModels/FlatSurfaceWithMultiplyBondaries.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatSurfaceWithMultiplyBondaries.CATPart.zip",
+      "hash": "b4a13247ad629c256cb1dcc59edfa44c"
+    },
+    {
+      "type": "CADModel",
+      "name": "FlatSurfaceWithMultiplyBondaries",
+      "urdf": "CADModels/FlatSurfaceWithMultiplyBondaries.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatSurfaceWithMultiplyBondaries.stp.zip",
+      "hash": "8ba02529323e7c7ed318a576baf37bd7"
+    },
+    {
+      "type": "CADModel",
+      "name": "Pipe",
+      "urdf": "CADModels/Pipe.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Pipe.stp.zip",
+      "hash": "5045be67f6342a2500d6b80d4b46bf4b"
+    },
+    {
+      "type": "CADModel",
+      "name": "PlaneWithGuideCurve",
+      "urdf": "CADModels/PlaneWithGuideCurve.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/PlaneWithGuideCurve.stp.zip",
+      "hash": "3bd869506057dc4e0dec45e27cd922da"
+    },
+    {
+      "type": "CADModel",
+      "name": "SDuctInlet",
+      "urdf": "CADModels/SDuctInlet.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SDuctInlet.CATPart.zip",
+      "hash": "654d1c87f0e32ddf386a2704fa8bab5f"
+    },
+    {
+      "type": "CADModel",
+      "name": "SDuctInlet",
+      "urdf": "CADModels/SDuctInlet.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SDuctInlet.stp.zip",
+      "hash": "118b0da038d9870ea5cfd6cbd1b44c8f"
+    },
+    {
+      "type": "CADModel",
+      "name": "SampleFlatPlate",
+      "urdf": "CADModels/SampleFlatPlate.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SampleFlatPlate.stp.zip",
+      "hash": "90aeb106d83d1d8ea3a62c3d0fa28909"
+    },
+    {
+      "type": "CADModel",
+      "name": "SamplePanel",
+      "urdf": "CADModels/SamplePanel.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SamplePanel.stp.zip",
+      "hash": "d35e5d11fec868a372deda26077a49d0"
+    },
+    {
+      "type": "CADModel",
+      "name": "SampleSpar",
+      "urdf": "CADModels/SampleSpar.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SampleSpar.stp.zip",
+      "hash": "c743ddf707296d11526547f19e10d42d"
+    },
+    {
+      "type": "CADModel",
+      "name": "SmallFlatSurface",
+      "urdf": "CADModels/SmallFlatSurface.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SmallFlatSurface.stp.zip",
+      "hash": "443a2f7de7a86f8ba2401299db712a70"
+    },
+    {
+      "type": "CADModel",
+      "name": "StringerC",
+      "urdf": "CADModels/StringerC.stl",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/StringerC.stl.zip",
+      "hash": "90acf17b79be1a502d544331bdec4c7d"
+    },
+    {
+      "type": "CADModel",
+      "name": "StringerL",
+      "urdf": "CADModels/StringerL.stl",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/StringerL.stl.zip",
+      "hash": "39ef59970f38459a4938d88d9af55f92"
+    },
+    {
+      "type": "CADModel",
+      "name": "Tank",
+      "urdf": "CADModels/Tank.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Tank.CATPart.zip",
+      "hash": "3032ae267ee997d0e9f058ff0416a328"
+    },
+    {
+      "type": "CADModel",
+      "name": "Tank",
+      "urdf": "CADModels/Tank.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Tank.stp.zip",
+      "hash": "66e0baed33c957b9ebe6e1c0ffa9da3d"
+    },
+    {
+      "type": "CADModel",
+      "name": "TankSmall",
+      "urdf": "CADModels/TankSmall.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/TankSmall.stp.zip",
+      "hash": "3d399546423dfbf54a7a7fa97cff303d"
+    },
+    {
+      "type": "CADModel",
+      "name": "USpar",
+      "urdf": "CADModels/USpar.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/USpar.CATPart.zip",
+      "hash": "78174fdd18373f42761b872505cd08de"
+    },
+    {
+      "type": "CADModel",
+      "name": "USpar",
+      "urdf": "CADModels/USpar.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/USpar.stp.zip",
+      "hash": "e777855eda18ae3b24e7577ec0f5e126"
+    },
+    {
+      "type": "CADModel",
+      "name": "Wing",
+      "urdf": "CADModels/Wing.CATPart",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Wing.CATPart.zip",
+      "hash": "ebc4bb0cb1b05fc997e9844efb19a12b"
+    },
+    {
+      "type": "CADModel",
+      "name": "Wing",
+      "urdf": "CADModels/Wing.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Wing.stp.zip",
+      "hash": "1f491d3774a5b472f3fdb4373ac8a596"
+    },
+    {
+      "type": "CADModel",
+      "name": "WingClosed",
+      "urdf": "CADModels/WingClosed.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/WingClosed.stp.zip",
+      "hash": "0a635288ff667e4d4db3ec7b2a06592d"
     }
   ]
 }

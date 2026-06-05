@@ -77,6 +77,27 @@ Converts ROS xacro-based robot packages from `ros-robots/` into standalone URDF
 files under `Robots/`. Handles UR (Universal Robots), KUKA, ABB, FANUC,
 MOTOMAN, and STAUBLI formats.
 
+## `Scripts/sync_installers.py`
+Syncs files in the local `Installers/` folder to the `Installers/` prefix on R2
+(single direction: local → remote, with optional prune of remote-only files).
+
+**What it does:**
+1. Walks `Installers/` and computes an MD5 for each file
+2. Uploads only files whose MD5 differs from the `local-md5` metadata stored
+   on the R2 object (skips unchanged files)
+3. Uploads with `local-md5` metadata so future runs can detect changes
+4. Sets `application/x-msdownload` Content-Type for `.exe` files
+5. With `--prune`, lists the `Installers/` prefix and deletes any remote
+   object that has no local counterpart
+
+```bash
+uv run Scripts/sync_installers.py
+# Preview without uploading:
+uv run Scripts/sync_installers.py --dry-run
+# Mirror deletions: also delete remote files that no longer exist locally:
+uv run Scripts/sync_installers.py --prune
+```
+
 ---
 
 # Adding a New Robot Model

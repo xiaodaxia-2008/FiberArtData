@@ -9,3 +9,5 @@ temp/
 ros-robots/
 .env
 *.exe
+__pycache__/
+*.pyc

@@ -1626,7 +1626,7 @@
       "name": "DemoTrack",
       "urdf": "Tracks/DemoTrack/DemoTrack.track",
       "uri": "https://storage.fiber-art.myshawn.com/Tracks/DemoTrack.zip",
-      "hash": "123a2b9c32fc90e1ea27c852d4b87995",
+      "hash": "617c65aba61c3a36e27af5818f49c37c",
       "brand": "Custom",
       "payload": 1000.0
     },

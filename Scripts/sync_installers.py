@@ -107,21 +107,22 @@ def upload_file_if_changed(s3_client, local_path, s3_key, dry_run=False):
     download_url = build_download_url(s3_key)
 
     # Check if remote file exists and has the same Metadata MD5
-    if not dry_run:
-        try:
-            response = s3_client.head_object(Bucket=BUCKET_NAME, Key=s3_key)
-            remote_md5 = response.get("Metadata", {}).get("local-md5")
+    # Check remote hash regardless of dry-run mode
+    try:
+        response = s3_client.head_object(Bucket=BUCKET_NAME, Key=s3_key)
+        remote_md5 = response.get("Metadata", {}).get("local-md5")
 
-            if local_md5 == remote_md5:
-                print(f"[Skipped] {s3_key} (Metadata MD5 matched: {local_md5})")
-                print(f"  URL: {download_url}")
-                return
-        except ClientError as e:
-            error_code = e.response["Error"]["Code"]
-            if error_code != "404":
-                print(f"Error checking {s3_key}: {e}")
-                return
-    else:
+        if local_md5 == remote_md5:
+            print(f"[Skipped] {s3_key} (Metadata MD5 matched: {local_md5})")
+            print(f"  URL: {download_url}")
+            return
+    except ClientError as e:
+        error_code = e.response["Error"]["Code"]
+        if error_code != "404":
+            print(f"Error checking {s3_key}: {e}")
+            return
+
+    if dry_run:
         print(f"[Dry-run] Would upload {s3_key} (local MD5: {local_md5})")
         print(f"  URL: {download_url}")
         return

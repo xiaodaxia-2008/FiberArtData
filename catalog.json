@@ -296,7 +296,7 @@
       "name": "CUSTOM_Gantry",
       "urdf": "Robots/CUSTOM_Gantry/CUSTOM_Gantry.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/CUSTOM_Gantry.zip",
-      "hash": "f9a3388aea599ee088b67c54f0ac530d",
+      "hash": "8b903d545c691a617cb0c0d9af9cab50",
       "brand": "Custom",
       "payload": 200.0,
       "reach": 10.0

@@ -22,12 +22,12 @@
   </link>
   <joint name="joint1" type="prismatic">
     <parent link="base_link"/>
-    <child link="link_1"/>
+    <child link="link1"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="-8" upper="8" velocity="5"/>
   </joint>
-  <link name="link_1">
+  <link name="link1">
     <visual>
       <geometry>
         <mesh filename="visual/link_1.stl"/>
@@ -45,8 +45,6 @@
     <child link="link2"/>
     <origin xyz="-0.66 0 5.025" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
-    <!-- Y 轴行程 ±1.6不够 -->
-    <!-- <limit lower="-1.6" upper="1.6" velocity="5"/> -->
     <limit lower="-2" upper="2" velocity="5"/>
   </joint>
   <link name="link2">

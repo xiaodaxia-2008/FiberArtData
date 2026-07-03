@@ -4,12 +4,13 @@
 # dependencies = ["boto3", "python-dotenv", "tqdm"]
 # ///
 
-import os
-import sys
-import json
-import shutil
-import hashlib
 import argparse
+import hashlib
+import json
+import os
+import shutil
+import sys
+
 import boto3
 from botocore.exceptions import ClientError
 from dotenv import load_dotenv
@@ -25,6 +26,7 @@ BUCKET_NAME = os.environ.get("R2_BUCKET_NAME", "fiber-art")
 DATA_DIR = r"C:\AppSource\FiberArtData"
 CATALOG_FILE = os.path.join(DATA_DIR, "catalog.json")
 
+
 class ProgressPercentage(object):
     def __init__(self, filename, size):
         self._filename = filename
@@ -32,10 +34,10 @@ class ProgressPercentage(object):
         self._seen_so_far = 0
         self._pbar = tqdm(
             total=size,
-            unit='B',
+            unit="B",
             unit_scale=True,
             desc=os.path.basename(filename),
-            leave=False
+            leave=False,
         )
 
     def __call__(self, bytes_amount):
@@ -43,6 +45,7 @@ class ProgressPercentage(object):
         self._pbar.update(bytes_amount)
         if self._seen_so_far >= self._size:
             self._pbar.close()
+
 
 def calculate_md5(file_path):
     """Calculate the MD5 hash of a file."""
@@ -52,13 +55,14 @@ def calculate_md5(file_path):
             hash_md5.update(chunk)
     return hash_md5.hexdigest()
 
+
 def upload_file_if_changed(s3_client, local_path, s3_key, remote_hash=None):
     if not os.path.exists(local_path):
         print(f"Error: Local file {local_path} not found.")
         return
 
     local_md5 = calculate_md5(local_path)
-    
+
     # Check if remote file exists and has same Metadata MD5 or remote_hash
     if remote_hash is not None:
         if local_md5 == remote_hash:
@@ -67,15 +71,15 @@ def upload_file_if_changed(s3_client, local_path, s3_key, remote_hash=None):
     else:
         try:
             response = s3_client.head_object(Bucket=BUCKET_NAME, Key=s3_key)
-            remote_md5 = response.get('Metadata', {}).get('local-md5')
-            
+            remote_md5 = response.get("Metadata", {}).get("local-md5")
+
             if local_md5 == remote_md5:
                 print(f"[Skipped] {s3_key} (Metadata MD5 matched: {local_md5})")
                 return
         except ClientError as e:
-            error_code = e.response['Error']['Code']
-            if error_code == '404':
-                pass # File does not exist, proceed to upload
+            error_code = e.response["Error"]["Code"]
+            if error_code == "404":
+                pass  # File does not exist, proceed to upload
             else:
                 print(f"Error checking {s3_key}: {e}")
                 return
@@ -84,28 +88,25 @@ def upload_file_if_changed(s3_client, local_path, s3_key, remote_hash=None):
     try:
         file_size = os.path.getsize(local_path)
         progress_callback = ProgressPercentage(local_path, file_size)
-        
+
         # Prepare upload arguments with Metadata and ContentType
-        extra_args = {
-            'Metadata': {
-                'local-md5': local_md5
-            }
-        }
-        if s3_key.endswith('.zip'):
-            extra_args['ContentType'] = 'application/zip'
-        elif s3_key.endswith('.json'):
-            extra_args['ContentType'] = 'application/json'
-            
+        extra_args = {"Metadata": {"local-md5": local_md5}}
+        if s3_key.endswith(".zip"):
+            extra_args["ContentType"] = "application/zip"
+        elif s3_key.endswith(".json"):
+            extra_args["ContentType"] = "application/json"
+
         s3_client.upload_file(
             local_path,
             BUCKET_NAME,
             s3_key,
             ExtraArgs=extra_args,
-            Callback=progress_callback
+            Callback=progress_callback,
         )
         print(f"[Success] Uploaded {s3_key}")
     except Exception as e:
         print(f"[Failed] to upload {local_path}: {e}")
+
 
 def get_cloud_model_hash(cloud_catalog, category, model_folder_name):
     """Retrieve the model zip hash from the cloud catalog dictionary."""
@@ -124,10 +125,14 @@ def get_cloud_model_hash(cloud_catalog, category, model_folder_name):
             folder = parts[1]
         else:
             folder = os.path.splitext(parts[1])[0]
-        
-        if cat.lower() == category.lower() and folder.lower() == model_folder_name.lower():
+
+        if (
+            cat.lower() == category.lower()
+            and folder.lower() == model_folder_name.lower()
+        ):
             return model.get("hash")
     return None
+
 
 def main():
     if not all([ENDPOINT_URL, ACCESS_KEY, SECRET_KEY, BUCKET_NAME]):
@@ -139,11 +144,11 @@ def main():
     args = parser.parse_args()
 
     s3 = boto3.client(
-        's3',
+        "s3",
         endpoint_url=ENDPOINT_URL,
         aws_access_key_id=ACCESS_KEY,
         aws_secret_access_key=SECRET_KEY,
-        region_name='auto'
+        region_name="auto",
     )
 
     print(f"Connected to R2 bucket: {BUCKET_NAME}")
@@ -158,8 +163,8 @@ def main():
             cloud_catalog = json.load(f)
         print("Cloud catalog.json downloaded and parsed successfully.")
     except ClientError as e:
-        error_code = e.response['Error']['Code']
-        if error_code == '404':
+        error_code = e.response["Error"]["Code"]
+        if error_code == "404":
             print("Cloud catalog.json does not exist yet (first-time upload).")
         else:
             print(f"Warning: Failed to download cloud catalog.json: {e}")
@@ -177,11 +182,15 @@ def main():
     # Step 2: Compare local and cloud catalogs. If identical, exit early!
     if cloud_catalog is not None:
         if catalog == cloud_catalog:
-            print("\n[Skipped] Local catalog.json is identical to cloud catalog.json. No uploads needed!")
+            print(
+                "\n[Skipped] Local catalog.json is identical to cloud catalog.json. No uploads needed!"
+            )
             print("Early exit.")
             sys.exit(0)
         else:
-            print("Local catalog.json and cloud catalog.json differ. Proceeding with upload process...")
+            print(
+                "Local catalog.json and cloud catalog.json differ. Proceeding with upload process..."
+            )
 
     models = catalog.get("models", [])
     print(f"Found {len(models)} models in catalog.json.")
@@ -198,8 +207,12 @@ def main():
             if not isinstance(update_list, list):
                 print("Error: Update file must be a JSON array of strings.")
                 sys.exit(1)
-            filter_models = {str(item).replace("\\", "/").lower() for item in update_list}
-            print(f"Loaded filter from {args.update_file}. Will only process {len(filter_models)} specified models.")
+            filter_models = {
+                str(item).replace("\\", "/").lower() for item in update_list
+            }
+            print(
+                f"Loaded filter from {args.update_file}. Will only process {len(filter_models)} specified models."
+            )
         except Exception as e:
             print(f"Error parsing update file: {e}")
             sys.exit(1)
@@ -241,7 +254,7 @@ def main():
         if filter_models is not None:
             model_path_str = f"{category}/{model_folder_name}".lower()
             folder_name_str = model_folder_name.lower()
-            
+
             matched = False
             if model_path_str in filter_models:
                 matched = True
@@ -252,55 +265,75 @@ def main():
                     if entry.endswith(f"/{folder_name_str}"):
                         matched = True
                         break
-            
+
             if not matched:
                 continue
 
+        zip_dir = os.path.join(DATA_DIR, "temp", "zips")
+        os.makedirs(zip_dir, exist_ok=True)
+
         if is_cad_model:
-            # CADModels: zips are pre-generated with original filenames; just upload
-            zip_dir = os.path.join(DATA_DIR, f"{category}_Zip")
-            # urdf has the full original filename, e.g. "CADModels/CircleSurface.CATPart"
+            # CADModels: zip each individual file
+            source_dir = os.path.join(DATA_DIR, category)
             cad_filename = os.path.basename(urdf_rel_path)
+            cad_file_path = os.path.join(source_dir, cad_filename)
+            if not os.path.isfile(cad_file_path):
+                print(f"Warning: CAD file not found at {cad_file_path}. Skipping.")
+                continue
             local_zip_path = os.path.join(zip_dir, f"{cad_filename}.zip")
-            if not os.path.exists(local_zip_path):
-                print(f"Warning: Zip not found at {local_zip_path}. Skipping.")
+            print(
+                f"Zipping {category}/{cad_filename} -> temp/zips/{cad_filename}.zip ..."
+            )
+            try:
+                shutil.make_archive(
+                    os.path.join(zip_dir, cad_filename), "zip", source_dir, cad_filename
+                )
+            except Exception as e:
+                print(f"Error zipping {cad_filename}: {e}. Skipping.")
                 continue
             s3_key = f"{category}/{cad_filename}.zip"
-            remote_hash = get_cloud_model_hash(cloud_catalog, category, model.get("name", ""))
+            remote_hash = get_cloud_model_hash(
+                cloud_catalog, category, model.get("name", "")
+            )
             upload_file_if_changed(s3, local_zip_path, s3_key, remote_hash=remote_hash)
         else:
-            # Define source and zip folders
             source_dir = os.path.join(DATA_DIR, category)
             model_dir = os.path.join(source_dir, model_folder_name)
-            
-            # Verify source directory exists before zipping
+
             if not os.path.isdir(model_dir):
                 print(f"Warning: Model directory {model_dir} does not exist. Skipping.")
                 continue
 
-            zip_dir = os.path.join(DATA_DIR, f"{category}_Zips")
-            os.makedirs(zip_dir, exist_ok=True)
-
             zip_base = os.path.join(zip_dir, model_folder_name)
             local_zip_path = f"{zip_base}.zip"
-            
-            print(f"Zipping {category}/{model_folder_name} -> {category}_Zips/{model_folder_name}.zip ...")
+
+            print(
+                f"Zipping {category}/{model_folder_name} -> temp/zips/{model_folder_name}.zip ..."
+            )
             try:
-                shutil.make_archive(zip_base, 'zip', source_dir, model_folder_name)
+                shutil.make_archive(zip_base, "zip", source_dir, model_folder_name)
             except Exception as e:
                 print(f"Error zipping {model_dir}: {e}. Skipping.")
                 continue
 
-            # 2. Upload to Cloudflare R2
             s3_key = f"{category}/{model_folder_name}.zip"
-            remote_hash = get_cloud_model_hash(cloud_catalog, category, model_folder_name)
+            remote_hash = get_cloud_model_hash(
+                cloud_catalog, category, model_folder_name
+            )
             upload_file_if_changed(s3, local_zip_path, s3_key, remote_hash=remote_hash)
 
     # 3. Upload catalog.json
     print("\nUploading catalog.json...")
     upload_file_if_changed(s3, CATALOG_FILE, "catalog.json")
 
+    # 4. Clean up temp zips
+    temp_zips = os.path.join(DATA_DIR, "temp", "zips")
+    if os.path.isdir(temp_zips):
+        shutil.rmtree(temp_zips)
+        print("Cleaned up temp/zips/.")
+
     print("\nAll uploads complete.")
+
 
 if __name__ == "__main__":
     main()

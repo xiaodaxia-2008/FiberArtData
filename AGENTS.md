@@ -32,8 +32,9 @@ Generates `catalog.json` from URDF files in the `Robots/`, `Tracks/`,
 **What it does:**
 1. Scans each category directory for URDF/definition files
 2. Reads `brand`, `payload`, `reach` attributes from the root XML element
-3. Creates zip archives in `{Category}_Zip/`
-4. Writes `catalog.json` with all models and their metadata
+3. Writes `catalog.json` with all models and their metadata
+
+Note: This script no longer creates zip archives — `upload_to_r2.py` handles zipping.
 
 ```bash
 uv run --with lxml Scripts/generate_catalog.py

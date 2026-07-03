@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot name="KR_70_R2100-2" brand="KUKA" type="Robot" payload="70" reach="2.1">
+  <!-- Properties -->
+  <material name="kuka_gray">
+    <color rgba="0.4 0.4 0.4 1"/>
+  </material>
+  <material name="kuka_organge">
+    <color rgba="0.96 0.65 0.14 1"/>
+  </material>
+  <!-- link list -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <mesh filename="visual/base_link.stl"/>
+      </geometry>
+      <material name="kuka_gray"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/base_link.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link1">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_1.stl"/>
+      </geometry>
+      <material name="kuka_organge"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link1.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link2">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_2.stl"/>
+      </geometry>
+      <material name="kuka_organge"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link2.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link3">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_3.stl"/>
+      </geometry>
+      <material name="kuka_organge"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link3.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link4">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_4.stl"/>
+      </geometry>
+      <material name="kuka_organge"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link4.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link5">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_5.stl"/>
+      </geometry>
+      <material name="kuka_organge"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link5.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="link6">
+    <visual>
+      <geometry>
+        <mesh filename="visual/link_6.stl"/>
+      </geometry>
+      <material name="kuka_organge"/>
+    </visual>
+    <collision name="collision">
+      <geometry>
+        <mesh filename="collision/link6.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="ee_link"/>
+  <!-- end of link list -->
+  <!-- joint list -->
+  <joint name="joint1" type="revolute">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 -1"/>
+    <limit lower="${radians(-185)}" upper="${radians(185)}" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint2" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0.19 0 0.557" rpy="0 ${radians(90)} 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-175)}" upper="${radians(60)}" velocity="${radians(150)}"/>
+  </joint>
+  <joint name="joint3" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0 0 0.89" rpy="0 ${radians(-90)} 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-120)}" upper="${radians(165)}" velocity="${radians(180)}"/>
+  </joint>
+  <joint name="joint4" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin xyz="1.01 0 0.15" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${radians(-180)}" upper="${radians(180)}" velocity="${radians(245)}"/>
+  </joint>
+  <joint name="joint5" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="${radians(-125)}" upper="${radians(125)}" velocity="${radians(265)}"/>
+  </joint>
+  <joint name="joint6" type="revolute">
+    <parent link="link5"/>
+    <child link="link6"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="-1 0 0"/>
+    <limit lower="${radians(-350)}" upper="${radians(350)}" velocity="${radians(355)}"/>
+  </joint>
+  <joint name="joint_6_t-tool0" type="fixed">
+    <origin xyz="0.1849 0 0" rpy="0 ${radians(90)} 0"/>
+    <parent link="link6"/>
+    <child link="ee_link"/>
+  </joint>
+  <!-- end of joint list -->
+  <tcp xyz="0 0 0" rpy="0 0 0"/>
+  <!-- home positions  -->
+  <home_positions joints="0 ${radians(-90)} ${radians(90)} 0 ${radians(90)} 0"/>
+  <!-- Ortho-parallel Basis and a Spherical Wrist -->
+  <opw_parameters>
+    <c1>0.557</c1>
+    <c2>0.89</c2>
+    <c3>1.01</c3>
+    <c4>0.1849</c4>
+    <a1>0.19</a1>
+    <a2>-0.15</a2>
+    <b>0</b>
+    <joint1 sign_correction="-1" offset="0"/>
+    <joint2 sign_correction="1" offset="${radians(-90)}"/>
+    <joint3 sign_correction="1" offset="0"/>
+    <joint4 sign_correction="-1" offset="0"/>
+    <joint5 sign_correction="1" offset="0"/>
+    <joint6 sign_correction="-1" offset="0"/>
+  </opw_parameters>
+</robot>

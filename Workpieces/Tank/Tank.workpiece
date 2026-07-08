@@ -1,0 +1,19 @@
+<workpiece name="Tank" brand="Custom" type="Workpiece">
+    <material name="organge">
+        <color rgba="0.96 0.65 0.14 1" />
+    </material>
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <mesh filename="visual/shape.stl" material_name="organge"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <mesh filename="collision/shape.stl" />
+            </geometry>
+        </collision>
+    </link>
+    <pose xyz="0 0 0" rpy="0 0 0"/>
+</workpiece>
+    

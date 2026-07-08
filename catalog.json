@@ -813,8 +813,8 @@
     },
     {
       "type": "Robot",
-      "name": "KR_70_R2100-2",
-      "urdf": "Robots/KUKA_KR70R2100-2/KR_70_R2100-2.urdf",
+      "name": "KR70_R2100-2",
+      "urdf": "Robots/KUKA_KR70R2100-2/KUKA_KR70_R2100-2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR70R2100-2.zip",
       "brand": "KUKA",
       "payload": 70.0,

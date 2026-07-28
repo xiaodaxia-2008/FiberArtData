@@ -7,32 +7,22 @@ import os
 import sys
 import argparse
 import glob
+import shutil
 import trimesh
 import coacd
 from lxml import etree
 
-def generate_single_convex_hull(input_path, output_path):
+def generate_convex_decomposition(
+    input_path, output_path, threshold=0.2, merge=False, max_convex_hulls=5
+):
     """
-    Generate a single convex hull from input mesh file using CoACD
-    and save it to output_path.
+    Generate up to max_convex_hulls convex parts using CoACD and save them
+    as one mesh file at output_path.
     """
     try:
-        mesh = trimesh.load(input_path, force="mesh")
-        if not isinstance(mesh, trimesh.Trimesh):
-            print(f"Error: Input {input_path} is not a valid 3D mesh.")
-            return False
-        
-        coacd_mesh = coacd.Mesh(mesh.vertices, mesh.faces)
-        # Use max_convex_hull=1 to generate a single convex hull (no decomposition)
-        parts = coacd.run_coacd(coacd_mesh, max_convex_hull=1, threshold=0.9, preprocess_mode='off')
-        
-        if not parts:
-            print(f"Error: CoACD failed to generate any part for {input_path}.")
-            return False
-        
-        # Convert part back to trimesh
-        vs, fs = parts[0]
-        result_mesh = trimesh.Trimesh(vertices=vs, faces=fs)
+        mesh_parts = decompose_mesh(input_path, threshold, merge, max_convex_hulls)
+        # Store all convex parts in one STL; each part remains a separate hull.
+        result_mesh = trimesh.util.concatenate(mesh_parts)
         
         # Save to output path
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
@@ -41,6 +31,53 @@ def generate_single_convex_hull(input_path, output_path):
     except Exception as e:
         print(f"Exception during convex hull generation for {input_path}: {e}")
         return False
+
+
+def decompose_mesh(input_path, threshold=0.2, merge=False, max_convex_hulls=5):
+    mesh = trimesh.load(input_path, force="mesh")
+    if not isinstance(mesh, trimesh.Trimesh):
+        raise ValueError(f"Input {input_path} is not a valid 3D mesh.")
+
+    coacd_mesh = coacd.Mesh(mesh.vertices, mesh.faces)
+    parts = coacd.run_coacd(
+        coacd_mesh,
+        max_convex_hull=max_convex_hulls,
+        threshold=threshold,
+        preprocess_mode='off',
+        merge=merge,
+    )
+    if not parts:
+        raise ValueError(f"CoACD failed to generate any part for {input_path}.")
+
+    if len(parts) > max_convex_hulls:
+        # Some CoACD builds ignore max_convex_hull when merge is disabled.
+        parts = sorted(
+            parts,
+            key=lambda part: abs(
+                trimesh.Trimesh(vertices=part[0], faces=part[1]).volume
+            ),
+            reverse=True,
+        )[:max_convex_hulls]
+        print(f"  Retaining {len(parts)} largest convex hulls.")
+
+    return [trimesh.Trimesh(vertices=vs, faces=fs) for vs, fs in parts]
+
+
+def generate_convex_decomposition_parts(
+    input_path, output_dir, output_stem, threshold=0.2, merge=False, max_convex_hulls=5
+):
+    try:
+        mesh_parts = decompose_mesh(input_path, threshold, merge, max_convex_hulls)
+        os.makedirs(output_dir, exist_ok=True)
+        output_paths = []
+        for index, mesh_part in enumerate(mesh_parts, start=1):
+            output_path = os.path.join(output_dir, f"{output_stem}_{index}.stl")
+            mesh_part.export(output_path)
+            output_paths.append(output_path)
+        return output_paths
+    except Exception as e:
+        print(f"Exception during convex hull generation for {input_path}: {e}")
+        return []
 
 def format_urdf_string(xml_root):
     """
@@ -57,114 +94,137 @@ def format_urdf_string(xml_root):
     xml_str = xml_str.replace('\r\n', '\n')
     return xml_str
 
-def scan_and_generate_collisions(robots_dir):
+def process_urdf(
+    urdf_path,
+    regenerate=False,
+    threshold=0.2,
+    merge=False,
+    max_convex_hulls=5,
+):
     """
-    Scan all URDF files under robots_dir, detect links missing a collision model,
-    generate single convex hull meshes using CoACD, and update the URDFs.
+    Generate collision meshes for one URDF/positioner and update its XML.
     """
-    print(f"Scanning for URDF files under {robots_dir}...")
-    urdfs = glob.glob(os.path.join(robots_dir, "**", "*.urdf"), recursive=True)
-    print(f"Found {len(urdfs)} URDF files.")
-    
-    total_processed = 0
-    total_updated_links = 0
-    
-    for urdf_path in sorted(urdfs):
-        try:
-            parser = etree.XMLParser(remove_blank_text=True)
-            tree = etree.parse(urdf_path, parser)
-            root = tree.getroot()
-            
-            urdf_dir = os.path.dirname(urdf_path)
-            urdf_modified = False
-            
-            # Find all links
+    try:
+        parser = etree.XMLParser(remove_blank_text=True)
+        tree = etree.parse(urdf_path, parser)
+        root = tree.getroot()
+        urdf_dir = os.path.dirname(urdf_path)
+        urdf_modified = False
+
+        if regenerate:
             for link in root.xpath("//link"):
-                link_name = link.get("name")
-                
-                # Check for visual mesh
-                visual_meshes = link.xpath("visual/geometry/mesh")
-                if not visual_meshes:
+                for collision_el in link.xpath("collision"):
+                    link.remove(collision_el)
+            collision_dir = os.path.join(urdf_dir, "collision")
+            if os.path.isdir(collision_dir):
+                shutil.rmtree(collision_dir)
+            urdf_modified = True
+
+        for link in root.xpath("//link"):
+            link_name = link.get("name")
+            visual_meshes = link.xpath("visual/geometry/mesh")
+            if not visual_meshes:
+                continue
+
+            visual_mesh_rel = visual_meshes[0].get("filename")
+            if not visual_mesh_rel:
+                continue
+
+            collision_meshes = link.xpath("collision/geometry/mesh")
+            if collision_meshes and not regenerate:
+                collision_files_exist = bool(collision_meshes) and all(
+                    mesh.get("filename")
+                    and os.path.isfile(os.path.join(urdf_dir, mesh.get("filename")))
+                    for mesh in collision_meshes
+                )
+                if collision_files_exist:
                     continue
-                    
-                visual_mesh_rel = visual_meshes[0].get("filename")
-                if not visual_mesh_rel:
-                    continue
-                    
-                # Check for existing collision mesh
-                collision_meshes = link.xpath("collision/geometry/mesh")
-                if collision_meshes:
-                    # Already has a collision mesh
-                    continue
-                    
-                # Missing collision mesh! Let's generate it
-                print(f"\nLink '{link_name}' in {os.path.basename(urdf_path)} is missing collision.")
-                
-                # Resolve paths
-                visual_mesh_abs = os.path.join(urdf_dir, visual_mesh_rel)
-                if not os.path.exists(visual_mesh_abs):
-                    print(f"  Warning: Visual mesh not found at {visual_mesh_abs}. Skipping.")
-                    continue
-                    
-                # Collision mesh output filename: collision/<link_name>.stl
-                collision_mesh_rel = f"collision/{link_name}.stl"
-                collision_mesh_abs = os.path.join(urdf_dir, collision_mesh_rel)
-                
-                print(f"  Generating single convex hull from {visual_mesh_rel} to {collision_mesh_rel}...")
-                success = generate_single_convex_hull(visual_mesh_abs, collision_mesh_abs)
-                
-                if success:
-                    print(f"  Successfully generated collision mesh.")
-                    
-                    # Create collision XML element
-                    collision_el = etree.Element("collision")
-                    collision_el.set("name", "collision")
-                    geom_el = etree.SubElement(collision_el, "geometry")
-                    mesh_el = etree.SubElement(geom_el, "mesh")
-                    mesh_el.set("filename", collision_mesh_rel)
-                    
-                    # Insert after visual if exists, otherwise append
-                    visual_els = link.xpath("visual")
-                    if visual_els:
-                        visual_el = visual_els[-1]
-                        idx = link.index(visual_el)
-                        link.insert(idx + 1, collision_el)
-                    else:
-                        link.append(collision_el)
-                        
-                    urdf_modified = True
-                    total_updated_links += 1
-                else:
-                    print(f"  Failed to generate collision mesh for link {link_name}.")
-            
-            if urdf_modified:
-                # Pretty print and save the modified URDF
-                formatted_xml = format_urdf_string(root)
-                with open(urdf_path, "w", encoding="utf-8") as f:
-                    f.write(formatted_xml)
-                print(f"Updated and formatted URDF: {urdf_path}")
-                total_processed += 1
-                
-        except Exception as e:
-            print(f"Error processing URDF {urdf_path}: {e}")
-            
-    print(f"\nScanning completed. Updated {total_updated_links} links in {total_processed} URDF files.")
+
+            print(f"\nProcessing link '{link_name}' in {os.path.basename(urdf_path)}.")
+            visual_mesh_abs = os.path.join(urdf_dir, visual_mesh_rel)
+            if not os.path.exists(visual_mesh_abs):
+                print(f"  Warning: Visual mesh not found at {visual_mesh_abs}. Skipping.")
+                continue
+
+            print(f"  Generating up to {max_convex_hulls} convex hulls from {visual_mesh_rel}...")
+            collision_paths = generate_convex_decomposition_parts(
+                visual_mesh_abs,
+                os.path.join(urdf_dir, "collision"),
+                link_name,
+                threshold,
+                merge,
+                max_convex_hulls,
+            )
+
+            if not collision_paths:
+                print(f"  Failed to generate collision mesh for link {link_name}.")
+                continue
+
+            print(f"  Successfully generated {len(collision_paths)} collision mesh(es).")
+            for collision_el in link.xpath("collision"):
+                link.remove(collision_el)
+
+            visual_els = link.xpath("visual")
+            insert_index = link.index(visual_els[-1]) + 1 if visual_els else len(link)
+            for collision_path in collision_paths:
+                collision_rel = os.path.relpath(collision_path, urdf_dir).replace(os.sep, "/")
+                collision_el = etree.Element("collision", name="collision")
+                geom_el = etree.SubElement(collision_el, "geometry")
+                etree.SubElement(geom_el, "mesh", filename=collision_rel)
+                link.insert(insert_index, collision_el)
+                insert_index += 1
+            urdf_modified = True
+
+        if urdf_modified:
+            formatted_xml = format_urdf_string(root)
+            with open(urdf_path, "w", encoding="utf-8") as f:
+                f.write(formatted_xml)
+            print(f"Updated URDF: {urdf_path}")
+    except Exception as e:
+        print(f"Error processing URDF {urdf_path}: {e}")
 
 def main():
     parser = argparse.ArgumentParser(description="MeshTools: Convert input mesh to convex hull(s) using CoACD, or scan for missing collisions in Robots/.")
     parser.add_argument("-i", "--input", dest="input", help="Input mesh file (STL/DAE/OBJ/etc.)")
     parser.add_argument("-o", "--output", dest="output", help="Output mesh file (STL)")
     parser.add_argument("--scan", action="store_true", help="Scan Robots/ folder, generate missing collisions, and update URDFs.")
+    parser.add_argument("--urdf", help="Regenerate collisions for one URDF or .positioner file.")
+    parser.add_argument("--regenerate", action="store_true", help="Delete existing collision XML nodes and the collision folder before generating.")
+    parser.add_argument("--threshold", type=float, default=0.2, help="CoACD concavity threshold (default: 0.2).")
+    parser.add_argument("--merge", action=argparse.BooleanOptionalAction, default=False, help="Allow CoACD to merge convex parts (default: false).")
+    parser.add_argument("--max-convex-hulls", type=int, default=5, help="Maximum convex hulls per visual mesh (default: 5).")
     
     args = parser.parse_args()
+
+    if args.max_convex_hulls < 1:
+        parser.error("--max-convex-hulls must be at least 1.")
+    if args.threshold < 0:
+        parser.error("--threshold must be non-negative.")
     
     # Locate ROBOTS_DIR dynamically
     script_dir = os.path.dirname(os.path.abspath(__file__))
     robots_dir = os.path.join(os.path.dirname(script_dir), "Robots")
     
-    if args.scan or (not args.input and not args.output):
+    if args.urdf:
+        process_urdf(
+            args.urdf,
+            regenerate=args.regenerate,
+            threshold=args.threshold,
+            merge=args.merge,
+            max_convex_hulls=args.max_convex_hulls,
+        )
+    elif args.scan or (not args.input and not args.output):
         # Scan mode
-        scan_and_generate_collisions(robots_dir)
+        urdfs = glob.glob(os.path.join(robots_dir, "**", "*.urdf"), recursive=True)
+        print(f"Scanning for URDF files under {robots_dir}... Found {len(urdfs)} URDF files.")
+        for urdf_path in sorted(urdfs):
+            process_urdf(
+                urdf_path,
+                regenerate=args.regenerate,
+                threshold=args.threshold,
+                merge=args.merge,
+                max_convex_hulls=args.max_convex_hulls,
+            )
     else:
         # Single file mode
         if not args.input or not args.output:
@@ -187,7 +247,12 @@ def main():
         coacd_mesh = coacd.Mesh(mesh.vertices, mesh.faces)
         
         print("Running Approximate Convex Decomposition via CoACD...")
-        parts = coacd.run_coacd(coacd_mesh)
+        parts = coacd.run_coacd(
+            coacd_mesh,
+            threshold=args.threshold,
+            merge=args.merge,
+            max_convex_hull=args.max_convex_hulls,
+        )
         print(f"Decomposed into {len(parts)} convex parts.")
         
         # Convert parts back to trimesh objects and combine them

@@ -2,6 +2,7 @@
 *.venv
 .antigravitycli
 .claude
+.mindfs/
 temp/
 # Zip 文件夹
 *_Zip/

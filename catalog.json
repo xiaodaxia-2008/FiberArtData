@@ -1568,12 +1568,6 @@
     {
       "type": "CADModel",
       "name": "CircleSurface",
-      "urdf": "CADModels/CircleSurface.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/CircleSurface.CATPart.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "CircleSurface",
       "urdf": "CADModels/CircleSurface.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/CircleSurface.stp.zip"
     },
@@ -1582,12 +1576,6 @@
       "name": "ConeTank",
       "urdf": "CADModels/ConeTank.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/ConeTank.stp.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "Cylinder",
-      "urdf": "CADModels/Cylinder.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Cylinder.CATPart.zip"
     },
     {
       "type": "CADModel",
@@ -1604,20 +1592,8 @@
     {
       "type": "CADModel",
       "name": "FlatCurveSurface",
-      "urdf": "CADModels/FlatCurveSurface.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatCurveSurface.CATPart.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "FlatCurveSurface",
       "urdf": "CADModels/FlatCurveSurface.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatCurveSurface.stp.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "FlatSurfaceWithMultiplyBondaries",
-      "urdf": "CADModels/FlatSurfaceWithMultiplyBondaries.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatSurfaceWithMultiplyBondaries.CATPart.zip"
     },
     {
       "type": "CADModel",
@@ -1636,12 +1612,6 @@
       "name": "PlaneWithGuideCurve",
       "urdf": "CADModels/PlaneWithGuideCurve.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/PlaneWithGuideCurve.stp.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "SDuctInlet",
-      "urdf": "CADModels/SDuctInlet.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SDuctInlet.CATPart.zip"
     },
     {
       "type": "CADModel",
@@ -1688,12 +1658,6 @@
     {
       "type": "CADModel",
       "name": "Tank",
-      "urdf": "CADModels/Tank.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Tank.CATPart.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "Tank",
       "urdf": "CADModels/Tank.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/Tank.stp.zip"
     },
@@ -1706,20 +1670,8 @@
     {
       "type": "CADModel",
       "name": "USpar",
-      "urdf": "CADModels/USpar.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/USpar.CATPart.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "USpar",
       "urdf": "CADModels/USpar.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/USpar.stp.zip"
-    },
-    {
-      "type": "CADModel",
-      "name": "Wing",
-      "urdf": "CADModels/Wing.CATPart",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Wing.CATPart.zip"
     },
     {
       "type": "CADModel",
@@ -1732,6 +1684,18 @@
       "name": "WingClosed",
       "urdf": "CADModels/WingClosed.stp",
       "uri": "https://storage.fiber-art.myshawn.com/CADModels/WingClosed.stp.zip"
+    },
+    {
+      "type": "Model",
+      "name": "sideTable",
+      "urdf": "Models/sideTable.fbx",
+      "uri": "https://storage.fiber-art.myshawn.com/Models/sideTable.fbx.zip"
+    },
+    {
+      "type": "Model",
+      "name": "standing-human",
+      "urdf": "Models/standing-human.dae",
+      "uri": "https://storage.fiber-art.myshawn.com/Models/standing-human.dae.zip"
     }
   ]
 }

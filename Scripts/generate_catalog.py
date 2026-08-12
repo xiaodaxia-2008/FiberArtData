@@ -10,6 +10,7 @@ from lxml import etree
 
 DATA_DIR = r"C:\AppSource\FiberArtData"
 R2_BASE_URL = "https://storage.fiber-art.myshawn.com/"
+MESH_EXTENSIONS = (".dae", ".fbx", ".glb", ".gltf", ".obj", ".ply", ".stl")
 
 CATEGORIES = [
     {"folder": "Robots", "exts": (".urdf",), "type": "Robot"},
@@ -17,6 +18,12 @@ CATEGORIES = [
     {"folder": "Positioners", "exts": (".positioner",), "type": "Positioner"},
     {"folder": "Tools", "exts": (".jointless_tool", ".jointed_tool"), "type": "Tool"},
     {"folder": "CADModels", "type": "CADModel", "individual_files": True},
+    {
+        "folder": "Models",
+        "exts": MESH_EXTENSIONS,
+        "type": "Model",
+        "individual_files": True,
+    },
 ]
 
 
@@ -31,10 +38,12 @@ def main():
             continue
 
         if cat.get("individual_files"):
-            # CADModels: each file listed individually
+            # Each supported file in the category root is listed individually.
             for f in sorted(os.listdir(source_dir)):
                 file_path = os.path.join(source_dir, f)
                 if not os.path.isfile(file_path):
+                    continue
+                if "exts" in cat and not f.lower().endswith(cat["exts"]):
                     continue
 
                 name_no_ext, ext = os.path.splitext(f)

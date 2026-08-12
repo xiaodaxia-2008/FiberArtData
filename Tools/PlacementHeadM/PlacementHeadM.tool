@@ -1,4 +1,5 @@
-<robot name="TapePlacementHead" brand="Custom" type="Tool">
+
+<robot name="PlacementHeadM" brand="Custom" type="Tool">
     <material name="tool_gray">
         <color rgba="0.82 0.68 0.61 1" />
     </material>
@@ -9,7 +10,7 @@
             </geometry>
         </visual>
     </link>
-    <attach_pose xyz="0 0 0" rpy="0 0 0"/>
-    <tcp xyz="0 0 -1.450" rpy="0 0 0"/>
+    <local_pose xyz="0 0 0" rpy="0 0 ${radians(180)}"/>
+    <tcp xyz="-0.001761239 0.000556 0.636682762" rpy="${radians(180)} 0 ${radians(180)}"/>
 </robot>
-
+    

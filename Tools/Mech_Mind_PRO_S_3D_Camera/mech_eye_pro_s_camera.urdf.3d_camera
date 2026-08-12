@@ -24,7 +24,7 @@
         <parent link="base_link"/>
         <child link="fov_link"/>
     </joint>
-    <attach_pose xyz="0 0 0" rpy="0 90 0"/>
+    <local_pose xyz="0 0 0" rpy="0 90 0"/>
     <tcp xyz="0 0 0.75" rpy="0 0 0"/>
 </robot>
 

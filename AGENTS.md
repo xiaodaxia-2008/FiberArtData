@@ -163,7 +163,7 @@ FiberArtData/
 │       └── collision/       # Collision meshes
 ├── Tracks/                  # Track definitions (.track)
 ├── Positioners/             # Positioner definitions (.positioner)
-├── Tools/                   # Tool definitions (.jointless_tool, .jointed_tool)
+├── Tools/                   # Tool definitions (.tool, .jointed_tool)
 ├── Scripts/                 # Reusable automation scripts
 ├── temp/                    # One-off scripts
 ├── ros-robots/              # Source ROS xacro packages (input for convert_ros_zips.py)

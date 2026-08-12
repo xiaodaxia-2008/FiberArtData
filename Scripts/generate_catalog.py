@@ -16,7 +16,7 @@ CATEGORIES = [
     {"folder": "Robots", "exts": (".urdf",), "type": "Robot"},
     {"folder": "Tracks", "exts": (".track",), "type": "Track"},
     {"folder": "Positioners", "exts": (".positioner",), "type": "Positioner"},
-    {"folder": "Tools", "exts": (".jointless_tool", ".jointed_tool"), "type": "Tool"},
+    {"folder": "Tools", "exts": (".tool", ".jointed_tool"), "type": "Tool"},
     {"folder": "CADModels", "type": "CADModel", "individual_files": True},
     {
         "folder": "Models",

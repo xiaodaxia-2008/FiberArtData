@@ -5,14 +5,14 @@
 # ///
 
 """
-transform_tool.py ? Apply attach_pose to link meshes and remove attach_pose from tool description.
+transform_tool.py ? Apply local_pose to link meshes and remove local_pose from tool description.
 
-Reads a .jointless_tool or .jointed_tool file, applies the <attach_pose>
+Reads a .tool or .jointed_tool file, applies the <local_pose>
 transformation (xyz + rpy) to every referenced STL mesh, backs up originals,
-then removes <attach_pose> from the XML.
+then removes <local_pose> from the XML.
 
 Usage:
-    uv run Scripts/transform_tool.py path/to/Tool.jointless_tool
+    uv run Scripts/transform_tool.py path/to/Tool.tool
     uv run Scripts/transform_tool.py path/to/Tool.jointed_tool
 """
 
@@ -74,14 +74,14 @@ def process_tool(tool_path: str) -> None:
     tree = etree.parse(str(tool_path), parser)
     root = tree.getroot()
 
-    attach = root.find("attach_pose")
-    if attach is None:
-        print("No <attach_pose> found ? nothing to do.")
+    local_pose = root.find("local_pose")
+    if local_pose is None:
+        print("No <local_pose> found ? nothing to do.")
         return
 
-    xyz = attach.get("xyz", "0 0 0")
-    rpy = attach.get("rpy", "0 0 0")
-    print(f"  attach_pose: xyz=\"{xyz}\"  rpy=\"{rpy}\"")
+    xyz = local_pose.get("xyz", "0 0 0")
+    rpy = local_pose.get("rpy", "0 0 0")
+    print(f"  local_pose: xyz=\"{xyz}\"  rpy=\"{rpy}\"")
 
     # ?? Back up ????????????????????????????????????????????????????????
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -138,9 +138,9 @@ def process_tool(tool_path: str) -> None:
         mesh.export(str(mesh_path))
         print(f"  Transformed {rel} ? overwritten in place")
 
-    # ?? Remove attach_pose ?????????????????????????????????????????????
-    root.remove(attach)
-    print("  Removed <attach_pose> from tool description.")
+    # ?? Remove local_pose ??????????????????????????????????????????????
+    root.remove(local_pose)
+    print("  Removed <local_pose> from tool description.")
 
     # ?? Write updated XML ??????????????????????????????????????????????
     xml_bytes = etree.tostring(root, encoding="utf-8", xml_declaration=True, pretty_print=True)
@@ -161,8 +161,8 @@ def main():
         sys.exit(1)
 
     for arg in sys.argv[1:]:
-        if not (arg.endswith(".jointless_tool") or arg.endswith(".jointed_tool")):
-            print(f"Warning: {arg} does not end with .jointless_tool or .jointed_tool, skipping.")
+        if not (arg.endswith(".tool") or arg.endswith(".jointed_tool")):
+            print(f"Warning: {arg} does not end with .tool or .jointed_tool, skipping.")
             continue
         process_tool(arg)
 

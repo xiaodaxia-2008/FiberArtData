@@ -226,7 +226,7 @@ def main():
             continue
 
         model_type = model.get("type", "")
-        is_cad_model = model_type == "CADModel"
+        is_individual_file = model_type in ("CADModel", "Model")
 
         # e.g., "Robots/UR10/UR10.urdf" -> parts: ["Robots", "UR10", "UR10.urdf"]
         # or "CADModels/CircleSurface.stp" -> parts: ["CADModels", "CircleSurface.stp"]
@@ -237,8 +237,8 @@ def main():
         category = parts[0]
         if len(parts) >= 3:
             model_folder_name = parts[1]
-        elif is_cad_model:
-            # CADModels: keep full filename (e.g. CircleSurface.CATPart) to avoid dedup collision
+        elif is_individual_file:
+            # Individual-file categories keep the full filename to avoid collisions.
             model_folder_name = parts[1]
         else:
             # Fallback for shallow directory (e.g., Robots/UR10.urdf -> folder UR10)
@@ -272,26 +272,26 @@ def main():
         zip_dir = os.path.join(DATA_DIR, "temp", "zips")
         os.makedirs(zip_dir, exist_ok=True)
 
-        if is_cad_model:
-            # CADModels: zip each individual file
+        if is_individual_file:
+            # CADModels and root-level Models entries are zipped individually.
             source_dir = os.path.join(DATA_DIR, category)
-            cad_filename = os.path.basename(urdf_rel_path)
-            cad_file_path = os.path.join(source_dir, cad_filename)
-            if not os.path.isfile(cad_file_path):
-                print(f"Warning: CAD file not found at {cad_file_path}. Skipping.")
+            filename = os.path.basename(urdf_rel_path)
+            file_path = os.path.join(source_dir, filename)
+            if not os.path.isfile(file_path):
+                print(f"Warning: Model file not found at {file_path}. Skipping.")
                 continue
-            local_zip_path = os.path.join(zip_dir, f"{cad_filename}.zip")
+            local_zip_path = os.path.join(zip_dir, f"{filename}.zip")
             print(
-                f"Zipping {category}/{cad_filename} -> temp/zips/{cad_filename}.zip ..."
+                f"Zipping {category}/{filename} -> temp/zips/{filename}.zip ..."
             )
             try:
                 shutil.make_archive(
-                    os.path.join(zip_dir, cad_filename), "zip", source_dir, cad_filename
+                    os.path.join(zip_dir, filename), "zip", source_dir, filename
                 )
             except Exception as e:
-                print(f"Error zipping {cad_filename}: {e}. Skipping.")
+                print(f"Error zipping {filename}: {e}. Skipping.")
                 continue
-            s3_key = f"{category}/{cad_filename}.zip"
+            s3_key = f"{category}/{filename}.zip"
             remote_hash = get_cloud_model_hash(
                 cloud_catalog, category, model.get("name", "")
             )

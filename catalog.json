@@ -1526,42 +1526,42 @@
     {
       "type": "Tool",
       "name": "AFPH16",
-      "urdf": "Tools/AFPHead/AFPH16.jointless_tool",
+      "urdf": "Tools/AFPHead/AFPH16.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/AFPHead.zip",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "Fiber Placement Head",
-      "urdf": "Tools/PlacementHead/PlacementHead.jointless_tool",
+      "urdf": "Tools/PlacementHead/PlacementHead.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/PlacementHead.zip",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "PlacementHeadM",
-      "urdf": "Tools/PlacementHeadM/PlacementHeadM.jointless_tool",
+      "urdf": "Tools/PlacementHeadM/PlacementHeadM.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/PlacementHeadM.zip",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "DemoPlacementHead",
-      "urdf": "Tools/SimpleDemoPlacementHead/DemoPlacementHead.jointless_tool",
+      "urdf": "Tools/SimpleDemoPlacementHead/DemoPlacementHead.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/SimpleDemoPlacementHead.zip",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "sucker",
-      "urdf": "Tools/Sucker/sucker.jointless_tool",
+      "urdf": "Tools/Sucker/sucker.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/Sucker.zip",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "TapePlacementHead",
-      "urdf": "Tools/TapePlacementHead/TapePlacementHead.jointless_tool",
+      "urdf": "Tools/TapePlacementHead/TapePlacementHead.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/TapePlacementHead.zip",
       "brand": "Custom"
     },

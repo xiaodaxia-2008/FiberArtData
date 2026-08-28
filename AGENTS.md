@@ -25,29 +25,39 @@ uv run temp/my_script.py
 
 # Scripts Overview
 
-## `Scripts/generate_catalog.py`
-Generates `catalog.json` from URDF files in the `Robots/`, `Tracks/`,
-`Positioners/`, `Tools/` directories.
-
-**What it does:**
-1. Scans each category directory for URDF/definition files
-2. Reads `brand`, `payload`, `reach` attributes from the root XML element
-3. Writes `catalog.json` with all models and their metadata
-
-Note: This script no longer creates zip archives — `upload_to_r2.py` handles zipping.
-
-```bash
-uv run --with lxml Scripts/generate_catalog.py
-```
-
 ## `Scripts/upload_to_r2.py`
 Uploads zip archives and `catalog.json` to Cloudflare R2 storage.
 
 **What it does:**
 1. Reads `catalog.json` to discover all models
-2. Zips each model folder into `{Category}_Zips/`
-3. Uploads only changed files (MD5-based dedup) to R2
+2. Zips each model folder into `temp/zips/`
+3. Uploads only changed files to R2 (skip logic compares each model's
+   **content hash** — recorded in `catalog.json` by `--generate-catalog` — with
+   the cloud catalog, falling back to the remote object's `local-md5` metadata)
 4. Uploads `catalog.json` last
+
+`generate_catalog.py` has been **merged into `upload_to_r2.py`**. Use
+`--generate-catalog` to rebuild `catalog.json` (now including a `hash` field per
+model) before uploading:
+
+```bash
+# Rebuild catalog.json (with content hashes) then upload
+uv run Scripts/upload_to_r2.py --generate-catalog
+
+# Upload only, using the existing catalog.json
+uv run Scripts/upload_to_r2.py
+```
+
+The catalog `hash` is computed with the same `model_source_hash()` used at
+upload time, so the local/cloud catalog comparison and per-model skip logic
+stay in sync with the actual source files — the catalog now changes (and no
+longer "skips" wrongly) whenever a model's files change.
+
+The catalog's `file` field holds the model's main file relative path (e.g.
+`Robots/UR10/UR10.urdf` or `CADModels/Spindle.stp`). The legacy `urdf` field is
+kept as a duplicate for backward compatibility; the script reads `file` first
+and falls back to `urdf`, so downstream consumers can migrate to `file` before
+`urdf` is dropped.
 
 **Requirements:** `.env` file with R2 credentials:
 ```
@@ -133,7 +143,7 @@ uv run Scripts/generate_collision_mesh.py --scan
 
 ### Step 3: Regenerate catalog and zip files
 ```bash
-uv run --with lxml Scripts/generate_catalog.py
+uv run Scripts/upload_to_r2.py --generate-catalog
 ```
 
 ### Step 4: Verify
@@ -169,5 +179,4 @@ FiberArtData/
 ├── ros-robots/              # Source ROS xacro packages (input for convert_ros_zips.py)
 ├── Robots_Zip/              # Generated zip archives (by generate_catalog.py)
 ├── Robots_Zips/             # Generated zip archives (by upload_to_r2.py)
-└── catalog.json             # Model catalog (generated, do not edit manually)
 ```

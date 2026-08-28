@@ -4,8 +4,10 @@
     {
       "type": "Robot",
       "name": "ABB_CRB15000_12_127",
+      "file": "Robots/ABB_CRB15000_12_127/ABB_CRB15000_12_127.urdf",
       "urdf": "Robots/ABB_CRB15000_12_127/ABB_CRB15000_12_127.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_CRB15000_12_127.zip",
+      "hash": "d1475cfbc42716e60dd3b985bc4206e5",
       "brand": "ABB",
       "payload": 12.0,
       "reach": 1.27
@@ -13,8 +15,10 @@
     {
       "type": "Robot",
       "name": "ABB_CRB15000_5_95",
+      "file": "Robots/ABB_CRB15000_5_95/ABB_CRB15000_5_95.urdf",
       "urdf": "Robots/ABB_CRB15000_5_95/ABB_CRB15000_5_95.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_CRB15000_5_95.zip",
+      "hash": "b8ab3a1d43ace81a07c91a2c8ac55c46",
       "brand": "ABB",
       "payload": 5.0,
       "reach": 0.95
@@ -22,8 +26,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB1200_5_90",
+      "file": "Robots/ABB_IRB1200_5_90/ABB_IRB1200_5_90.urdf",
       "urdf": "Robots/ABB_IRB1200_5_90/ABB_IRB1200_5_90.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB1200_5_90.zip",
+      "hash": "e78576e5114a4832d0391d16d59e9268",
       "brand": "ABB",
       "payload": 5.0,
       "reach": 0.9
@@ -31,8 +37,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB1200_7_70",
+      "file": "Robots/ABB_IRB1200_7_70/ABB_IRB1200_7_70.urdf",
       "urdf": "Robots/ABB_IRB1200_7_70/ABB_IRB1200_7_70.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB1200_7_70.zip",
+      "hash": "0c199d4088390bf072c5c7e98cb9c19a",
       "brand": "ABB",
       "payload": 7.0,
       "reach": 0.7
@@ -40,8 +48,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB120T_3_58",
+      "file": "Robots/ABB_IRB120T_3_58/ABB_IRB120T_3_58.urdf",
       "urdf": "Robots/ABB_IRB120T_3_58/ABB_IRB120T_3_58.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB120T_3_58.zip",
+      "hash": "7c55617da62eb456ea15b676fb4f07a1",
       "brand": "ABB",
       "payload": 3.0,
       "reach": 0.58
@@ -49,8 +59,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB120_3_58",
+      "file": "Robots/ABB_IRB120_3_58/ABB_IRB120_3_58.urdf",
       "urdf": "Robots/ABB_IRB120_3_58/ABB_IRB120_3_58.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB120_3_58.zip",
+      "hash": "33fbbc71ee9d4b99782f0b185fd9cac2",
       "brand": "ABB",
       "payload": 3.0,
       "reach": 0.58
@@ -58,8 +70,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB1600_10_145",
+      "file": "Robots/ABB_IRB1600_10_145/ABB_IRB1600_10_145.urdf",
       "urdf": "Robots/ABB_IRB1600_10_145/ABB_IRB1600_10_145.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB1600_10_145.zip",
+      "hash": "c3949584d19c797a3d4366e9dc981ed8",
       "brand": "ABB",
       "payload": 10.0,
       "reach": 1.45
@@ -67,8 +81,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB1600_6_12",
+      "file": "Robots/ABB_IRB1600_6_12/ABB_IRB1600_6_12.urdf",
       "urdf": "Robots/ABB_IRB1600_6_12/ABB_IRB1600_6_12.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB1600_6_12.zip",
+      "hash": "579d143105615ac217be99184ada2ab0",
       "brand": "ABB",
       "payload": 6.0,
       "reach": 1.2
@@ -76,8 +92,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB1600_8_145",
+      "file": "Robots/ABB_IRB1600_8_145/ABB_IRB1600_8_145.urdf",
       "urdf": "Robots/ABB_IRB1600_8_145/ABB_IRB1600_8_145.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB1600_8_145.zip",
+      "hash": "62e69bbc56487cd1418f78923f752cc0",
       "brand": "ABB",
       "payload": 8.0,
       "reach": 1.45
@@ -85,8 +103,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB2400",
+      "file": "Robots/ABB_IRB2400/ABB_IRB2400.urdf",
       "urdf": "Robots/ABB_IRB2400/ABB_IRB2400.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB2400.zip",
+      "hash": "2a21660a25e20ea16c78e50f5478decd",
       "brand": "ABB",
       "payload": 12.0,
       "reach": 1.55
@@ -94,8 +114,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB2400_12_155",
+      "file": "Robots/ABB_IRB2400_12_155/ABB_IRB2400_12_155.urdf",
       "urdf": "Robots/ABB_IRB2400_12_155/ABB_IRB2400_12_155.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB2400_12_155.zip",
+      "hash": "35b9a1489e8c857f262e30ab984b68df",
       "brand": "ABB",
       "payload": 12.0,
       "reach": 1.55
@@ -103,8 +125,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB2600_12_165",
+      "file": "Robots/ABB_IRB2600_12_165/ABB_IRB2600_12_165.urdf",
       "urdf": "Robots/ABB_IRB2600_12_165/ABB_IRB2600_12_165.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB2600_12_165.zip",
+      "hash": "f8b1874b915a402f37881eebb7a4725f",
       "brand": "ABB",
       "payload": 12.0,
       "reach": 1.65
@@ -112,8 +136,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB2600_12_185",
+      "file": "Robots/ABB_IRB2600_12_185/ABB_IRB2600_12_185.urdf",
       "urdf": "Robots/ABB_IRB2600_12_185/ABB_IRB2600_12_185.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB2600_12_185.zip",
+      "hash": "162c05e212623458924bc7d7a428c456",
       "brand": "ABB",
       "payload": 12.0,
       "reach": 1.85
@@ -121,8 +147,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB4400L_30_243",
+      "file": "Robots/ABB_IRB4400L_30_243/ABB_IRB4400L_30_243.urdf",
       "urdf": "Robots/ABB_IRB4400L_30_243/ABB_IRB4400L_30_243.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB4400L_30_243.zip",
+      "hash": "4c2f98d5d975a708fb640d9ac5b8d44d",
       "brand": "ABB",
       "payload": 30.0,
       "reach": 2.43
@@ -130,8 +158,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB4600_20_250",
+      "file": "Robots/ABB_IRB4600_20_250/ABB_IRB4600_20_250.urdf",
       "urdf": "Robots/ABB_IRB4600_20_250/ABB_IRB4600_20_250.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB4600_20_250.zip",
+      "hash": "4ef41b6248f52414394e31598006130b",
       "brand": "ABB",
       "payload": 20.0,
       "reach": 2.5
@@ -139,8 +169,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB4600_40_255",
+      "file": "Robots/ABB_IRB4600_40_255/ABB_IRB4600_40_255.urdf",
       "urdf": "Robots/ABB_IRB4600_40_255/ABB_IRB4600_40_255.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB4600_40_255.zip",
+      "hash": "cb79fbe680653441ec8f289280b942bd",
       "brand": "ABB",
       "payload": 40.0,
       "reach": 2.55
@@ -148,8 +180,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB4600_60_205",
+      "file": "Robots/ABB_IRB4600_60_205/ABB_IRB4600_60_205.urdf",
       "urdf": "Robots/ABB_IRB4600_60_205/ABB_IRB4600_60_205.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB4600_60_205.zip",
+      "hash": "14fba2f52f79b0d017670da8b90ce201",
       "brand": "ABB",
       "payload": 60.0,
       "reach": 2.05
@@ -157,8 +191,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB52_7_120",
+      "file": "Robots/ABB_IRB52_7_120/ABB_IRB52_7_120.urdf",
       "urdf": "Robots/ABB_IRB52_7_120/ABB_IRB52_7_120.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB52_7_120.zip",
+      "hash": "35e00f171078a1417fb23abf8b2c66e0",
       "brand": "ABB",
       "payload": 7.0,
       "reach": 1.2
@@ -166,8 +202,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB52_7_145",
+      "file": "Robots/ABB_IRB52_7_145/ABB_IRB52_7_145.urdf",
       "urdf": "Robots/ABB_IRB52_7_145/ABB_IRB52_7_145.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB52_7_145.zip",
+      "hash": "5d53ca2db4aaba3982222bbd55bf9751",
       "brand": "ABB",
       "payload": 7.0,
       "reach": 1.45
@@ -175,8 +213,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB5400",
+      "file": "Robots/ABB_IRB5400/ABB_IRB5400.urdf",
       "urdf": "Robots/ABB_IRB5400/ABB_IRB5400.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB5400.zip",
+      "hash": "c89908a2fbab796e262c22015ed40a16",
       "brand": "ABB",
       "payload": 15.0,
       "reach": 1.62
@@ -184,8 +224,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6600_225_255",
+      "file": "Robots/ABB_IRB6600_225_255/ABB_IRB6600_225_255.urdf",
       "urdf": "Robots/ABB_IRB6600_225_255/ABB_IRB6600_225_255.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6600_225_255.zip",
+      "hash": "aab8a70c11a30b213c2b9a16663b9965",
       "brand": "ABB",
       "payload": 225.0,
       "reach": 2.55
@@ -193,8 +235,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6640",
+      "file": "Robots/ABB_IRB6640/ABB_IRB6640.urdf",
       "urdf": "Robots/ABB_IRB6640/ABB_IRB6640.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6640.zip",
+      "hash": "18cf53c24e2458626c1e99c35677f131",
       "brand": "ABB",
       "payload": 180.0,
       "reach": 2.55
@@ -202,8 +246,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6640_185_280",
+      "file": "Robots/ABB_IRB6640_185_280/ABB_IRB6640_185_280.urdf",
       "urdf": "Robots/ABB_IRB6640_185_280/ABB_IRB6640_185_280.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6640_185_280.zip",
+      "hash": "b89364f058384ca262738586685a0f6c",
       "brand": "ABB",
       "payload": 185.0,
       "reach": 2.8
@@ -211,8 +257,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6650S_125_350",
+      "file": "Robots/ABB_IRB6650S_125_350/ABB_IRB6650S_125_350.urdf",
       "urdf": "Robots/ABB_IRB6650S_125_350/ABB_IRB6650S_125_350.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6650S_125_350.zip",
+      "hash": "20574b71fd9469cdd766b795eecf5b7b",
       "brand": "ABB",
       "payload": 125.0,
       "reach": 3.5
@@ -220,8 +268,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6650S_90_390",
+      "file": "Robots/ABB_IRB6650S_90_390/ABB_IRB6650S_90_390.urdf",
       "urdf": "Robots/ABB_IRB6650S_90_390/ABB_IRB6650S_90_390.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6650S_90_390.zip",
+      "hash": "87e0acfe2dfc98154625b7d4cce7370d",
       "brand": "ABB",
       "payload": 90.0,
       "reach": 3.9
@@ -229,8 +279,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6700_200_260",
+      "file": "Robots/ABB_IRB6700_200_260/ABB_IRB6700_200_260.urdf",
       "urdf": "Robots/ABB_IRB6700_200_260/ABB_IRB6700_200_260.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6700_200_260.zip",
+      "hash": "8286231edcf8cf6e4c6450d6a8658956",
       "brand": "ABB",
       "payload": 200.0,
       "reach": 2.6
@@ -238,8 +290,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB6700_235_265",
+      "file": "Robots/ABB_IRB6700_235_265/ABB_IRB6700_235_265.urdf",
       "urdf": "Robots/ABB_IRB6700_235_265/ABB_IRB6700_235_265.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB6700_235_265.zip",
+      "hash": "3f4a7205fa261985c8a88e9bb20dfe63",
       "brand": "ABB",
       "payload": 235.0,
       "reach": 2.65
@@ -247,8 +301,10 @@
     {
       "type": "Robot",
       "name": "ABB_IRB7600_150_350",
+      "file": "Robots/ABB_IRB7600_150_350/ABB_IRB7600_150_350.urdf",
       "urdf": "Robots/ABB_IRB7600_150_350/ABB_IRB7600_150_350.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/ABB_IRB7600_150_350.zip",
+      "hash": "f04c6148029eff3faf598f57622c5e8d",
       "brand": "ABB",
       "payload": 150.0,
       "reach": 3.5
@@ -256,8 +312,10 @@
     {
       "type": "Robot",
       "name": "COMAU_ComauSMART_NJ_500-2.7",
+      "file": "Robots/COMAU_ComauSMART_NJ_500-2.7/COMAU_ComauSMART_NJ_500-2.7.urdf",
       "urdf": "Robots/COMAU_ComauSMART_NJ_500-2.7/COMAU_ComauSMART_NJ_500-2.7.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/COMAU_ComauSMART_NJ_500-2.7.zip",
+      "hash": "a9b2f50af70aef57be96fbcd54cc59df",
       "brand": "COMAU",
       "payload": 500.0,
       "reach": 2.703
@@ -265,8 +323,10 @@
     {
       "type": "Robot",
       "name": "CUSTOM_Gantry",
+      "file": "Robots/CUSTOM_Gantry/CUSTOM_Gantry.urdf",
       "urdf": "Robots/CUSTOM_Gantry/CUSTOM_Gantry.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/CUSTOM_Gantry.zip",
+      "hash": "2e2ee65706061a991f634ec58071462e",
       "brand": "Custom",
       "payload": 200.0,
       "reach": 10.0
@@ -274,8 +334,10 @@
     {
       "type": "Robot",
       "name": "CUSTOM_TapePlacementGantry",
+      "file": "Robots/CUSTOM_TapePlacementGantry/CUSTOM_TapePlacementGantry.urdf",
       "urdf": "Robots/CUSTOM_TapePlacementGantry/CUSTOM_TapePlacementGantry.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/CUSTOM_TapePlacementGantry.zip",
+      "hash": "9f2c6f566b98494d8ccd44771ef201d8",
       "brand": "Custom",
       "payload": 200.0,
       "reach": 10.0
@@ -283,8 +345,10 @@
     {
       "type": "Robot",
       "name": "FANUC_CR35IA",
+      "file": "Robots/FANUC_CR35IA/FANUC_CR35IA.urdf",
       "urdf": "Robots/FANUC_CR35IA/FANUC_CR35IA.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_CR35IA.zip",
+      "hash": "a8d6d792d29ef19692594ad130cbacb9",
       "brand": "FANUC",
       "payload": 35.0,
       "reach": 1.813
@@ -292,8 +356,10 @@
     {
       "type": "Robot",
       "name": "FANUC_CR7IA",
+      "file": "Robots/FANUC_CR7IA/FANUC_CR7IA.urdf",
       "urdf": "Robots/FANUC_CR7IA/FANUC_CR7IA.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_CR7IA.zip",
+      "hash": "b6264a19b0418e5886bf3333abcca285",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.717
@@ -301,8 +367,10 @@
     {
       "type": "Robot",
       "name": "FANUC_CR7IAL",
+      "file": "Robots/FANUC_CR7IAL/FANUC_CR7IAL.urdf",
       "urdf": "Robots/FANUC_CR7IAL/FANUC_CR7IAL.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_CR7IAL.zip",
+      "hash": "b9ccf46846aca907b3a37ef7945cb05d",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.911
@@ -310,8 +378,10 @@
     {
       "type": "Robot",
       "name": "FANUC_CRX10IAL",
+      "file": "Robots/FANUC_CRX10IAL/FANUC_CRX10IAL.urdf",
       "urdf": "Robots/FANUC_CRX10IAL/FANUC_CRX10IAL.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_CRX10IAL.zip",
+      "hash": "04f300adc4988af20ab50b35b8666ff8",
       "brand": "FANUC",
       "payload": 10.0,
       "reach": 1.418
@@ -319,8 +389,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200I",
+      "file": "Robots/FANUC_LRMATE200I/FANUC_LRMATE200I.urdf",
       "urdf": "Robots/FANUC_LRMATE200I/FANUC_LRMATE200I.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200I.zip",
+      "hash": "140708542da0e4582a9b53240a9900db",
       "brand": "FANUC",
       "payload": 3.0,
       "reach": 0.56
@@ -328,8 +400,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IB",
+      "file": "Robots/FANUC_LRMATE200IB/FANUC_LRMATE200IB.urdf",
       "urdf": "Robots/FANUC_LRMATE200IB/FANUC_LRMATE200IB.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IB.zip",
+      "hash": "12013796fc6a114d509d30267de2771b",
       "brand": "FANUC",
       "payload": 5.0,
       "reach": 0.7
@@ -337,8 +411,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IB3L",
+      "file": "Robots/FANUC_LRMATE200IB3L/FANUC_LRMATE200IB3L.urdf",
       "urdf": "Robots/FANUC_LRMATE200IB3L/FANUC_LRMATE200IB3L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IB3L.zip",
+      "hash": "8bf7c429562dc1a4cbc7c8e3192f948e",
       "brand": "FANUC",
       "payload": 3.0,
       "reach": 0.83
@@ -346,8 +422,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IC",
+      "file": "Robots/FANUC_LRMATE200IC/FANUC_LRMATE200IC.urdf",
       "urdf": "Robots/FANUC_LRMATE200IC/FANUC_LRMATE200IC.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IC.zip",
+      "hash": "fff1d10119f7ad847a3bbed6db47599a",
       "brand": "FANUC",
       "payload": 5.0,
       "reach": 0.704
@@ -355,8 +433,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IC5F",
+      "file": "Robots/FANUC_LRMATE200IC5F/FANUC_LRMATE200IC5F.urdf",
       "urdf": "Robots/FANUC_LRMATE200IC5F/FANUC_LRMATE200IC5F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IC5F.zip",
+      "hash": "bb94b78303fa7bc4c8f3a3966cdd09ee",
       "brand": "FANUC",
       "payload": 5.0,
       "reach": 0.704
@@ -364,8 +444,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IC5H",
+      "file": "Robots/FANUC_LRMATE200IC5H/FANUC_LRMATE200IC5H.urdf",
       "urdf": "Robots/FANUC_LRMATE200IC5H/FANUC_LRMATE200IC5H.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IC5H.zip",
+      "hash": "fb6f928435db92f8c5ccf6496b2f6baf",
       "brand": "FANUC",
       "payload": 5.0,
       "reach": 0.704
@@ -373,8 +455,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IC5HS",
+      "file": "Robots/FANUC_LRMATE200IC5HS/FANUC_LRMATE200IC5HS.urdf",
       "urdf": "Robots/FANUC_LRMATE200IC5HS/FANUC_LRMATE200IC5HS.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IC5HS.zip",
+      "hash": "5fefebfaf22005ab79ab8484ec0f6e63",
       "brand": "FANUC",
       "payload": 5.0,
       "reach": 0.704
@@ -382,8 +466,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200IC5L",
+      "file": "Robots/FANUC_LRMATE200IC5L/FANUC_LRMATE200IC5L.urdf",
       "urdf": "Robots/FANUC_LRMATE200IC5L/FANUC_LRMATE200IC5L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200IC5L.zip",
+      "hash": "00a30acf6cc4eb3bcc0e21eda9f1b861",
       "brand": "FANUC",
       "payload": 5.0,
       "reach": 0.911
@@ -391,8 +477,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID",
+      "file": "Robots/FANUC_LRMATE200ID/FANUC_LRMATE200ID.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID/FANUC_LRMATE200ID.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID.zip",
+      "hash": "0be927a4b2ded96a8a25f06ea4811389",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.717
@@ -400,8 +488,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID4S",
+      "file": "Robots/FANUC_LRMATE200ID4S/FANUC_LRMATE200ID4S.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID4S/FANUC_LRMATE200ID4S.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID4S.zip",
+      "hash": "ea851752f6c1c523a4865749d51c6d26",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.55
@@ -409,8 +499,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID4SC",
+      "file": "Robots/FANUC_LRMATE200ID4SC/FANUC_LRMATE200ID4SC.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID4SC/FANUC_LRMATE200ID4SC.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID4SC.zip",
+      "hash": "0b2b8dfef4947fafd3aa95924fbc5065",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.55
@@ -418,8 +510,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID4SH",
+      "file": "Robots/FANUC_LRMATE200ID4SH/FANUC_LRMATE200ID4SH.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID4SH/FANUC_LRMATE200ID4SH.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID4SH.zip",
+      "hash": "3e91c14e68cd8ec829d6fe118764ee5d",
       "brand": "FANUC",
       "payload": 4.0,
       "reach": 0.55
@@ -427,8 +521,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID7H",
+      "file": "Robots/FANUC_LRMATE200ID7H/FANUC_LRMATE200ID7H.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID7H/FANUC_LRMATE200ID7H.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID7H.zip",
+      "hash": "fc5d10b9fa510dc2bed10be1e5e3f2c3",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.717
@@ -436,8 +532,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID7L",
+      "file": "Robots/FANUC_LRMATE200ID7L/FANUC_LRMATE200ID7L.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID7L/FANUC_LRMATE200ID7L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID7L.zip",
+      "hash": "254c352da0e653d3768a20187722191a",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.911
@@ -445,8 +543,10 @@
     {
       "type": "Robot",
       "name": "FANUC_LRMATE200ID7LC",
+      "file": "Robots/FANUC_LRMATE200ID7LC/FANUC_LRMATE200ID7LC.urdf",
       "urdf": "Robots/FANUC_LRMATE200ID7LC/FANUC_LRMATE200ID7LC.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_LRMATE200ID7LC.zip",
+      "hash": "a26829b1d32548df5d3b89ec7a2e670d",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 0.911
@@ -454,8 +554,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M10IA",
+      "file": "Robots/FANUC_M10IA/FANUC_M10IA.urdf",
       "urdf": "Robots/FANUC_M10IA/FANUC_M10IA.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M10IA.zip",
+      "hash": "4d6f8bde38a77dd384db9e9ee553387d",
       "brand": "FANUC",
       "payload": 10.0,
       "reach": 1.42
@@ -463,8 +565,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M10IA7L",
+      "file": "Robots/FANUC_M10IA7L/FANUC_M10IA7L.urdf",
       "urdf": "Robots/FANUC_M10IA7L/FANUC_M10IA7L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M10IA7L.zip",
+      "hash": "cb354bcc6da144d95ce893a1b5966b0a",
       "brand": "FANUC",
       "payload": 7.0,
       "reach": 1.633
@@ -472,8 +576,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M16IB20",
+      "file": "Robots/FANUC_M16IB20/FANUC_M16IB20.urdf",
       "urdf": "Robots/FANUC_M16IB20/FANUC_M16IB20.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M16IB20.zip",
+      "hash": "4781c2003c70441403133e46d188c210",
       "brand": "FANUC",
       "payload": 20.0,
       "reach": 1.667
@@ -481,8 +587,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M20IA",
+      "file": "Robots/FANUC_M20IA/FANUC_M20IA.urdf",
       "urdf": "Robots/FANUC_M20IA/FANUC_M20IA.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M20IA.zip",
+      "hash": "878c8933977e4faec7c05e94b839f91d",
       "brand": "FANUC",
       "payload": 20.0,
       "reach": 1.811
@@ -490,8 +598,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M20IA10L",
+      "file": "Robots/FANUC_M20IA10L/FANUC_M20IA10L.urdf",
       "urdf": "Robots/FANUC_M20IA10L/FANUC_M20IA10L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M20IA10L.zip",
+      "hash": "54f7c35aa0f37dc85314e6547c50a2bf",
       "brand": "FANUC",
       "payload": 10.0,
       "reach": 2.009
@@ -499,8 +609,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M20IB25",
+      "file": "Robots/FANUC_M20IB25/FANUC_M20IB25.urdf",
       "urdf": "Robots/FANUC_M20IB25/FANUC_M20IB25.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M20IB25.zip",
+      "hash": "fbb566dfd7a4bf8b0c0aa2e032c0ed5b",
       "brand": "FANUC",
       "payload": 25.0,
       "reach": 1.853
@@ -508,8 +620,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M430IA2F",
+      "file": "Robots/FANUC_M430IA2F/FANUC_M430IA2F.urdf",
       "urdf": "Robots/FANUC_M430IA2F/FANUC_M430IA2F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M430IA2F.zip",
+      "hash": "90cd3600640d5c0f6fd6bb36b629df7c",
       "brand": "FANUC",
       "payload": 2.0,
       "reach": 0.9
@@ -517,8 +631,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M430IA2P",
+      "file": "Robots/FANUC_M430IA2P/FANUC_M430IA2P.urdf",
       "urdf": "Robots/FANUC_M430IA2P/FANUC_M430IA2P.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M430IA2P.zip",
+      "hash": "6775512742d650b951f62cc25079298a",
       "brand": "FANUC",
       "payload": 2.0,
       "reach": 0.9
@@ -526,8 +642,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M6IB",
+      "file": "Robots/FANUC_M6IB/FANUC_M6IB.urdf",
       "urdf": "Robots/FANUC_M6IB/FANUC_M6IB.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M6IB.zip",
+      "hash": "43f50848a5337dbb9e35909a23ebff85",
       "brand": "FANUC",
       "payload": 6.0,
       "reach": 1.373
@@ -535,8 +653,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M6IB6S",
+      "file": "Robots/FANUC_M6IB6S/FANUC_M6IB6S.urdf",
       "urdf": "Robots/FANUC_M6IB6S/FANUC_M6IB6S.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M6IB6S.zip",
+      "hash": "36eafbd427a9ec4e3273fdf71f7da7a5",
       "brand": "FANUC",
       "payload": 6.0,
       "reach": 0.951
@@ -544,8 +664,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M710IC45M",
+      "file": "Robots/FANUC_M710IC45M/FANUC_M710IC45M.urdf",
       "urdf": "Robots/FANUC_M710IC45M/FANUC_M710IC45M.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M710IC45M.zip",
+      "hash": "74af2e1ccb0851459bbc0538270feec7",
       "brand": "FANUC",
       "payload": 45.0,
       "reach": 2.606
@@ -553,8 +675,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M710IC50",
+      "file": "Robots/FANUC_M710IC50/FANUC_M710IC50.urdf",
       "urdf": "Robots/FANUC_M710IC50/FANUC_M710IC50.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M710IC50.zip",
+      "hash": "5855dbe1eda918e5ce7204df3e262c44",
       "brand": "FANUC",
       "payload": 50.0,
       "reach": 2.05
@@ -562,8 +686,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M900IA260L",
+      "file": "Robots/FANUC_M900IA260L/FANUC_M900IA260L.urdf",
       "urdf": "Robots/FANUC_M900IA260L/FANUC_M900IA260L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M900IA260L.zip",
+      "hash": "051cd58e351ab1af7a527bb0073e8eea",
       "brand": "FANUC",
       "payload": 260.0,
       "reach": 3.1
@@ -571,8 +697,10 @@
     {
       "type": "Robot",
       "name": "FANUC_M900IB700",
+      "file": "Robots/FANUC_M900IB700/FANUC_M900IB700.urdf",
       "urdf": "Robots/FANUC_M900IB700/FANUC_M900IB700.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_M900IB700.zip",
+      "hash": "7d3cf6af93b6bebc2f0ed575cb964330",
       "brand": "FANUC",
       "payload": 700.0,
       "reach": 2.832
@@ -580,8 +708,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R1000IA80F",
+      "file": "Robots/FANUC_R1000IA80F/FANUC_R1000IA80F.urdf",
       "urdf": "Robots/FANUC_R1000IA80F/FANUC_R1000IA80F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R1000IA80F.zip",
+      "hash": "fb0582fbf5030dd2c6b443bf6fe24380",
       "brand": "FANUC",
       "payload": 80.0,
       "reach": 2.23
@@ -589,8 +719,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R2000IB210F",
+      "file": "Robots/FANUC_R2000IB210F/FANUC_R2000IB210F.urdf",
       "urdf": "Robots/FANUC_R2000IB210F/FANUC_R2000IB210F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IB210F.zip",
+      "hash": "790569ed2af5c1318cc7d217f84d092b",
       "brand": "FANUC",
       "payload": 210.0,
       "reach": 2.655
@@ -598,8 +730,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R2000IC125L",
+      "file": "Robots/FANUC_R2000IC125L/FANUC_R2000IC125L.urdf",
       "urdf": "Robots/FANUC_R2000IC125L/FANUC_R2000IC125L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC125L.zip",
+      "hash": "ad664d6ded705f855e711c980087feff",
       "brand": "FANUC",
       "payload": 125.0,
       "reach": 3.1
@@ -607,8 +741,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R2000IC165F",
+      "file": "Robots/FANUC_R2000IC165F/FANUC_R2000IC165F.urdf",
       "urdf": "Robots/FANUC_R2000IC165F/FANUC_R2000IC165F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC165F.zip",
+      "hash": "9c519cc3a67621b5c68d32b75e4f1efc",
       "brand": "FANUC",
       "payload": 165.0,
       "reach": 2.655
@@ -616,8 +752,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R2000IC210F",
+      "file": "Robots/FANUC_R2000IC210F/FANUC_R2000IC210F.urdf",
       "urdf": "Robots/FANUC_R2000IC210F/FANUC_R2000IC210F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC210F.zip",
+      "hash": "c98935fa2ed50d3d718f0096c58bf9a2",
       "brand": "FANUC",
       "payload": 210.0,
       "reach": 2.655
@@ -625,8 +763,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R2000IC210L",
+      "file": "Robots/FANUC_R2000IC210L/FANUC_R2000IC210L.urdf",
       "urdf": "Robots/FANUC_R2000IC210L/FANUC_R2000IC210L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC210L.zip",
+      "hash": "6e0452363a3bfc0c8d01a6907a2f003a",
       "brand": "FANUC",
       "payload": 210.0,
       "reach": 3.1
@@ -634,8 +774,10 @@
     {
       "type": "Robot",
       "name": "FANUC_R2000IC270F",
+      "file": "Robots/FANUC_R2000IC270F/FANUC_R2000IC270F.urdf",
       "urdf": "Robots/FANUC_R2000IC270F/FANUC_R2000IC270F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/FANUC_R2000IC270F.zip",
+      "hash": "eec30c656f9f24616c270b6464a138b2",
       "brand": "FANUC",
       "payload": 270.0,
       "reach": 2.655
@@ -643,8 +785,10 @@
     {
       "type": "Robot",
       "name": "INOVANCE_IR-R35JQR",
+      "file": "Robots/INOVANCE_IR-R35JQR/INOVANCE_IR-R35JQR.urdf",
       "urdf": "Robots/INOVANCE_IR-R35JQR/INOVANCE_IR-R35JQR.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/INOVANCE_IR-R35JQR.zip",
+      "hash": "9b7fb6e969a08a6be44879099bf28b96",
       "brand": "INOVANCE",
       "payload": 35.0,
       "reach": 1.856
@@ -652,8 +796,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR10R1100SIXX",
+      "file": "Robots/KUKA_KR10R1100SIXX/KUKA_KR10R1100SIXX.urdf",
       "urdf": "Robots/KUKA_KR10R1100SIXX/KUKA_KR10R1100SIXX.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R1100SIXX.zip",
+      "hash": "27e10ce514f0f842d3e11d028559affe",
       "brand": "KUKA",
       "payload": 10.0,
       "reach": 1.101
@@ -661,8 +807,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR10R1420",
+      "file": "Robots/KUKA_KR10R1420/KUKA_KR10R1420.urdf",
       "urdf": "Robots/KUKA_KR10R1420/KUKA_KR10R1420.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R1420.zip",
+      "hash": "cf18990538dcf3ac2ac69d38cbe33eaa",
       "brand": "KUKA",
       "payload": 10.0,
       "reach": 1.42
@@ -670,8 +818,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR10R1420HP",
+      "file": "Robots/KUKA_KR10R1420HP/KUKA_KR10R1420HP.urdf",
       "urdf": "Robots/KUKA_KR10R1420HP/KUKA_KR10R1420HP.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R1420HP.zip",
+      "hash": "5c7ad589f887224a9895f0ff1aa283e6",
       "brand": "KUKA",
       "payload": 10.0,
       "reach": 1.42
@@ -679,8 +829,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR10R900_2",
+      "file": "Robots/KUKA_KR10R900_2/KUKA_KR10R900_2.urdf",
       "urdf": "Robots/KUKA_KR10R900_2/KUKA_KR10R900_2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR10R900_2.zip",
+      "hash": "79fb59314ce5cf8ceed1842d4fd2ab37",
       "brand": "KUKA",
       "payload": 10.0,
       "reach": 0.901
@@ -688,8 +840,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR120R2500PRO",
+      "file": "Robots/KUKA_KR120R2500PRO/KUKA_KR120R2500PRO.urdf",
       "urdf": "Robots/KUKA_KR120R2500PRO/KUKA_KR120R2500PRO.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR120R2500PRO.zip",
+      "hash": "9e2730bd381137affd66f60c4ace8b86",
       "brand": "KUKA",
       "payload": 120.0,
       "reach": 2.496
@@ -697,8 +851,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR150R3100_2",
+      "file": "Robots/KUKA_KR150R3100_2/KUKA_KR150R3100_2.urdf",
       "urdf": "Robots/KUKA_KR150R3100_2/KUKA_KR150R3100_2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR150R3100_2.zip",
+      "hash": "c376a9c0ae6f0e3ffa2e4694bc981159",
       "brand": "KUKA",
       "payload": 150.0,
       "reach": 3.095
@@ -706,8 +862,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR150_2",
+      "file": "Robots/KUKA_KR150_2/KUKA_KR150_2.urdf",
       "urdf": "Robots/KUKA_KR150_2/KUKA_KR150_2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR150_2.zip",
+      "hash": "42f18ff885ba633e38a9e10f39ed9f44",
       "brand": "KUKA",
       "payload": 150.0,
       "reach": 2.7
@@ -715,8 +873,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR16_2",
+      "file": "Robots/KUKA_KR16_2/KUKA_KR16_2.urdf",
       "urdf": "Robots/KUKA_KR16_2/KUKA_KR16_2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR16_2.zip",
+      "hash": "0d9792b149fc3503c5c51220518211d3",
       "brand": "KUKA",
       "payload": 16.0,
       "reach": 1.611
@@ -724,8 +884,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR210L150",
+      "file": "Robots/KUKA_KR210L150/KUKA_KR210L150.urdf",
       "urdf": "Robots/KUKA_KR210L150/KUKA_KR210L150.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR210L150.zip",
+      "hash": "2bb573053b0b6c53fdf7ba822d67f608",
       "brand": "KUKA",
       "payload": 150.0,
       "reach": 3.1
@@ -733,8 +895,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR210R2700-2",
+      "file": "Robots/KUKA_KR210R2700-2/KUKA_KR210R2700-2.urdf",
       "urdf": "Robots/KUKA_KR210R2700-2/KUKA_KR210R2700-2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR210R2700-2.zip",
+      "hash": "95a76a75e99643c2420b4308422123ae",
       "brand": "KUKA",
       "payload": 210.0,
       "reach": 2.701
@@ -742,8 +906,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR360R2830",
+      "file": "Robots/KUKA_KR360R2830/KUKA_KR360R2830.urdf",
       "urdf": "Robots/KUKA_KR360R2830/KUKA_KR360R2830.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR360R2830.zip",
+      "hash": "e6f5ae61c856c193d2bfda354cdba5e1",
       "brand": "KUKA",
       "payload": 360.0,
       "reach": 2.826
@@ -751,8 +917,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR3R540",
+      "file": "Robots/KUKA_KR3R540/KUKA_KR3R540.urdf",
       "urdf": "Robots/KUKA_KR3R540/KUKA_KR3R540.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR3R540.zip",
+      "hash": "a6ded3a8b67ce9b5e2bd81d67ec6e6f5",
       "brand": "KUKA",
       "payload": 3.0,
       "reach": 0.54
@@ -760,8 +928,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR480R3330MT",
+      "file": "Robots/KUKA_KR480R3330MT/KUKA_KR480R3330MT.urdf",
       "urdf": "Robots/KUKA_KR480R3330MT/KUKA_KR480R3330MT.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR480R3330MT.zip",
+      "hash": "3eb973c9debcb3f0a17141526f1fa770",
       "brand": "KUKA",
       "payload": 480.0,
       "reach": 3.33
@@ -769,8 +939,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR500R2380",
+      "file": "Robots/KUKA_KR500R2380/KUKA_KR500R2380.urdf",
       "urdf": "Robots/KUKA_KR500R2380/KUKA_KR500R2380.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR500R2380.zip",
+      "hash": "d464396d99c24c70052490f54c0fdb3d",
       "brand": "KUKA",
       "payload": 500.0,
       "reach": 2.38
@@ -778,8 +950,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR5_ARC",
+      "file": "Robots/KUKA_KR5_ARC/KUKA_KR5_ARC.urdf",
       "urdf": "Robots/KUKA_KR5_ARC/KUKA_KR5_ARC.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR5_ARC.zip",
+      "hash": "0a17dd225f05caa660062485960b1518",
       "brand": "KUKA",
       "payload": 5.0,
       "reach": 1.611
@@ -787,8 +961,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR6R700SIXX",
+      "file": "Robots/KUKA_KR6R700SIXX/KUKA_KR6R700SIXX.urdf",
       "urdf": "Robots/KUKA_KR6R700SIXX/KUKA_KR6R700SIXX.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR6R700SIXX.zip",
+      "hash": "ae05a38ed91937a3dabf0f8c0028fa52",
       "brand": "KUKA",
       "payload": 6.0,
       "reach": 0.706
@@ -796,8 +972,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR6R900SIXX",
+      "file": "Robots/KUKA_KR6R900SIXX/KUKA_KR6R900SIXX.urdf",
       "urdf": "Robots/KUKA_KR6R900SIXX/KUKA_KR6R900SIXX.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR6R900SIXX.zip",
+      "hash": "7feab40cc79e6322c59110c0e641632c",
       "brand": "KUKA",
       "payload": 6.0,
       "reach": 0.901
@@ -805,8 +983,10 @@
     {
       "type": "Robot",
       "name": "KUKA_KR6R900_2",
+      "file": "Robots/KUKA_KR6R900_2/KUKA_KR6R900_2.urdf",
       "urdf": "Robots/KUKA_KR6R900_2/KUKA_KR6R900_2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR6R900_2.zip",
+      "hash": "87c1ecd343927659ebc5848dd0b130ae",
       "brand": "KUKA",
       "payload": 6.0,
       "reach": 0.901
@@ -814,8 +994,10 @@
     {
       "type": "Robot",
       "name": "KR70_R2100-2",
+      "file": "Robots/KUKA_KR70R2100-2/KUKA_KR70_R2100-2.urdf",
       "urdf": "Robots/KUKA_KR70R2100-2/KUKA_KR70_R2100-2.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_KR70R2100-2.zip",
+      "hash": "9ae844d11fead5dae9b647b4885b8ee5",
       "brand": "KUKA",
       "payload": 70.0,
       "reach": 2.1
@@ -823,8 +1005,10 @@
     {
       "type": "Robot",
       "name": "KUKA_LBR_IIWA_14_R820",
+      "file": "Robots/KUKA_LBR_IIWA_14_R820/KUKA_LBR_IIWA_14_R820.urdf",
       "urdf": "Robots/KUKA_LBR_IIWA_14_R820/KUKA_LBR_IIWA_14_R820.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/KUKA_LBR_IIWA_14_R820.zip",
+      "hash": "e2e8a1c749f9a54a662d29cb1c02bec0",
       "brand": "KUKA",
       "payload": 14.0,
       "reach": 0.82
@@ -832,8 +1016,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_AR2010",
+      "file": "Robots/MOTOMAN_AR2010/MOTOMAN_AR2010.urdf",
       "urdf": "Robots/MOTOMAN_AR2010/MOTOMAN_AR2010.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_AR2010.zip",
+      "hash": "7262b8594eb7042782bda170c4b6934f",
       "brand": "MOTOMAN",
       "payload": 12.0,
       "reach": 2.01
@@ -841,8 +1027,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_ARM",
+      "file": "Robots/MOTOMAN_ARM/MOTOMAN_ARM.urdf",
       "urdf": "Robots/MOTOMAN_ARM/MOTOMAN_ARM.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_ARM.zip",
+      "hash": "ac50d04330b5148f930dd4e85dc5dde6",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 0.72
@@ -850,8 +1038,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_CSDA10F",
+      "file": "Robots/MOTOMAN_CSDA10F/MOTOMAN_CSDA10F.urdf",
       "urdf": "Robots/MOTOMAN_CSDA10F/MOTOMAN_CSDA10F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_CSDA10F.zip",
+      "hash": "d65270452896cf6fca7036966b2e7195",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 0.72
@@ -859,8 +1049,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_CSDA10F_MOTOMAN_ARM",
+      "file": "Robots/MOTOMAN_CSDA10F_MOTOMAN_ARM/MOTOMAN_CSDA10F_MOTOMAN_ARM.urdf",
       "urdf": "Robots/MOTOMAN_CSDA10F_MOTOMAN_ARM/MOTOMAN_CSDA10F_MOTOMAN_ARM.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_CSDA10F_MOTOMAN_ARM.zip",
+      "hash": "90d941aa615790695cf24665a9c8d9ad",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 0.72
@@ -868,8 +1060,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_ES165",
+      "file": "Robots/MOTOMAN_ES165/MOTOMAN_ES165.urdf",
       "urdf": "Robots/MOTOMAN_ES165/MOTOMAN_ES165.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_ES165.zip",
+      "hash": "67fb570e84c18cf2a9aea9e538af1a93",
       "brand": "MOTOMAN",
       "payload": 165.0,
       "reach": 2.651
@@ -877,8 +1071,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_ES200_120",
+      "file": "Robots/MOTOMAN_ES200_120/MOTOMAN_ES200_120.urdf",
       "urdf": "Robots/MOTOMAN_ES200_120/MOTOMAN_ES200_120.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_ES200_120.zip",
+      "hash": "2cfb580fea02f213444dad18ce031782",
       "brand": "MOTOMAN",
       "payload": 120.0,
       "reach": 3.14
@@ -886,8 +1082,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP110",
+      "file": "Robots/MOTOMAN_GP110/MOTOMAN_GP110.urdf",
       "urdf": "Robots/MOTOMAN_GP110/MOTOMAN_GP110.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP110.zip",
+      "hash": "eaa91509b3f0eb59ea5e1c561aedb4a2",
       "brand": "MOTOMAN",
       "payload": 110.0,
       "reach": 2.235
@@ -895,8 +1093,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP12",
+      "file": "Robots/MOTOMAN_GP12/MOTOMAN_GP12.urdf",
       "urdf": "Robots/MOTOMAN_GP12/MOTOMAN_GP12.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP12.zip",
+      "hash": "accccee5c6b3b3f62629bf2317120cd4",
       "brand": "MOTOMAN",
       "payload": 12.0,
       "reach": 1.44
@@ -904,8 +1104,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP165R",
+      "file": "Robots/MOTOMAN_GP165R/MOTOMAN_GP165R.urdf",
       "urdf": "Robots/MOTOMAN_GP165R/MOTOMAN_GP165R.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP165R.zip",
+      "hash": "3fcb9c11d117d3e300208326de8354ef",
       "brand": "MOTOMAN",
       "payload": 165.0,
       "reach": 3.14
@@ -913,8 +1115,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP165R_EQUIPPED",
+      "file": "Robots/MOTOMAN_GP165R_EQUIPPED/MOTOMAN_GP165R_EQUIPPED.urdf",
       "urdf": "Robots/MOTOMAN_GP165R_EQUIPPED/MOTOMAN_GP165R_EQUIPPED.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP165R_EQUIPPED.zip",
+      "hash": "90bc1a21fd6647ac931b44602529768f",
       "brand": "MOTOMAN",
       "payload": 165.0,
       "reach": 3.14
@@ -922,8 +1126,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP180",
+      "file": "Robots/MOTOMAN_GP180/MOTOMAN_GP180.urdf",
       "urdf": "Robots/MOTOMAN_GP180/MOTOMAN_GP180.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP180.zip",
+      "hash": "f1f5f456c6d1f750c2a1e843e0bcf396",
       "brand": "MOTOMAN",
       "payload": 180.0,
       "reach": 2.702
@@ -931,8 +1137,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP180_120",
+      "file": "Robots/MOTOMAN_GP180_120/MOTOMAN_GP180_120.urdf",
       "urdf": "Robots/MOTOMAN_GP180_120/MOTOMAN_GP180_120.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP180_120.zip",
+      "hash": "0c9a9f3735111c8fe05e0c7b3824b555",
       "brand": "MOTOMAN",
       "payload": 120.0,
       "reach": 3.058
@@ -940,8 +1148,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP200R",
+      "file": "Robots/MOTOMAN_GP200R/MOTOMAN_GP200R.urdf",
       "urdf": "Robots/MOTOMAN_GP200R/MOTOMAN_GP200R.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP200R.zip",
+      "hash": "0118ce1b81c3d4182e0fbf27e000bfca",
       "brand": "MOTOMAN",
       "payload": 200.0,
       "reach": 3.14
@@ -949,8 +1159,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP20HL",
+      "file": "Robots/MOTOMAN_GP20HL/MOTOMAN_GP20HL.urdf",
       "urdf": "Robots/MOTOMAN_GP20HL/MOTOMAN_GP20HL.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP20HL.zip",
+      "hash": "cff95babd4960872ad25386c90bfdb23",
       "brand": "MOTOMAN",
       "payload": 20.0,
       "reach": 3.124
@@ -958,8 +1170,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP215",
+      "file": "Robots/MOTOMAN_GP215/MOTOMAN_GP215.urdf",
       "urdf": "Robots/MOTOMAN_GP215/MOTOMAN_GP215.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP215.zip",
+      "hash": "a4e2476f393a9c3c2fcee9c145df825a",
       "brand": "MOTOMAN",
       "payload": 215.0,
       "reach": 3.061
@@ -967,8 +1181,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP225",
+      "file": "Robots/MOTOMAN_GP225/MOTOMAN_GP225.urdf",
       "urdf": "Robots/MOTOMAN_GP225/MOTOMAN_GP225.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP225.zip",
+      "hash": "9b3701c711bb91d16c6b2e6626c31ab2",
       "brand": "MOTOMAN",
       "payload": 225.0,
       "reach": 3.935
@@ -976,8 +1192,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP25",
+      "file": "Robots/MOTOMAN_GP25/MOTOMAN_GP25.urdf",
       "urdf": "Robots/MOTOMAN_GP25/MOTOMAN_GP25.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP25.zip",
+      "hash": "b673d21c338f5e939ff2d6f769d0a22f",
       "brand": "MOTOMAN",
       "payload": 25.0,
       "reach": 1.73
@@ -985,8 +1203,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP250",
+      "file": "Robots/MOTOMAN_GP250/MOTOMAN_GP250.urdf",
       "urdf": "Robots/MOTOMAN_GP250/MOTOMAN_GP250.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP250.zip",
+      "hash": "eb13bb31e9a71aa5d3b93a3bad0a3079",
       "brand": "MOTOMAN",
       "payload": 250.0,
       "reach": 2.951
@@ -994,8 +1214,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP25_12",
+      "file": "Robots/MOTOMAN_GP25_12/MOTOMAN_GP25_12.urdf",
       "urdf": "Robots/MOTOMAN_GP25_12/MOTOMAN_GP25_12.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP25_12.zip",
+      "hash": "9a6d742257c484094d7109ee5b410581",
       "brand": "MOTOMAN",
       "payload": 12.0,
       "reach": 1.73
@@ -1003,8 +1225,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP25_20",
+      "file": "Robots/MOTOMAN_GP25_20/MOTOMAN_GP25_20.urdf",
       "urdf": "Robots/MOTOMAN_GP25_20/MOTOMAN_GP25_20.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP25_20.zip",
+      "hash": "c3991b3b0f055309a85e8f07839af36e",
       "brand": "MOTOMAN",
       "payload": 20.0,
       "reach": 1.73
@@ -1012,8 +1236,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP35L",
+      "file": "Robots/MOTOMAN_GP35L/MOTOMAN_GP35L.urdf",
       "urdf": "Robots/MOTOMAN_GP35L/MOTOMAN_GP35L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP35L.zip",
+      "hash": "f51ae0e991079a3009f54c5b79711d77",
       "brand": "MOTOMAN",
       "payload": 35.0,
       "reach": 2.538
@@ -1021,8 +1247,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP4",
+      "file": "Robots/MOTOMAN_GP4/MOTOMAN_GP4.urdf",
       "urdf": "Robots/MOTOMAN_GP4/MOTOMAN_GP4.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP4.zip",
+      "hash": "0ed08fe93ff369268e24e08ca1f9811d",
       "brand": "MOTOMAN",
       "payload": 4.0,
       "reach": 0.55
@@ -1030,8 +1258,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP50",
+      "file": "Robots/MOTOMAN_GP50/MOTOMAN_GP50.urdf",
       "urdf": "Robots/MOTOMAN_GP50/MOTOMAN_GP50.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP50.zip",
+      "hash": "db5cc8b8cc1ec2d614e5fa3da880cda1",
       "brand": "MOTOMAN",
       "payload": 50.0,
       "reach": 2.061
@@ -1039,8 +1269,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP7",
+      "file": "Robots/MOTOMAN_GP7/MOTOMAN_GP7.urdf",
       "urdf": "Robots/MOTOMAN_GP7/MOTOMAN_GP7.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP7.zip",
+      "hash": "06bc902fe0d6013b6383530d30a5579f",
       "brand": "MOTOMAN",
       "payload": 7.0,
       "reach": 0.927
@@ -1048,8 +1280,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP70L",
+      "file": "Robots/MOTOMAN_GP70L/MOTOMAN_GP70L.urdf",
       "urdf": "Robots/MOTOMAN_GP70L/MOTOMAN_GP70L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP70L.zip",
+      "hash": "5dec45d21354bd41e29b9e0e9b80500d",
       "brand": "MOTOMAN",
       "payload": 70.0,
       "reach": 3.048
@@ -1057,8 +1291,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP8",
+      "file": "Robots/MOTOMAN_GP8/MOTOMAN_GP8.urdf",
       "urdf": "Robots/MOTOMAN_GP8/MOTOMAN_GP8.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP8.zip",
+      "hash": "c7d8de807b49e43d4ca4450587a57f54",
       "brand": "MOTOMAN",
       "payload": 8.0,
       "reach": 0.727
@@ -1066,8 +1302,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP88",
+      "file": "Robots/MOTOMAN_GP88/MOTOMAN_GP88.urdf",
       "urdf": "Robots/MOTOMAN_GP88/MOTOMAN_GP88.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP88.zip",
+      "hash": "418095b084f08bac0a91a943b474011e",
       "brand": "MOTOMAN",
       "payload": 88.0,
       "reach": 2.235
@@ -1075,8 +1313,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_GP8L",
+      "file": "Robots/MOTOMAN_GP8L/MOTOMAN_GP8L.urdf",
       "urdf": "Robots/MOTOMAN_GP8L/MOTOMAN_GP8L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_GP8L.zip",
+      "hash": "f96947212a87afb75c5ecca8d423b577",
       "brand": "MOTOMAN",
       "payload": 8.0,
       "reach": 1.236
@@ -1084,8 +1324,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC10",
+      "file": "Robots/MOTOMAN_HC10/MOTOMAN_HC10.urdf",
       "urdf": "Robots/MOTOMAN_HC10/MOTOMAN_HC10.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC10.zip",
+      "hash": "8511aa7e3aedbb22c04e5eb7223ac453",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 1.2
@@ -1093,8 +1335,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC10DT",
+      "file": "Robots/MOTOMAN_HC10DT/MOTOMAN_HC10DT.urdf",
       "urdf": "Robots/MOTOMAN_HC10DT/MOTOMAN_HC10DT.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC10DT.zip",
+      "hash": "12e706b3c94effc8af40196d2a0337b5",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 1.2
@@ -1102,8 +1346,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC10DTP_B00",
+      "file": "Robots/MOTOMAN_HC10DTP_B00/MOTOMAN_HC10DTP_B00.urdf",
       "urdf": "Robots/MOTOMAN_HC10DTP_B00/MOTOMAN_HC10DTP_B00.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC10DTP_B00.zip",
+      "hash": "623b7c26295aa84225f6f90ea16b122a",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 1.2
@@ -1111,8 +1357,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC10DT_B10",
+      "file": "Robots/MOTOMAN_HC10DT_B10/MOTOMAN_HC10DT_B10.urdf",
       "urdf": "Robots/MOTOMAN_HC10DT_B10/MOTOMAN_HC10DT_B10.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC10DT_B10.zip",
+      "hash": "a2c272fddcb7e3fd8cb575c5b29c1889",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 1.2
@@ -1120,8 +1368,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC20",
+      "file": "Robots/MOTOMAN_HC20/MOTOMAN_HC20.urdf",
       "urdf": "Robots/MOTOMAN_HC20/MOTOMAN_HC20.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC20.zip",
+      "hash": "d26b481b15a81691db7a1650801ec1ae",
       "brand": "MOTOMAN",
       "payload": 20.0,
       "reach": 1.7
@@ -1129,8 +1379,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC20DTP",
+      "file": "Robots/MOTOMAN_HC20DTP/MOTOMAN_HC20DTP.urdf",
       "urdf": "Robots/MOTOMAN_HC20DTP/MOTOMAN_HC20DTP.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC20DTP.zip",
+      "hash": "495e8e9b60d3c2240573c4579ef25f3e",
       "brand": "MOTOMAN",
       "payload": 20.0,
       "reach": 1.7
@@ -1138,8 +1390,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_HC30PL",
+      "file": "Robots/MOTOMAN_HC30PL/MOTOMAN_HC30PL.urdf",
       "urdf": "Robots/MOTOMAN_HC30PL/MOTOMAN_HC30PL.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_HC30PL.zip",
+      "hash": "b7737d5fdb2bdb40c10d4d7384b6f092",
       "brand": "MOTOMAN",
       "payload": 30.0,
       "reach": 2.1
@@ -1147,8 +1401,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MA2010",
+      "file": "Robots/MOTOMAN_MA2010/MOTOMAN_MA2010.urdf",
       "urdf": "Robots/MOTOMAN_MA2010/MOTOMAN_MA2010.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MA2010.zip",
+      "hash": "8f7f1303afd5119b7da112014765d707",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 2.01
@@ -1156,8 +1412,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MH110",
+      "file": "Robots/MOTOMAN_MH110/MOTOMAN_MH110.urdf",
       "urdf": "Robots/MOTOMAN_MH110/MOTOMAN_MH110.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MH110.zip",
+      "hash": "2e3f2a044b4f0fc5bd92f48d92078f9f",
       "brand": "MOTOMAN",
       "payload": 110.0,
       "reach": 2.235
@@ -1165,8 +1423,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MH12",
+      "file": "Robots/MOTOMAN_MH12/MOTOMAN_MH12.urdf",
       "urdf": "Robots/MOTOMAN_MH12/MOTOMAN_MH12.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MH12.zip",
+      "hash": "0ae8933f886ae5903f8bbce480aea16a",
       "brand": "MOTOMAN",
       "payload": 12.0,
       "reach": 1.44
@@ -1174,8 +1434,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MH5",
+      "file": "Robots/MOTOMAN_MH5/MOTOMAN_MH5.urdf",
       "urdf": "Robots/MOTOMAN_MH5/MOTOMAN_MH5.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MH5.zip",
+      "hash": "4d8feb4afff9d061d280e8e49c331681",
       "brand": "MOTOMAN",
       "payload": 5.0,
       "reach": 0.706
@@ -1183,8 +1445,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MH50",
+      "file": "Robots/MOTOMAN_MH50/MOTOMAN_MH50.urdf",
       "urdf": "Robots/MOTOMAN_MH50/MOTOMAN_MH50.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MH50.zip",
+      "hash": "d4f18c4bab7f39b63ce324aa916c8251",
       "brand": "MOTOMAN",
       "payload": 50.0,
       "reach": 2.061
@@ -1192,8 +1456,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MH5L",
+      "file": "Robots/MOTOMAN_MH5L/MOTOMAN_MH5L.urdf",
       "urdf": "Robots/MOTOMAN_MH5L/MOTOMAN_MH5L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MH5L.zip",
+      "hash": "5cb60dab84e1685c824a22138e456710",
       "brand": "MOTOMAN",
       "payload": 5.0,
       "reach": 0.895
@@ -1201,8 +1467,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MOTOMINI",
+      "file": "Robots/MOTOMAN_MOTOMINI/MOTOMAN_MOTOMINI.urdf",
       "urdf": "Robots/MOTOMAN_MOTOMINI/MOTOMAN_MOTOMINI.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MOTOMINI.zip",
+      "hash": "d0b2047ddcf7330a0a4d8d7f1962b24e",
       "brand": "MOTOMAN",
       "payload": 1.0,
       "reach": 0.35
@@ -1210,8 +1478,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MOTOPOS_D500",
+      "file": "Robots/MOTOMAN_MOTOPOS_D500/MOTOMAN_MOTOPOS_D500.urdf",
       "urdf": "Robots/MOTOMAN_MOTOPOS_D500/MOTOMAN_MOTOPOS_D500.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MOTOPOS_D500.zip",
+      "hash": "f9e3684c5e03d247a33e95af14f01846",
       "brand": "MOTOMAN",
       "payload": 500.0,
       "reach": 2.0
@@ -1219,8 +1489,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MOTOPOS_MH1655",
+      "file": "Robots/MOTOMAN_MOTOPOS_MH1655/MOTOMAN_MOTOPOS_MH1655.urdf",
       "urdf": "Robots/MOTOMAN_MOTOPOS_MH1655/MOTOMAN_MOTOPOS_MH1655.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MOTOPOS_MH1655.zip",
+      "hash": "c13e25b4a8ac5f3dc38c7bc82e0e5001",
       "brand": "MOTOMAN",
       "payload": 165.0,
       "reach": 2.0
@@ -1228,8 +1500,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MPX1950",
+      "file": "Robots/MOTOMAN_MPX1950/MOTOMAN_MPX1950.urdf",
       "urdf": "Robots/MOTOMAN_MPX1950/MOTOMAN_MPX1950.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MPX1950.zip",
+      "hash": "be2216c777d6668017d2c3907b140042",
       "brand": "MOTOMAN",
       "payload": 7.0,
       "reach": 1.95
@@ -1237,8 +1511,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_MS210",
+      "file": "Robots/MOTOMAN_MS210/MOTOMAN_MS210.urdf",
       "urdf": "Robots/MOTOMAN_MS210/MOTOMAN_MS210.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_MS210.zip",
+      "hash": "9623b42bf4cb2969693afd79366bed83",
       "brand": "MOTOMAN",
       "payload": 210.0,
       "reach": 2.651
@@ -1246,8 +1522,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SDA10F",
+      "file": "Robots/MOTOMAN_SDA10F/MOTOMAN_SDA10F.urdf",
       "urdf": "Robots/MOTOMAN_SDA10F/MOTOMAN_SDA10F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SDA10F.zip",
+      "hash": "ad63e6c2b2c4053959822c0c1fd92837",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 0.72
@@ -1255,8 +1533,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA10D",
+      "file": "Robots/MOTOMAN_SIA10D/MOTOMAN_SIA10D.urdf",
       "urdf": "Robots/MOTOMAN_SIA10D/MOTOMAN_SIA10D.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA10D.zip",
+      "hash": "5803a2b9c953acc1c3205cc28002f76e",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 1.2
@@ -1264,8 +1544,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA10F",
+      "file": "Robots/MOTOMAN_SIA10F/MOTOMAN_SIA10F.urdf",
       "urdf": "Robots/MOTOMAN_SIA10F/MOTOMAN_SIA10F.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA10F.zip",
+      "hash": "68e2ab8211ab6625b9e9309eb522959c",
       "brand": "MOTOMAN",
       "payload": 10.0,
       "reach": 0.72
@@ -1273,8 +1555,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA20D",
+      "file": "Robots/MOTOMAN_SIA20D/MOTOMAN_SIA20D.urdf",
       "urdf": "Robots/MOTOMAN_SIA20D/MOTOMAN_SIA20D.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA20D.zip",
+      "hash": "04e4a22f6ec6e9e1b37d9dfda6c3c4e8",
       "brand": "MOTOMAN",
       "payload": 20.0,
       "reach": 1.3
@@ -1282,8 +1566,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA30D",
+      "file": "Robots/MOTOMAN_SIA30D/MOTOMAN_SIA30D.urdf",
       "urdf": "Robots/MOTOMAN_SIA30D/MOTOMAN_SIA30D.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA30D.zip",
+      "hash": "bd973313c0e9891b71beba719a4570e3",
       "brand": "MOTOMAN",
       "payload": 30.0,
       "reach": 1.485
@@ -1291,8 +1577,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA50",
+      "file": "Robots/MOTOMAN_SIA50/MOTOMAN_SIA50.urdf",
       "urdf": "Robots/MOTOMAN_SIA50/MOTOMAN_SIA50.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA50.zip",
+      "hash": "9db154053a2552183a45afdf7a56ac93",
       "brand": "MOTOMAN",
       "payload": 50.0,
       "reach": 1.63
@@ -1300,8 +1588,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_SIA5D",
+      "file": "Robots/MOTOMAN_SIA5D/MOTOMAN_SIA5D.urdf",
       "urdf": "Robots/MOTOMAN_SIA5D/MOTOMAN_SIA5D.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_SIA5D.zip",
+      "hash": "254d5098468852f50045c5f392ab6e6e",
       "brand": "MOTOMAN",
       "payload": 5.0,
       "reach": 0.72
@@ -1309,8 +1599,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_TORSO",
+      "file": "Robots/MOTOMAN_TORSO/MOTOMAN_TORSO.urdf",
       "urdf": "Robots/MOTOMAN_TORSO/MOTOMAN_TORSO.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_TORSO.zip",
+      "hash": "85feca83a21d1cffcde3e57956aa01a2",
       "brand": "MOTOMAN",
       "payload": 5.0,
       "reach": 0.7
@@ -1318,8 +1610,10 @@
     {
       "type": "Robot",
       "name": "MOTOMAN_UP50N_35",
+      "file": "Robots/MOTOMAN_UP50N_35/MOTOMAN_UP50N_35.urdf",
       "urdf": "Robots/MOTOMAN_UP50N_35/MOTOMAN_UP50N_35.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/MOTOMAN_UP50N_35.zip",
+      "hash": "2b79d991b9902ea5c335574062c37b93",
       "brand": "MOTOMAN",
       "payload": 35.0,
       "reach": 1.63
@@ -1327,8 +1621,10 @@
     {
       "type": "Robot",
       "name": "STAUBLI_RX160",
+      "file": "Robots/STAUBLI_RX160/STAUBLI_RX160.urdf",
       "urdf": "Robots/STAUBLI_RX160/STAUBLI_RX160.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/STAUBLI_RX160.zip",
+      "hash": "59863033d7b7b135b7b9513b6ddcd90e",
       "brand": "STAUBLI",
       "payload": 20.0,
       "reach": 1.6
@@ -1336,8 +1632,10 @@
     {
       "type": "Robot",
       "name": "STAUBLI_RX160L",
+      "file": "Robots/STAUBLI_RX160L/STAUBLI_RX160L.urdf",
       "urdf": "Robots/STAUBLI_RX160L/STAUBLI_RX160L.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/STAUBLI_RX160L.zip",
+      "hash": "b6a50bd8959e025e2d6190ff9d8ee77f",
       "brand": "STAUBLI",
       "payload": 14.0,
       "reach": 2.01
@@ -1345,8 +1643,10 @@
     {
       "type": "Robot",
       "name": "UR10",
+      "file": "Robots/UR10/UR10.urdf",
       "urdf": "Robots/UR10/UR10.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR10.zip",
+      "hash": "ca13e4e5d91cbc0030ab2921149d5e24",
       "brand": "UR",
       "payload": 10.0,
       "reach": 1.3
@@ -1354,8 +1654,10 @@
     {
       "type": "Robot",
       "name": "UR10E",
+      "file": "Robots/UR10E/UR10E.urdf",
       "urdf": "Robots/UR10E/UR10E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR10E.zip",
+      "hash": "91a562f655935fb3fe705170d1b6a5ac",
       "brand": "UR",
       "payload": 10.0,
       "reach": 1.3
@@ -1363,8 +1665,10 @@
     {
       "type": "Robot",
       "name": "UR12E",
+      "file": "Robots/UR12E/UR12E.urdf",
       "urdf": "Robots/UR12E/UR12E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR12E.zip",
+      "hash": "85ba97a54f566e474c3beea3dfb21cbe",
       "brand": "UR",
       "payload": 12.5,
       "reach": 1.3
@@ -1372,8 +1676,10 @@
     {
       "type": "Robot",
       "name": "UR15",
+      "file": "Robots/UR15/UR15.urdf",
       "urdf": "Robots/UR15/UR15.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR15.zip",
+      "hash": "63deae577013f74841d5f56c553846ce",
       "brand": "UR",
       "payload": 15.0,
       "reach": 1.3
@@ -1381,8 +1687,10 @@
     {
       "type": "Robot",
       "name": "UR16E",
+      "file": "Robots/UR16E/UR16E.urdf",
       "urdf": "Robots/UR16E/UR16E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR16E.zip",
+      "hash": "318250ca50a0c9972ef14698e52872a6",
       "brand": "UR",
       "payload": 16.0,
       "reach": 0.9
@@ -1390,8 +1698,10 @@
     {
       "type": "Robot",
       "name": "UR18",
+      "file": "Robots/UR18/UR18.urdf",
       "urdf": "Robots/UR18/UR18.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR18.zip",
+      "hash": "54f82ac3ad1086cb80965d859093be58",
       "brand": "UR",
       "payload": 18.0,
       "reach": 0.95
@@ -1399,8 +1709,10 @@
     {
       "type": "Robot",
       "name": "UR20",
+      "file": "Robots/UR20/UR20.urdf",
       "urdf": "Robots/UR20/UR20.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR20.zip",
+      "hash": "ea212b86bcfc610d0584d83330fd3782",
       "brand": "UR",
       "payload": 20.0,
       "reach": 1.75
@@ -1408,8 +1720,10 @@
     {
       "type": "Robot",
       "name": "UR3",
+      "file": "Robots/UR3/UR3.urdf",
       "urdf": "Robots/UR3/UR3.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR3.zip",
+      "hash": "5d033a7d496f14d228ccdebad96d87d6",
       "brand": "UR",
       "payload": 3.0,
       "reach": 0.5
@@ -1417,8 +1731,10 @@
     {
       "type": "Robot",
       "name": "UR30",
+      "file": "Robots/UR30/UR30.urdf",
       "urdf": "Robots/UR30/UR30.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR30.zip",
+      "hash": "e6882929c363fc586021f86cb97904bd",
       "brand": "UR",
       "payload": 30.0,
       "reach": 1.3
@@ -1426,8 +1742,10 @@
     {
       "type": "Robot",
       "name": "UR3E",
+      "file": "Robots/UR3E/UR3E.urdf",
       "urdf": "Robots/UR3E/UR3E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR3E.zip",
+      "hash": "1ffdcb8a673e885e19815b448f52bf82",
       "brand": "UR",
       "payload": 3.0,
       "reach": 0.5
@@ -1435,8 +1753,10 @@
     {
       "type": "Robot",
       "name": "UR5",
+      "file": "Robots/UR5/UR5.urdf",
       "urdf": "Robots/UR5/UR5.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR5.zip",
+      "hash": "ea07d6bba7f9a0b87ac60c5272a788c0",
       "brand": "UR",
       "payload": 5.0,
       "reach": 0.85
@@ -1444,8 +1764,10 @@
     {
       "type": "Robot",
       "name": "UR5E",
+      "file": "Robots/UR5E/UR5E.urdf",
       "urdf": "Robots/UR5E/UR5E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR5E.zip",
+      "hash": "f03bf8aa6b83040adfe41aa5ac23d677",
       "brand": "UR",
       "payload": 5.0,
       "reach": 0.85
@@ -1453,8 +1775,10 @@
     {
       "type": "Robot",
       "name": "UR7E",
+      "file": "Robots/UR7E/UR7E.urdf",
       "urdf": "Robots/UR7E/UR7E.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR7E.zip",
+      "hash": "1fa65a60c9ca11b633b33d8dd17778f3",
       "brand": "UR",
       "payload": 5.0,
       "reach": 0.85
@@ -1462,8 +1786,10 @@
     {
       "type": "Robot",
       "name": "UR8LONG",
+      "file": "Robots/UR8LONG/UR8LONG.urdf",
       "urdf": "Robots/UR8LONG/UR8LONG.urdf",
       "uri": "https://storage.fiber-art.myshawn.com/Robots/UR8LONG.zip",
+      "hash": "902b365893cea754b37fa56ff578e350",
       "brand": "UR",
       "payload": 10.0,
       "reach": 1.75
@@ -1471,231 +1797,309 @@
     {
       "type": "Track",
       "name": "DemoTrack",
+      "file": "Tracks/DemoTrack/DemoTrack.track",
       "urdf": "Tracks/DemoTrack/DemoTrack.track",
       "uri": "https://storage.fiber-art.myshawn.com/Tracks/DemoTrack.zip",
+      "hash": "37b17cb354167535714a7231d8ddfa8b",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Track",
       "name": "TrackM",
+      "file": "Tracks/TrackM/TrackM.track",
       "urdf": "Tracks/TrackM/TrackM.track",
       "uri": "https://storage.fiber-art.myshawn.com/Tracks/TrackM.zip",
+      "hash": "802c406f51393376430793af7a047276",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Positioner",
       "name": "DemoPositioner",
+      "file": "Positioners/PerpendularPositioner/Positioner.positioner",
       "urdf": "Positioners/PerpendularPositioner/Positioner.positioner",
       "uri": "https://storage.fiber-art.myshawn.com/Positioners/PerpendularPositioner.zip",
+      "hash": "aad7314c34298991a9406beb5705bfbc",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Positioner",
       "name": "PositionerL",
+      "file": "Positioners/PositionerL/PositionerL.positioner",
       "urdf": "Positioners/PositionerL/PositionerL.positioner",
       "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerL.zip",
+      "hash": "8ec28daa94e562236a328970d054c361",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Positioner",
       "name": "PositionerSimple",
+      "file": "Positioners/PositionerSimple/PositionerSimple.positioner",
       "urdf": "Positioners/PositionerSimple/PositionerSimple.positioner",
       "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerSimple.zip",
+      "hash": "f80e5e82961830c7c7625a2014153834",
       "brand": "Custom"
     },
     {
       "type": "Positioner",
       "name": "PositionerXL",
+      "file": "Positioners/PositionerXL/PositionerXL.positioner",
       "urdf": "Positioners/PositionerXL/PositionerXL.positioner",
       "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerXL.zip",
+      "hash": "e3e6116637e5387eaef8e2a02a6780f1",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Positioner",
       "name": "PositionerXS",
+      "file": "Positioners/PositionerXS/PositionerXS.positioner",
       "urdf": "Positioners/PositionerXS/PositionerXS.positioner",
       "uri": "https://storage.fiber-art.myshawn.com/Positioners/PositionerXS.zip",
+      "hash": "dda41818dc28f7517bbd1429fd1376cf",
       "brand": "Custom",
       "payload": 1000.0
     },
     {
       "type": "Tool",
       "name": "AFPH16",
+      "file": "Tools/AFPHead/AFPH16.tool",
       "urdf": "Tools/AFPHead/AFPH16.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/AFPHead.zip",
+      "hash": "8927434a31a236453d920d54d05d2bc0",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "Fiber Placement Head",
+      "file": "Tools/PlacementHead/PlacementHead.tool",
       "urdf": "Tools/PlacementHead/PlacementHead.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/PlacementHead.zip",
+      "hash": "e92e2fc0a66e18b3bd0188df28c44637",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "PlacementHeadM",
+      "file": "Tools/PlacementHeadM/PlacementHeadM.tool",
       "urdf": "Tools/PlacementHeadM/PlacementHeadM.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/PlacementHeadM.zip",
+      "hash": "f01d363b79d141c0df26773b7d330c30",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "DemoPlacementHead",
+      "file": "Tools/SimpleDemoPlacementHead/DemoPlacementHead.tool",
       "urdf": "Tools/SimpleDemoPlacementHead/DemoPlacementHead.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/SimpleDemoPlacementHead.zip",
+      "hash": "d2a54c683758b619e588631f2b58fc13",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "sucker",
+      "file": "Tools/Sucker/sucker.tool",
       "urdf": "Tools/Sucker/sucker.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/Sucker.zip",
+      "hash": "766b4438c71d1f574ef842074abe8313",
       "brand": "Custom"
     },
     {
       "type": "Tool",
       "name": "TapePlacementHead",
+      "file": "Tools/TapePlacementHead/TapePlacementHead.tool",
       "urdf": "Tools/TapePlacementHead/TapePlacementHead.tool",
       "uri": "https://storage.fiber-art.myshawn.com/Tools/TapePlacementHead.zip",
+      "hash": "2f5e4eb96fece83366dc6f5cfadbfa08",
       "brand": "Custom"
     },
     {
       "type": "CADModel",
       "name": "CircleSurface",
+      "file": "CADModels/CircleSurface.stp",
       "urdf": "CADModels/CircleSurface.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/CircleSurface.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/CircleSurface.stp.zip",
+      "hash": "f0fd9ed9afba8b4d71fb55544087d967"
     },
     {
       "type": "CADModel",
       "name": "ConeTank",
+      "file": "CADModels/ConeTank.stp",
       "urdf": "CADModels/ConeTank.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/ConeTank.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/ConeTank.stp.zip",
+      "hash": "d401b55eba5f4d8c5b2e99c7a1bc1855"
     },
     {
       "type": "CADModel",
       "name": "Cylinder",
+      "file": "CADModels/Cylinder.stp",
       "urdf": "CADModels/Cylinder.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Cylinder.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Cylinder.stp.zip",
+      "hash": "ac07ba0ce1ee5d88bec222ab7535a5e3"
     },
     {
       "type": "CADModel",
       "name": "ExtrudeSurface",
+      "file": "CADModels/ExtrudeSurface.stp",
       "urdf": "CADModels/ExtrudeSurface.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/ExtrudeSurface.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/ExtrudeSurface.stp.zip",
+      "hash": "dffac9581e4cf65e264248fe41f6fc9b"
     },
     {
       "type": "CADModel",
       "name": "FlatCurveSurface",
+      "file": "CADModels/FlatCurveSurface.stp",
       "urdf": "CADModels/FlatCurveSurface.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatCurveSurface.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatCurveSurface.stp.zip",
+      "hash": "2224d85708e530210d76891816aa4e6d"
     },
     {
       "type": "CADModel",
       "name": "FlatSurfaceWithMultiplyBondaries",
+      "file": "CADModels/FlatSurfaceWithMultiplyBondaries.stp",
       "urdf": "CADModels/FlatSurfaceWithMultiplyBondaries.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatSurfaceWithMultiplyBondaries.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/FlatSurfaceWithMultiplyBondaries.stp.zip",
+      "hash": "d278620d26bbf252653653ecf1a276cf"
     },
     {
       "type": "CADModel",
       "name": "Pipe",
+      "file": "CADModels/Pipe.stp",
       "urdf": "CADModels/Pipe.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Pipe.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Pipe.stp.zip",
+      "hash": "47bf6b14bdc09d8fcec8dbf9385121c1"
     },
     {
       "type": "CADModel",
       "name": "PlaneWithGuideCurve",
+      "file": "CADModels/PlaneWithGuideCurve.stp",
       "urdf": "CADModels/PlaneWithGuideCurve.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/PlaneWithGuideCurve.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/PlaneWithGuideCurve.stp.zip",
+      "hash": "093d8043842debc1fb07680284b91e9c"
     },
     {
       "type": "CADModel",
       "name": "SDuctInlet",
+      "file": "CADModels/SDuctInlet.stp",
       "urdf": "CADModels/SDuctInlet.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SDuctInlet.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SDuctInlet.stp.zip",
+      "hash": "b6f8187d45d60f03fa4702668221af96"
     },
     {
       "type": "CADModel",
       "name": "SampleFlatPlate",
+      "file": "CADModels/SampleFlatPlate.stp",
       "urdf": "CADModels/SampleFlatPlate.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SampleFlatPlate.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SampleFlatPlate.stp.zip",
+      "hash": "eae21222ee834198741a05f51d99b151"
     },
     {
       "type": "CADModel",
       "name": "SamplePanel",
+      "file": "CADModels/SamplePanel.stp",
       "urdf": "CADModels/SamplePanel.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SamplePanel.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SamplePanel.stp.zip",
+      "hash": "37df35f8291ed1665b1b26af9db1dd14"
     },
     {
       "type": "CADModel",
       "name": "SampleSpar",
+      "file": "CADModels/SampleSpar.stp",
       "urdf": "CADModels/SampleSpar.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SampleSpar.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SampleSpar.stp.zip",
+      "hash": "895166c5d97a45819f7392ad0de3c7d5"
     },
     {
       "type": "CADModel",
       "name": "SmallFlatSurface",
+      "file": "CADModels/SmallFlatSurface.stp",
       "urdf": "CADModels/SmallFlatSurface.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SmallFlatSurface.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/SmallFlatSurface.stp.zip",
+      "hash": "2f3c00d37c6f03c376a6d448d15ef81a"
+    },
+    {
+      "type": "CADModel",
+      "name": "Spindle",
+      "file": "CADModels/Spindle.stp",
+      "urdf": "CADModels/Spindle.stp",
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Spindle.stp.zip",
+      "hash": "376374309a8a9b275485d0d68d3f541a"
     },
     {
       "type": "CADModel",
       "name": "StringerC",
+      "file": "CADModels/StringerC.stl",
       "urdf": "CADModels/StringerC.stl",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/StringerC.stl.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/StringerC.stl.zip",
+      "hash": "6dac95b4af9875e31b1a1110dd472976"
     },
     {
       "type": "CADModel",
       "name": "StringerL",
+      "file": "CADModels/StringerL.stl",
       "urdf": "CADModels/StringerL.stl",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/StringerL.stl.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/StringerL.stl.zip",
+      "hash": "e85b10c99a52018a019fe1e23e77a827"
     },
     {
       "type": "CADModel",
       "name": "Tank",
+      "file": "CADModels/Tank.stp",
       "urdf": "CADModels/Tank.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Tank.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Tank.stp.zip",
+      "hash": "da6a530333dc471c6c8f46b3c3072ffc"
     },
     {
       "type": "CADModel",
       "name": "TankSmall",
+      "file": "CADModels/TankSmall.stp",
       "urdf": "CADModels/TankSmall.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/TankSmall.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/TankSmall.stp.zip",
+      "hash": "bde77aac674826f04e9a02c7f52e5201"
     },
     {
       "type": "CADModel",
       "name": "USpar",
+      "file": "CADModels/USpar.stp",
       "urdf": "CADModels/USpar.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/USpar.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/USpar.stp.zip",
+      "hash": "9a9f671f34492658352cc22700d21b7a"
     },
     {
       "type": "CADModel",
       "name": "Wing",
+      "file": "CADModels/Wing.stp",
       "urdf": "CADModels/Wing.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Wing.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/Wing.stp.zip",
+      "hash": "3df11e8fe00977d71d02719402aa7487"
     },
     {
       "type": "CADModel",
       "name": "WingClosed",
+      "file": "CADModels/WingClosed.stp",
       "urdf": "CADModels/WingClosed.stp",
-      "uri": "https://storage.fiber-art.myshawn.com/CADModels/WingClosed.stp.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/CADModels/WingClosed.stp.zip",
+      "hash": "dc8d2fdc036fa2aa0f489875058f99c1"
     },
     {
       "type": "Model",
       "name": "sideTable",
+      "file": "Models/sideTable.fbx",
       "urdf": "Models/sideTable.fbx",
-      "uri": "https://storage.fiber-art.myshawn.com/Models/sideTable.fbx.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Models/sideTable.fbx.zip",
+      "hash": "8f026a9fe2d56981cacb1fc518996b75"
     },
     {
       "type": "Model",
       "name": "standing-human",
+      "file": "Models/standing-human.dae",
       "urdf": "Models/standing-human.dae",
-      "uri": "https://storage.fiber-art.myshawn.com/Models/standing-human.dae.zip"
+      "uri": "https://storage.fiber-art.myshawn.com/Models/standing-human.dae.zip",
+      "hash": "f1f7a6dce56ab89ba26b358841e64545"
     }
   ]
 }

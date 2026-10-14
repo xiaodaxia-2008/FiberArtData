@@ -21,7 +21,7 @@ ACCESS_KEY = os.environ.get("CloudFlareAPI_FiberArt_S3_ID")
 SECRET_KEY = os.environ.get("CloudFlareAPI_FiberArt_S3_SECRET")
 BUCKET_NAME = os.environ.get("R2_BUCKET_NAME", "fiber-art")
 
-DATA_DIR = r"C:\AppSource\FiberArtData"
+DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL_DIR = os.path.join(DATA_DIR, "Installers")
 REMOTE_PREFIX = "Installers/"
 CUSTOM_DOMAIN = "https://storage.fiber-art.myshawn.com"
@@ -136,6 +136,8 @@ def upload_file_if_changed(s3_client, local_path, s3_key, dry_run=False):
         extra_args = {"Metadata": {"local-md5": local_md5}}
         if s3_key.lower().endswith(".exe"):
             extra_args["ContentType"] = "application/x-msdownload"
+        elif s3_key.lower().endswith(".apk"):
+            extra_args["ContentType"] = "application/vnd.android.package-archive"
 
         s3_client.upload_file(
             local_path,

@@ -27,7 +27,7 @@ ACCESS_KEY = os.environ.get("CloudFlareAPI_FiberArt_S3_ID")
 SECRET_KEY = os.environ.get("CloudFlareAPI_FiberArt_S3_SECRET")
 BUCKET_NAME = os.environ.get("R2_BUCKET_NAME", "fiber-art")
 
-DATA_DIR = r"C:\AppSource\FiberArtData"
+DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CATALOG_FILE = os.path.join(DATA_DIR, "catalog.json")
 R2_BASE_URL = "https://storage.fiber-art.myshawn.com/"
 MESH_EXTENSIONS = (".dae", ".fbx", ".glb", ".gltf", ".obj", ".ply", ".stl")
@@ -516,6 +516,7 @@ def main():
     CLOUD_CATALOG_FILE = os.path.join(DATA_DIR, "temp", "cloud_catalog.json")
     cloud_catalog = None
     try:
+        os.makedirs(os.path.dirname(CLOUD_CATALOG_FILE), exist_ok=True)
         print("Downloading cloud catalog.json to temp/cloud_catalog.json...")
         s3.download_file(BUCKET_NAME, "catalog.json", CLOUD_CATALOG_FILE)
         with open(CLOUD_CATALOG_FILE, "r", encoding="utf-8") as f:

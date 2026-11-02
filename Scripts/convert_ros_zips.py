@@ -14,7 +14,7 @@ import json
 import types
 from lxml import etree
 
-DATA_DIR = r"C:\AppSource\FiberArtData"
+DATA_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROBOTS_DIR = os.path.join(DATA_DIR, "Robots")
 ZIPS_DIR = os.path.join(DATA_DIR, "ros-robots")
 OUT_ZIPS_DIR = os.path.join(DATA_DIR, "Robots_Zip")

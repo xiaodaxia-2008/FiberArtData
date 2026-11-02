@@ -120,8 +120,8 @@
     <parent link="link2"/>
     <child link="link3"/>
     <origin xyz="0 0 0.84" rpy="0 0 0"/>
-    <axis xyz="0 1 0"/>
-    <limit lower="${radians(-160)}" upper="${radians(75)}" velocity="${radians(242)}"/>
+    <axis xyz="0 -1 0"/>
+    <limit lower="${radians(-75)}" upper="${radians(160)}" velocity="${radians(242)}"/>
   </joint>
   <joint name="joint4" type="revolute">
     <parent link="link3"/>
@@ -164,7 +164,7 @@
     <b>0</b>
     <joint1 sign_correction="1" offset="0"/>
     <joint2 sign_correction="-1" offset="0"/>
-    <joint3 sign_correction="1" offset="${radians(-90)}"/>
+    <joint3 sign_correction="-1" offset="${radians(-90)}"/>
     <joint4 sign_correction="1" offset="0"/>
     <joint5 sign_correction="-1" offset="0"/>
     <joint6 sign_correction="1" offset="0"/>
